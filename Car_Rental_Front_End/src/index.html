@@ -10,17 +10,29 @@
         #btnRegister{
             right: 50px;
             bottom: 50px;
-            border-radius: 20%;
+            border-radius: 40%;
             position: fixed;
             cursor: pointer;
+            box-shadow: 1px 4px 16px 4px #004583;
+
         }
+
+        #call{
+            right: 140px;
+            bottom: 200px;
+            border-radius: 100%;
+            position: fixed;
+            cursor: pointer;
+            box-shadow: 1px 4px 16px 4px #0082CA;
+        }
+
+
     </style>
 </head>
 <header>
 
     <nav class="navbar bg-primary" data-bs-theme="dark">
         <h1 style="color: #e3f2fd;">Easy Car Rental Pvt Ltd</h1>
-
         <button  class="fs-5 fw-bold" style="margin-right: 20px; border: none;background: none">Sign In</button>
     </nav>
 </header>
@@ -99,9 +111,16 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
 
+<div id="call" style="width: 80px;height:80px; ">
+    <img src="assets/images/call.png" class="img-fluid"  alt="call">
+</div>
 
 <button id="btnRegister" type="button" class="btn btn-lg" style="width: 250px;height: 80px; font-weight: bold; color: white; background: #004583">Register</button>
+
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
