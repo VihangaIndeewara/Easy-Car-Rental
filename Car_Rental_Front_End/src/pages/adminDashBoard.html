@@ -5,30 +5,158 @@
     <title>Easy Car Rental</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <style>
+        .a{
+            color: white;
+            font-size: 20px;
+        }
+    </style>
 </head>
 
+
+<body>
 <header>
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
-           <h1 style="color: #e3f2fd;">Easy Car Rental</h1>
+            <h1 style="color: #e3f2fd;">Easy Car Rental</h1>
 
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <div class="collapse navbar-collapse" style="position:absolute;right: 15px" id="navbarNavDropdown">
+                <ul class="navbar-nav " >
+                    <li class="nav-item ">
+                        <a class="nav-link  a" aria-current="page" href="#"  >Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cars</a>
+                    <li class="nav-item ">
+                        <a class="nav-link a" href="#" >Cars</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                    <li class="nav-item ">
+                        <a class="nav-link a" href="#">Pricing</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<body>
+
+<br>
+<br>
+<br>
+
+<div class="jumbotron pt-md-5">
+    <div id="home-tiles">
+        <div class="row ">
+
+            <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="card">
+                        <div class="card-header bg-success font-weight-bolder"><h3>Registered Users</h3></div>
+                        <div class="card-body">
+                            <div class="dash-tile-icon">
+                                <img src="assets/images/customer.jpg" width="200" height="200">
+                            </div>
+                            <div class="dash-tile-text text-lg-end text-black "><h2 class="fs-1">150</h2></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="card">
+                        <div class="card-header bg-warning font-weight-bolder"><h3>Total Booking For Today</h3></div>
+                        <div class="card-body">
+                            <div class="dash-tile-icon">
+                                <img src="assets/images/item.jpg" width="200" height="200">
+                            </div>
+                            <div class="dash-tile-text text-lg-end text-black"><h2>350</h2></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="card">
+                        <div class="card-header bg-info font-weight-bolder"><h3>Available Car Count</h3></div>
+                        <div class="card-body">
+                            <div class="dash-tile-icon">
+                                <img src="assets/images/order.jpg" width="200" height="200">
+                            </div>
+                            <div class="dash-tile-text text-lg-end text-black"><h2>20</h2></div>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="card">
+                        <div class="card-header bg-danger font-weight-bolder"><h3>Reserved Car Count</h3></div>
+                        <div class="card-body">
+                            <div class="dash-tile-icon" style="">
+                                <img src="assets/images/all_Orders.jpg" width="200" height="200">
+                            </div>
+                            <div class="dash-tile-text text-lg-end text-black"><h2>420</h2></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-lg-6 col-xl-3 mb-2">
+                <div class="card">
+                    <div class="card-header bg-success font-weight-bolder"><h3>Available Drivers</h3></div>
+                    <div class="card-body">
+                        <div class="dash-tile-icon">
+                            <img src="assets/images/customer.jpg" width="200" height="200">
+                        </div>
+                        <div class="dash-tile-text text-lg-end text-black "><h2 class="fs-1">150</h2></div>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-lg-6 col-xl-3 mb-2">
+                <div class="card">
+                    <div class="card-header bg-warning font-weight-bolder"><h3>Occupied Drivers</h3></div>
+                    <div class="card-body">
+                        <div class="dash-tile-icon">
+                            <img src="assets/images/item.jpg" width="200" height="200">
+                        </div>
+                        <div class="dash-tile-text text-lg-end text-black"><h2>350</h2></div>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-lg-6 col-xl-3 mb-2">
+                <div class="card">
+                    <div class="card-header bg-info font-weight-bolder"><h3> Car Need Maintenance</h3></div>
+                    <div class="card-body">
+                        <div class="dash-tile-icon">
+                            <img src="assets/images/order.jpg" width="200" height="200">
+                        </div>
+                        <div class="dash-tile-text text-lg-end text-black"><h2>20</h2></div>
+                    </div>
+                </div>
+
+                </a>
+            </div>
+
+            <div class="col-lg-6 col-xl-3 mb-2">
+                <div class="card">
+                    <div class="card-header bg-danger font-weight-bolder"><h3>Car Under Maintenance</h3></div>
+                    <div class="card-body">
+                        <div class="dash-tile-icon" style="">
+                            <img src="assets/images/all_Orders.jpg" width="200" height="200">
+                        </div>
+                        <div class="dash-tile-text text-lg-end text-black"><h2>420</h2></div>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
