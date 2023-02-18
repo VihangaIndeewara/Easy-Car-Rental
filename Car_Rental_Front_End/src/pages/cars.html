@@ -54,7 +54,7 @@
         <button type="button" class="btn btn-secondary col-1 "style="width: 120px; height: 50px; margin-left: 1550px " data-bs-toggle="modal" data-bs-target="#addCarModal" ><h3 class="fs-4">Add Car</h3></button>
 
         <!--         save modal-->
-        <div class="modal  modal-dialog modal-xl  " id="addCarModal" tabindex="-1" aria-labelledby="addCar"  aria-hidden="true">
+        <div class="modal  modal-dialog modal-xl  " id="addCarModal" tabindex="-10" aria-labelledby="addCar"  aria-hidden="false" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header " style="background: #3A4D85; color: white">
@@ -215,7 +215,9 @@
 
                     <div class="modal-footer">
                         <button id="saveButton" type="button" class="btn btn-primary" >Save</button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button id="updateButton" type="button" class="btn btn-secondary" >Update</button>
+                        <button id="deleteButton" type="button" class="btn btn-danger" >Delete</button>
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -231,32 +233,41 @@
 
         <div class="container-fluid w-100 h-50" style="background: white">
             <table class="table table-striped table-hover ">
-                <thead class="table-dark">
+                <thead style="background: #AAA69D">
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Car Id</th>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Registration No</th>
+                    <th scope="col">Fuel Type</th>
+                    <th scope="col">Transmission Type</th>
+                    <th scope="col">No Of Passengers</th>
+                    <th scope="col">Daily Rate Price</th>
+                    <th scope="col">Monthly Rate Price</th>
+                    <th scope="col">Free KM Per Day</th>
+                    <th scope="col">Free KM Per Month</th>
+                    <th scope="col">Price For Extra KM</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+<!--                <tr>-->
+<!--                    <th scope="row">1</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">2</th>-->
+<!--                    <td>Jacob</td>-->
+<!--                    <td>Thornton</td>-->
+<!--                    <td>@fat</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">3</th>-->
+<!--                    <td colspan="2">Larry the Bird</td>-->
+<!--                    <td>@twitter</td>-->
+<!--                </tr>-->
                 </tbody>
             </table>
         </div>
