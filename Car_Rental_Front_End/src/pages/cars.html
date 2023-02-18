@@ -37,188 +37,233 @@
 
 
 <section style="background:#695b43">
-<div class="container-fluid" style="border: 2px solid black; width: 1800px; height: 1000px; background: #B8AA90">
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 class="text-center">Manage Cars</h1>
+<!--    Add Car-->
+    <div class="container-fluid" style="border: 2px solid black; width: 1800px; height: 1000px; background: #B8AA90">
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="text-center">Manage Cars</h1>
 
 
 
-    <button type="button" class="btn btn-secondary col-1 "style="width: 120px; height: 50px; margin-left: 1550px" data-bs-toggle="modal" data-bs-target="#addCarModal" ><h3 class="fs-4">Add Car</h3></button>
+        <button type="button" class="btn btn-secondary col-1 "style="width: 120px; height: 50px; margin-left: 1550px " data-bs-toggle="modal" data-bs-target="#addCarModal" ><h3 class="fs-4">Add Car</h3></button>
 
-    <!--         save modal-->
-    <div class="modal  modal-dialog modal-xl" id="addCarModal" tabindex="-1" aria-labelledby="addCar"  aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-success">
-                    <h5 class="modal-title" id="saveModalTitle">Add New Car</h5>
-                </div>
-
-                <form id="addCar">
-                    <div class="modal-body  row">
-
-                        <div class="mb-3 col">
-                            <label for="carIdInput" class="form-label">Car ID</label>
-                            <input type="text" class="form-control" id="carIdInput" placeholder="Ex:- C001" name="id">
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="comboBrand" class="form-label">Brand</label>
-                            <select name="brand" class="form-control" id="comboBrand">
-                                <option value="Select">Select</option>
-                            </select>
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="comboColour" class="form-label">Colour</label>
-                            <select name="color" class="form-control" id="comboColour">
-                                <option value="Select">Select</option>
-                            </select>
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="comboType" class="form-label">Type</label>
-                            <select name="type" class="form-control" id="comboType">
-                                <option value="Select">Select</option>
-                            </select>
-                            <span class="control-error"></span>
-                        </div>
-
+        <!--         save modal-->
+        <div class="modal  modal-dialog modal-xl  " id="addCarModal" tabindex="-1" aria-labelledby="addCar"  aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header " style="background: #3A4D85; color: white">
+                        <h5 class="modal-title" id="saveModalTitle">Add New Car</h5>
                     </div>
 
+                    <form id="addCar">
+                        <div class="modal-body  row">
 
-                    <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="carIdInput" class="form-label">Car ID</label>
+                                <input type="text" class="form-control" id="carIdInput" placeholder="Ex:- C001" name="id">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboBrand" class="form-label">Brand</label>
+                                <select name="brand" class="form-control" id="comboBrand">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboColour" class="form-label">Colour</label>
+                                <select name="color" class="form-control" id="comboColour">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboType" class="form-label">Type</label>
+                                <select name="type" class="form-control" id="comboType">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
 
-                        <div class="mb-3 col">
-                            <label for="registrationNoInput" class="form-label">Registration No</label>
-                            <input type="text" class="form-control" id="registrationNoInput"  name="registrationNo">
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="comboFuelType" class="form-label">Fuel Type</label>
-                            <select name="fuelType" class="form-control" id="comboFuelType">
-                                <option value="Select">Select</option>
-                            </select>
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="comboTransmissionType" class="form-label">Transmission Type</label>
-                            <select name="transmissionType" class="form-control" id="comboTransmissionType">
-                                <option value="Select">Select</option>
-                            </select>
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="noOfPassengersInput" class="form-label">No Of Passengers</label>
-                            <input type="text" class="form-control" id="noOfPassengersInput"  name="noOfPassengers">
-                            <span class="control-error"></span>
                         </div>
 
+
+                        <div class="modal-body  row">
+
+                            <div class="mb-3 col">
+                                <label for="registrationNoInput" class="form-label">Registration No</label>
+                                <input type="text" class="form-control" id="registrationNoInput"  name="registrationNo">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboFuelType" class="form-label">Fuel Type</label>
+                                <select name="fuelType" class="form-control" id="comboFuelType">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboTransmissionType" class="form-label">Transmission Type</label>
+                                <select name="transmissionType" class="form-control" id="comboTransmissionType">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="noOfPassengersInput" class="form-label">No Of Passengers</label>
+                                <input type="text" class="form-control" id="noOfPassengersInput"  name="noOfPassengers">
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="dailyRatePriceInput" class="form-label">Daily Rate Price</label>
+                                <input type="text" class="form-control" id="dailyRatePriceInput"  name="dailyRatePrice">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="monthlyRatePriceInput" class="form-label">Monthly Rate Price</label>
+                                <input type="text" class="form-control" id="monthlyRatePriceInput"  name="monthlyRatePrice">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="freeKmPerDayInput" class="form-label">Free Km Per Day</label>
+                                <input type="text" class="form-control" id="freeKmPerDayInput"  name="freeKmPerDay">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="freeKmPerMonthInput" class="form-label">Free Km Per Month</label>
+                                <input type="text" class="form-control" id="freeKmPerMonthInput"  name="freeKmPerMonth">
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="priceForExtraKMInput" class="form-label">Price For Extra KM</label>
+                                <input type="text" class="form-control" id="priceForExtraKMInput"  name="priceForExtraKM">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboAvailableOrNot" class="form-label">Available Or Not</label>
+                                <select name="availableOrNot" class="form-control" id="comboAvailableOrNot">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboDamageOrNot" class="form-label">Damage Or Not</label>
+                                <select name="damageOrNot" class="form-control" id="comboDamageOrNot">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboUnderMaintainOrNot" class="form-label">Under Maintain Or Not</label>
+                                <select name="underMaintainOrNot" class="form-control" id="comboUnderMaintainOrNot">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col-3">
+                                <label for="totalDistanceTravelledInput" class="form-label">Total Distance Travelled</label>
+                                <input type="text" class="form-control" id="totalDistanceTravelledInput"  name="TotalDistanceTravelled">
+                                <span class="control-error"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="chooseUploadFrontView" class="form-label">Upload Front View</label>
+                                <input type="file" class="form-control" id="chooseUploadFrontView"  name="uploadFrontView">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="chooseUploadBackView" class="form-label">Upload Back View</label>
+                                <input type="file" class="form-control" id="chooseUploadBackView"  name="uploadBackView">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="chooseUploadSideView" class="form-label">Upload Side View</label>
+                                <input type="file" class="form-control" id="chooseUploadSideView"  name="uploadSideView">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="chooseUploadInteriorView" class="form-label">Upload Interior View</label>
+                                <input type="file" class="form-control" id="chooseUploadInteriorView"  name="uploadInteriorView">
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                    <div class="modal-footer">
+                        <button id="saveButton" type="button" class="btn btn-primary" >Save</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                     </div>
-
-                    <div class="modal-body  row">
-                        <div class="mb-3 col">
-                            <label for="dailyRatePriceInput" class="form-label">Daily Rate Price</label>
-                            <input type="text" class="form-control" id="dailyRatePriceInput"  name="dailyRatePrice">
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="monthlyRatePriceInput" class="form-label">Monthly Rate Price</label>
-                            <input type="text" class="form-control" id="monthlyRatePriceInput"  name="monthlyRatePrice">
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="freeKmPerDayInput" class="form-label">Free Km Per Day</label>
-                            <input type="text" class="form-control" id="freeKmPerDayInput"  name="freeKmPerDay">
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="freeKmPerMonthInput" class="form-label">Free Km Per Month</label>
-                            <input type="text" class="form-control" id="freeKmPerMonthInput"  name="freeKmPerMonth">
-                            <span class="control-error"></span>
-                        </div>
-
-                    </div>
-
-                    <div class="modal-body  row">
-                        <div class="mb-3 col">
-                            <label for="priceForExtraKMInput" class="form-label">Price For Extra KM</label>
-                            <input type="text" class="form-control" id="priceForExtraKMInput"  name="priceForExtraKM">
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="comboAvailableOrNot" class="form-label">Available Or Not</label>
-                            <select name="availableOrNot" class="form-control" id="comboAvailableOrNot">
-                                <option value="Select">Select</option>
-                            </select>
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="comboDamageOrNot" class="form-label">Damage Or Not</label>
-                            <select name="damageOrNot" class="form-control" id="comboDamageOrNot">
-                                <option value="Select">Select</option>
-                            </select>
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="comboUnderMaintainOrNot" class="form-label">Under Maintain Or Not</label>
-                            <select name="underMaintainOrNot" class="form-control" id="comboUnderMaintainOrNot">
-                                <option value="Select">Select</option>
-                            </select>
-                            <span class="control-error"></span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="modal-body  row">
-                        <div class="mb-3 col-3">
-                            <label for="totalDistanceTravelledInput" class="form-label">Total Distance Travelled</label>
-                            <input type="text" class="form-control" id="totalDistanceTravelledInput"  name="TotalDistanceTravelled">
-                            <span class="control-error"></span>
-                        </div>
-                    </div>
-
-
-                    <div class="modal-body  row">
-                        <div class="mb-3 col">
-                            <label for="chooseUploadFrontView" class="form-label">Upload Front View</label>
-                            <input type="file" class="form-control" id="chooseUploadFrontView"  name="uploadFrontView">
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="chooseUploadBackView" class="form-label">Upload Back View</label>
-                            <input type="file" class="form-control" id="chooseUploadBackView"  name="uploadBackView">
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="chooseUploadSideView" class="form-label">Upload Side View</label>
-                            <input type="file" class="form-control" id="chooseUploadSideView"  name="uploadSideView">
-                            <span class="control-error"></span>
-                        </div>
-                        <div class="mb-3 col">
-                            <label for="chooseUploadInteriorView" class="form-label">Upload Interior View</label>
-                            <input type="file" class="form-control" id="chooseUploadInteriorView"  name="uploadInteriorView">
-                            <span class="control-error"></span>
-                        </div>
-
-                    </div>
-
-                </form>
-
-                <div class="modal-footer">
-                    <button id="saveButton" type="button" class="btn btn-primary" >Save</button>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
+
+
+        <!--    Table-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="container-fluid w-100 h-50" style="background: white">
+            <table class="table table-striped table-hover ">
+                <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
-</div>
+
+
 </section>
 
 
