@@ -551,6 +551,167 @@
         <br>
         <h1 class="text-center">Payment</h1>
 
+        <button type="button" class="btn btn-warning col-1 "style="width: 120px; height: 50px; margin-left: 1550px " data-bs-toggle="modal" data-bs-target="#makePaymentModal" ><h3 class="fs-4">Make Payment</h3></button>
+
+        <!--         save modal-->
+        <div class="modal  modal-dialog modal-xl  " id="makePaymentModal" tabindex="-10" aria-labelledby="makePayment"  aria-hidden="true" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header " style="background: #3A4D85; color: white">
+                        <h5 class="modal-title" id="makePaymentTitle">Make Payment</h5>
+                    </div>
+
+                    <form id="makePayment">
+                        <div class="modal-body  row">
+
+                            <div class="mb-3 col">
+                                <label for="paymentIDInput" class="form-label">Payment ID</label>
+                                <input type="text" class="form-control" id="paymentIDInput" name="paymentID">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="paymentDateInput" class="form-label">Payment Date</label>
+                                <input type="text" class="form-control" id="paymentDateInput" name="paymentDate">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="rentFeeInput" class="form-label">Rent Fee</label>
+                                <input type="text" class="form-control" id="rentFeeInput" name="rentFee">
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="driverFeeInput" class="form-label">Driver Fee</label>
+                                <input type="text" class="form-control" id="driverFeeInput" name="driverFee">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="lossDamageWaiverPaymentInput" class="form-label">Loss Damage Waiver Payment</label>
+                                <input type="text" class="form-control" id="lossDamageWaiverPaymentInput"  name="lossDamageWaiverPayment">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="reducedLossDamagePaymentInput" class="form-label">Reduced Loss Damage Payment</label>
+                                <input type="text" class="form-control" id="reducedLossDamagePaymentInput"  name="reducedLossDamagePayment">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboTransmissionType" class="form-label">Transmission Type</label>
+                                <select name="transmissionType" class="form-control" id="comboTransmissionType">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="noOfPassengersInput" class="form-label">No Of Passengers</label>
+                                <input type="text" class="form-control" id="noOfPassengersInput"  name="noOfPassengers">
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="dailyRatePriceInput" class="form-label">Daily Rate Price</label>
+                                <input type="text" class="form-control" id="dailyRatePriceInput"  name="dailyRatePrice">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="monthlyRatePriceInput" class="form-label">Monthly Rate Price</label>
+                                <input type="text" class="form-control" id="monthlyRatePriceInput"  name="monthlyRatePrice">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="freeKmPerDayInput" class="form-label">Free Km Per Day</label>
+                                <input type="text" class="form-control" id="freeKmPerDayInput"  name="freeKmPerDay">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="freeKmPerMonthInput" class="form-label">Free Km Per Month</label>
+                                <input type="text" class="form-control" id="freeKmPerMonthInput"  name="freeKmPerMonth">
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="priceForExtraKMInput" class="form-label">Price For Extra KM</label>
+                                <input type="text" class="form-control" id="priceForExtraKMInput"  name="priceForExtraKM">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboAvailableOrNot" class="form-label">Available Or Not</label>
+                                <select name="availableOrNot" class="form-control" id="comboAvailableOrNot">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboDamageOrNot" class="form-label">Damage Or Not</label>
+                                <select name="damageOrNot" class="form-control" id="comboDamageOrNot">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboUnderMaintainOrNot" class="form-label">Under Maintain Or Not</label>
+                                <select name="underMaintainOrNot" class="form-control" id="comboUnderMaintainOrNot">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col-3">
+                                <label for="totalDistanceTravelledInput" class="form-label">Total Distance Travelled</label>
+                                <input type="text" class="form-control" id="totalDistanceTravelledInput"  name="TotalDistanceTravelled">
+                                <span class="control-error"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="chooseUploadFrontView" class="form-label">Upload Front View</label>
+                                <input type="file" class="form-control" id="chooseUploadFrontView"  name="uploadFrontView">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="chooseUploadBackView" class="form-label">Upload Back View</label>
+                                <input type="file" class="form-control" id="chooseUploadBackView"  name="uploadBackView">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="chooseUploadSideView" class="form-label">Upload Side View</label>
+                                <input type="file" class="form-control" id="chooseUploadSideView"  name="uploadSideView">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="chooseUploadInteriorView" class="form-label">Upload Interior View</label>
+                                <input type="file" class="form-control" id="chooseUploadInteriorView"  name="uploadInteriorView">
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                    <div class="modal-footer">
+                        <button id="saveButton" type="button" class="btn btn-primary" >Save</button>
+                        <button id="updateButton" type="button" class="btn btn-secondary" >Update</button>
+                        <button id="deleteButton" type="button" class="btn btn-danger" >Delete</button>
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
         <br>
         <br>
         <br>
