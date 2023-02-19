@@ -523,7 +523,7 @@
 
 </main>
 
-
+<!--Customer Manager-->
 <main class="container-fluid" id="CustomersManagerPage" style="display: none; height: 1010px;background:#B8AA90">
     <div class="container-fluid" >
 
@@ -540,6 +540,8 @@
 
 </main>
 
+
+<!--Payment-->
 <main class="container-fluid" id="PaymentPage" style="display: none; height: 1010px;background:#B8AA90">
     <div class="container-fluid" >
 
@@ -551,7 +553,7 @@
         <br>
         <h1 class="text-center">Payment</h1>
 
-        <button type="button" class="btn btn-warning col-1 "style="width: 120px; height: 50px; margin-left: 1550px " data-bs-toggle="modal" data-bs-target="#makePaymentModal" ><h3 class="fs-4">Make Payment</h3></button>
+        <button type="button" class="btn btn-warning col-1 "style="width: 150px; height:60px; margin-left: 1860px " data-bs-toggle="modal" data-bs-target="#makePaymentModal" ><h3 class="fs-5">Make Payment</h3></button>
 
         <!--         save modal-->
         <div class="modal  modal-dialog modal-xl  " id="makePaymentModal" tabindex="-10" aria-labelledby="makePayment"  aria-hidden="true" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0">
@@ -624,7 +626,7 @@
                         </div>
 
                         <div class="modal-body  row">
-                            <div class="mb-3 col">
+                            <div class="mb-3 col-4">
                                 <label for="priceForExtraKMInput" class="form-label">Price For Extra KM</label>
                                 <input type="text" class="form-control" id="priceForExtraKMInput"  name="priceForExtraKM">
                                 <span class="control-error"></span>
@@ -634,10 +636,11 @@
 
 
                         <div class="modal-body  row">
-                            <div class="mb-3 col-3">
-                                <button>Click For Total Price</button>
+                            <div class="mb-3 col-6">
+                                <label class="form-label"> </label>
+                                <button type="button" class="form-control" style="background: #d0a331; color: white;font-weight: bold; height: 50px">Click For Total Price</button>
                             </div>
-                            <div class="mb-3 col-3">
+                            <div class="mb-3 col-6">
                                 <label for="fullPaymentInput" class="form-label">Full Payment</label>
                                 <input type="text" class="form-control" id="fullPaymentInput"  name="fullPayment">
                                 <span class="control-error"></span>
@@ -648,13 +651,12 @@
                     </form>
 
                     <div class="modal-footer">
-                        <button id="saveButton" type="button" class="btn btn-primary" >Save</button>
-                        <button id="updateButton" type="button" class="btn btn-secondary" >Update</button>
-                        <button id="deleteButton" type="button" class="btn btn-danger" >Delete</button>
-                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                        <button id="paymentSaveButton" type="button" class="btn btn-success" >Save</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
-
+            </div>
+        </div>
         <br>
         <br>
         <br>
@@ -697,13 +699,7 @@
                 </tbody>
             </table>
         </div>
-
     </div>
-
-
-
-    </div>
-
 </main>
 
 
