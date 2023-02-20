@@ -4,6 +4,10 @@ $("#home").click(function (){
     $("#AdminPage").css("display","none")
     $("#CustomersManagerPage").css("display","none")
     $("#PaymentPage").css("display","none")
+    $("#DriversManagerPage").css("display","none")
+    $("#RentalDetailsPage").css("display","none")
+    $("#SchedulePage").css("display","none")
+    $("#IncomePage").css("display","none")
 });
 
 $("#cars").click(function (){
@@ -12,6 +16,10 @@ $("#cars").click(function (){
     $("#AdminPage").css("display","none")
     $("#CustomersManagerPage").css("display","none")
     $("#PaymentPage").css("display","none")
+    $("#DriversManagerPage").css("display","none")
+    $("#RentalDetailsPage").css("display","none")
+    $("#SchedulePage").css("display","none")
+    $("#IncomePage").css("display","none")
 });
 
 $("#admin").click(function (){
@@ -20,6 +28,11 @@ $("#admin").click(function (){
     $("#AdminPage").css("display","block")
     $("#CustomersManagerPage").css("display","none")
     $("#PaymentPage").css("display","none")
+    $("#DriversManagerPage").css("display","none")
+    $("#RentalDetailsPage").css("display","none")
+    $("#SchedulePage").css("display","none")
+    $("#IncomePage").css("display","none")
+
 })
 
 $("#customers").click(function (){
@@ -28,6 +41,10 @@ $("#customers").click(function (){
     $("#AdminPage").css("display","none")
     $("#CustomersManagerPage").css("display","block")
     $("#PaymentPage").css("display","none")
+    $("#DriversManagerPage").css("display","none")
+    $("#RentalDetailsPage").css("display","none")
+    $("#SchedulePage").css("display","none")
+    $("#IncomePage").css("display","none")
 })
 
 $("#payment").click(function (){
@@ -36,5 +53,56 @@ $("#payment").click(function (){
     $("#AdminPage").css("display","none")
     $("#CustomersManagerPage").css("display","none")
     $("#PaymentPage").css("display","block")
+    $("#DriversManagerPage").css("display","none")
+    $("#RentalDetailsPage").css("display","none")
+    $("#SchedulePage").css("display","none")
+    $("#IncomePage").css("display","none")
 })
 
+$("#drivers").click(function (){
+    $("#HomePage").css("display","none")
+    $("#CarManagerPage").css("display","none")
+    $("#AdminPage").css("display","none")
+    $("#CustomersManagerPage").css("display","none")
+    $("#PaymentPage").css("display","none")
+    $("#DriversManagerPage").css("display","block")
+    $("#RentalDetailsPage").css("display","none")
+    $("#SchedulePage").css("display","none")
+    $("#IncomePage").css("display","none")
+})
+
+$("#rentDetails").click(function (){
+    $("#HomePage").css("display","none")
+    $("#CarManagerPage").css("display","none")
+    $("#AdminPage").css("display","none")
+    $("#CustomersManagerPage").css("display","none")
+    $("#PaymentPage").css("display","none")
+    $("#DriversManagerPage").css("display","none")
+    $("#RentalDetailsPage").css("display","block")
+    $("#SchedulePage").css("display","none")
+    $("#IncomePage").css("display","none")
+})
+
+$("#scheduleDetails").click(function (){
+    $("#HomePage").css("display","none")
+    $("#CarManagerPage").css("display","none")
+    $("#AdminPage").css("display","none")
+    $("#CustomersManagerPage").css("display","none")
+    $("#PaymentPage").css("display","none")
+    $("#DriversManagerPage").css("display","none")
+    $("#RentalDetailsPage").css("display","none")
+    $("#SchedulePage").css("display","block")
+    $("#IncomePage").css("display","none")
+})
+
+$("#incomeDetails").click(function (){
+    $("#HomePage").css("display","none")
+    $("#CarManagerPage").css("display","none")
+    $("#AdminPage").css("display","none")
+    $("#CustomersManagerPage").css("display","none")
+    $("#PaymentPage").css("display","none")
+    $("#DriversManagerPage").css("display","none")
+    $("#RentalDetailsPage").css("display","none")
+    $("#SchedulePage").css("display","none")
+    $("#IncomePage").css("display","block")
+})
