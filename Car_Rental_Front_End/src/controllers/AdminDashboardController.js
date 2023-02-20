@@ -37,3 +37,4 @@ $("#payment").click(function (){
     $("#CustomersManagerPage").css("display","none")
     $("#PaymentPage").css("display","block")
 })
+

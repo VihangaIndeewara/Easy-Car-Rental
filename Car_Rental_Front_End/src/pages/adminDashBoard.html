@@ -49,7 +49,19 @@
                         <a class="nav-link a" aria-current="page" id="customers" href="#CustomersManagerPage" >Customers</a>
                     </li>
                     <li class="nav-item ">
+                        <a class="nav-link a" aria-current="page" id="drivers" href="#DriversManagerPage" >Drivers</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link a" aria-current="page" id="rentDetails" href="#RentalDetailsPage" >Rental Details</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link a" aria-current="page" id="scheduleDetails" href="#SchedulePage" >Schedule </a>
+                    </li>
+                    <li class="nav-item ">
                         <a class="nav-link a" aria-current="page" id="payment" href="#PaymentPage" >Payment</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link a" aria-current="page" id="incomeDetails" href="#IncomePage" >Income</a>
                     </li>
                 </ul>
             </div>
@@ -586,6 +598,48 @@
 </main>
 
 
+<!--Driver Manager-->
+<main class="container-fluid" id="DriversManagerPage" style="display: none; height: 1010px; background: #B8AA90">
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class=" topic text-center">Manage Drivers</h1>
+    <br>
+    <br>
+</main>
+
+<!--Rental Details-->
+<main class="container-fluid" id="RentalDetailsPage" style="display: none; height: 1010px; background: #B8AA90">
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class=" topic text-center">Rental Details</h1>
+    <br>
+    <br>
+</main>
+
+<!--Schedule Details-->
+<main class="container-fluid" id="SchedulePage" style="display: none; height: 1010px; background: #B8AA90">
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class=" topic text-center">Schedule Details</h1>
+    <br>
+    <br>
+</main>
+
 <!--Payment-->
 <main class="container-fluid" id="PaymentPage" style="display: none; height: 1010px;background:#B8AA90">
     <div class="container-fluid" >
@@ -652,8 +706,10 @@
 
                         <div class="modal-body  row">
                             <div class="mb-3 col">
-                                <label for="harmOrNotInput" class="form-label">Harm Or Not</label>
-                                <input type="text" class="form-control" id="harmOrNotInput"  name="harmOrNot">
+                                <label for="comboHarmOrNot" class="form-label">Harm Or Not</label>
+                                <select name="harmOrNot" class="form-control" id="comboHarmOrNot">
+                                    <option value="Select">Select</option>
+                                </select>
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col">
@@ -747,7 +803,19 @@
     </div>
 </main>
 
+<!--Income Details-->
+<main class="container-fluid" id="IncomePage" style="display: none; height: 1010px; background: #B8AA90">
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class=" topic text-center">Income Details</h1>
+    <br>
+    <br>
+</main>
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 
 <script src="../controllers/AdminDashboardController.js"></script>
