@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500&display=swap" rel="stylesheet">
+
 
     <style>
         #btnRegister{
@@ -60,8 +63,8 @@
             <ul class="dropdown-menu" >
 
                 <li><a class="dropdown-item" href="#customer" data-bs-toggle="modal">Customer Login</a></li>
-                <li><a class="dropdown-item" href="#">Driver Login</a></li>
-                <li><a class="dropdown-item" href="#">Admin Login</a></li>
+                <li><a class="dropdown-item" href="#driver" data-bs-toggle="modal">Driver Login</a></li>
+                <li><a class="dropdown-item" href="#admin" data-bs-toggle="modal">Admin Login</a></li>
             </ul>
         </div>
     </nav>
@@ -71,16 +74,85 @@
     <div id="customer" class="modal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Customer Login</h5>
+                <div class="modal-header text-center">
+                    <h5 class="modal-title " style="font-family: 'Pacifico', cursive;">Customer Login</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Modal body text goes here.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="CustomerUsernameInput" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="CustomerUsernameInput" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="CustomerPasswordInput" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="CustomerPasswordInput">
+                        </div>
+                        <button type="button" class="btn btn-primary">Login</button>
+                        <button type="button" class="btn btn-primary">Sign Up</button>
+                    </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Login</button>
-                    <button type="button" class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="driver" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <br>
+                    <br>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <br>
+                    <br>
+                    <h3 class="modal-title  text-center" style="font-family: 'Pacifico', cursive;">Driver Login</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <form>
+                        <div class="mb-3">
+                            <label for="DriverUsernameInput" class="form-label" style="font-family: 'Prompt', sans-serif;">Username</label>
+                            <input type="text" class="form-control" id="DriverUsernameInput" >
+                        </div>
+                        <br>
+                        <div class="mb-3">
+                            <label for="DriverPasswordInput" class="form-label" style="font-family: 'Prompt', sans-serif;">Password</label>
+                            <input type="password" class="form-control" id="DriverPasswordInput">
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-primary fw-bold" style="width: 100%">Login</button>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="admin" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="font-family: 'Pacifico', cursive;">Admin Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="AdminUsernameInput" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="AdminUsernameInput" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="AdminPasswordInput" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="AdminPasswordInput">
+                        </div>
+                        <button type="button" class="btn btn-primary">Login</button>
+                    </form>
                 </div>
             </div>
         </div>
