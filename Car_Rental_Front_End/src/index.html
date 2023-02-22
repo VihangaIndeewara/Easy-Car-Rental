@@ -14,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
 
 
     <style>
@@ -51,10 +54,6 @@
         <h1 style="color: #e3f2fd;font-family: 'Gajraj One', cursive;">Easy Car Rental Pvt Ltd</h1>
 
 
-        <a href="../src/pages/signInPage.html"><button style="background: #464444; color: white; border: none; font-weight: bold">Login</button></a>
-
-
-
         <div class="dropdown">
             <a id="login"class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Login
@@ -71,6 +70,7 @@
 </header>
 
 <main>
+<!--    Customer Login-->
     <div id="customer" class="modal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -102,18 +102,13 @@
                         <br>
                         <br>
                         <br>
-                        <div class="form-text text-center fw-bold">Not a member ? sign up</div>
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn-warning fw-bold" style="width: 100%">Sign Up</button>
-                        <br>
-                        <br>
-                        <br>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--    Driver Login-->
 
     <div id="driver" class="modal" tabindex="-1">
         <div class="modal-dialog">
@@ -153,6 +148,8 @@
         </div>
     </div>
 
+    <!--    Admin Login-->
+
     <div id="admin" class="modal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -180,7 +177,7 @@
                         <br>
                         <br>
                         <br>
-                        <button type="button" class="btn btn-primary fw-bold" style="width: 100%">Login</button>
+                        <a href="../src/pages/adminDashBoard.html"> <button type="button" class="btn btn-primary fw-bold" style="width: 100%">Login</button></a>
                         <br>
                         <br>
                         <br>
@@ -219,14 +216,14 @@
 
 <div class="w-75 p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end  " >
 
-    <h2 class="fw-semibold" style="font-family: 'Satisfy', cursive;">About Us</h2>
+    <h2 class="fw-semibold" style="font-family: 'Rye', cursive;">About Us</h2>
     <br>
     <br>
 
-    <pre class="fst-italic fw-normal fs-5">
+    <pre class=" fs-3" style="font-family: 'VT323', monospace;">
 
-        Secure Your Car Hire Today. The Best Price Guaranteed. Book at Over 53,000 Locations. Search, Compare and Save Using the World's Biggest Online
-        Car Rental Service
+        Secure Your Car Hire Today. The Best Price Guaranteed. Book at Over 53,000 Locations. Search, Compare and Save Using the World's Biggest
+        Online Car Rental Service
 
         As the market leader and Sri Lanka's most successful start-up business in recent times, we envision the intelligent upgrade of the local
         transportation industry;consequently inspiring Sri Lanka towards matching global standards in effective problem solving via technology.
@@ -238,12 +235,11 @@
         mutual engagement for the receipt and delivery of a seamless service.
 
 
-
-        <pre class="fw-bold fw-normal fs-4">
-        Address:                            Contact:
-            No:86,                              +94712424242
-            Galle Road,                         +94112424242
-            Dehiwala.
+        <pre class="fs-5" style="font-family: 'Black Ops One', cursive;">
+                    Address:                            Contact:
+                        No:86,                               +94712424242
+                        Galle Road,                      +94112424242
+                        Dehiwala.
         </pre>
     </pre>
 </div>
