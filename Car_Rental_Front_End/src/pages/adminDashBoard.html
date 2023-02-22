@@ -564,6 +564,84 @@
 <main class="container-fluid" id="CustomersManagerPage" style="display: none; height: 1010px;background:#B8AA90">
     <div class="container-fluid" >
 
+
+        <button type="button" class="btn btn-warning col-1 position-absolute"style="width: 150px; height:60px; top: 250px; margin-left: 1860px " data-bs-toggle="modal" data-bs-target="#manageCustomerModal" ><h3 class="fs-5">Manage Customer</h3></button>
+
+        <!--         save modal-->
+        <div class="modal  modal-dialog modal-xl  " id="manageCustomerModal" tabindex="-10" aria-labelledby="manageCustomer"  aria-hidden="true" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header " style="background: #3A4D85; color: white">
+                        <h5 class="modal-title" id="manageCustomerTitle">Manage Customer</h5>
+                    </div>
+
+                    <form id="manageCustomer">
+                        <div class="modal-body  row">
+
+                            <div class="mb-3 col">
+                                <label for="customerIDInput" class="form-label">Customer ID</label>
+                                <input type="text" class="form-control" id="customerIDInput" name="customerID">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="customerNameInput" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="customerNameInput" name="customerName">
+                                <span class="control-error"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="customerAddressInput" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="customerAddressInput" name="customerAddress">
+                                <span class="control-error"></span>
+                            </div>
+                        </div>
+
+
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="customerContactNoInput" class="form-label">Contact No</label>
+                                <input type="text" class="form-control" id="customerContactNoInput"  name="customerContactNo">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="customerEmailInput" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="customerEmailInput"  name="customerEmail">
+                                <span class="control-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col-6">
+                                <label for="customerNICNoInput" class="form-label">NIC No</label>
+                                <input type="text" class="form-control" id="customerNICNoInput"  name="customerNICNo">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col-6">
+                                <label for="customerLicenseNoInput" class="form-label">License No</label>
+                                <input type="text" class="form-control" id="customerLicenseNoInput"  name="customerLicenseNo">
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                    <div class="modal-footer">
+                        <div class="btn-group col-4 gap-1 rounded">
+                            <button class="btn btn-primary" id="btnCustomerSave">Save</button>
+                            <button class="btn btn-secondary" id="btnCustomerUpdate">Update</button>
+                            <button class="btn btn-danger" id="btnCustomerDelete">Delete</button>
+                            <button class="btn btn-warning" id="btnCustomerclear">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <br>
         <br>
         <br>
