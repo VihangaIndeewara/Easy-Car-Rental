@@ -761,8 +761,12 @@
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col-6">
-                                <label for="releaseStatusInput" class="form-label">Release Status</label>
-                                <input type="text" class="form-control" id="releaseStatusInput"  name="releaseStatus">
+                                <label for="comboReleaseStatus" class="form-label">Release Status</label>
+                                <select name="releaseStatus" class="form-control" id="comboReleaseStatus">
+                                    <option value="Select">Select</option>
+                                    <option value="Release">Release</option>
+                                    <option value="Not Released">Not Released</option>
+                                </select>
                                 <span class="control-error"></span>
                             </div>
                         </div>
@@ -794,10 +798,10 @@
                 <thead style="background: gray" >
                 <tr>
                     <th scope="col">Driver Id</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Contact No</th>
-                    <th scope="col">Age</th>
+                    <th scope="col">Driver Name</th>
+                    <th scope="col">Driver Address</th>
+                    <th scope="col">Driver Age</th>
+                    <th scope="col">Driver Contact No</th>
                     <th scope="col">Release Status</th>
                 </tr>
                 </thead>
@@ -806,21 +810,10 @@
                     <td>D001</td>
                     <td>Kamal Perera</td>
                     <td>80, Galle Rd, Galle</td>
-                    <td>+94785252369</td>
                     <td>28</td>
-                    <td>Yes</td>
+                    <td>+94785252369</td>
+                    <td>Release</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <!--                <tr>-->
-                <!--                    <th scope="row">3</th>-->
-                <!--                    <td colspan="2">Larry the Bird</td>-->
-                <!--                    <td>@twitter</td>-->
-                <!--                </tr>-->
                 </tbody>
             </table>
         </div>
