@@ -41,6 +41,11 @@
         .card{
             box-shadow:  4px 8px 8px 8px #464444;
         }
+
+        .cusImages{
+            width:35px;
+            height:35px;
+        }
     </style>
 </head>
 
@@ -657,41 +662,32 @@
             <div  class="container-fluid " style=" width: 1900px; height:580px ;">
                 <table class="table table-striped "  >
                     <thead style="background: gray" >
-                    <tr>
-                        <th scope="col">Customer Id</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Contact No</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">NIC No</th>
-                        <th scope="col">License No</th>
-                        <th scope="col">Username</th>
-                        <th scope="col">Password</th>
-                    </tr>
+                        <tr>
+                            <th scope="col">Customer Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Contact No</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">NIC No</th>
+                            <th scope="col">License No</th>
+                            <th scope="col">Customer Image</th>
+                            <th scope="col">NIC Image</th>
+                            <th scope="col">License Image</th>
+                        </tr>
                     </thead>
                     <tbody class="table-light fs-6 fw-bold">
-                    <tr>
-                        <td>C001</td>
-                        <td>Kamal Perera</td>
-                        <td>80, Galle Rd, Galle</td>
-                        <td>+94785252369</td>
-                        <td>kamal123@gmail.com</td>
-                        <td>982536125v</td>
-                        <td>B745D4475</td>
-                        <td>kamal123</td>
-                        <td>perera1234</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <!--                <tr>-->
-                    <!--                    <th scope="row">3</th>-->
-                    <!--                    <td colspan="2">Larry the Bird</td>-->
-                    <!--                    <td>@twitter</td>-->
-                    <!--                </tr>-->
+                        <tr>
+                            <td>C001</td>
+                            <td>Kamal Perera</td>
+                            <td>80, Galle Rd, Galle</td>
+                            <td>+94785252369</td>
+                            <td>kamal123@gmail.com</td>
+                            <td>982536125v</td>
+                            <td>B745D4475</td>
+                            <td><img class="cusImages" src="../assets/images/client.jpg" alt="customer" ></td>
+                            <td><img class="cusImages" src="../assets/images/nic.jpg" alt="nic" ></td>
+                            <td><img class="cusImages" src="../assets/images/license.jpg" alt="license" ></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -724,6 +720,21 @@
                     </div>
 
                     <form id="manageDriver">
+                        <div class="modal-body  row">
+
+                            <div class="mb-3 col">
+                                <label for="driverUsernameInput" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="driverUsernameInput" name="driverUsername">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="driverPasswordInput" class="form-label">Password</label>
+                                <input type="text" class="form-control" id="driverPasswordInput" name="driverPassword">
+                                <span class="control-error"></span>
+                            </div>
+                        </div>
+
+
                         <div class="modal-body  row">
 
                             <div class="mb-3 col">
