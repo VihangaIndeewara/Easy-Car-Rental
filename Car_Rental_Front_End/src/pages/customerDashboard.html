@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Driver Dashboard</title>
+    <title>Customer Dashboard</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
 <header>
@@ -34,69 +36,19 @@
 
             </div>
         </div>
-
-
     </nav>
 </header>
 
-<!--Driver Dashboard-->
-<main class="container-fluid"  style=" height: 1010px; background: #B8AA90">
+<!--Customer Dashboard-->
+<main class="container-fluid" id="CustomerDashboard" style=" height: 1010px;">
+    <img src="../assets/images/cusDashboardimage.jpg" alt="dashbpardimage" style=" height: 1010px; width: 2304px; position: absolute; left: 0">
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 class=" topic text-center">Driver Dashboard</h1>
-    <br>
-    <h5 class="text-center" style="color: dimgray">Schedule Information</h5>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div  class="container-fluid " style=" width: 1600px; height:580px;">
-        <table class="table table-striped "  >
-            <thead style="background: gray" >
-            <tr>
-                <th scope="col">Schedule Id</th>
-                <th scope="col">Reserve Id</th>
-                <th scope="col">Car Id</th>
-                <th scope="col">Driver Id</th>
-                <th scope="col">Pickup Date</th>
-                <th scope="col">Pickup Time</th>
-                <th scope="col">Pickup Venue</th>
-                <th scope="col">Return Date</th>
-                <th scope="col">Return Time</th>
-                <th scope="col">Return Venue</th>
-                <th scope="col">Release Or Not</th>
-            </tr>
-            </thead>
-            <tbody class="table-light fs-6 fw-bold">
-            <tr>
-                <td>S000001</td>
-                <td>R000001</td>
-                <td>C000001</td>
-                <td>D000001</td>
-                <td>02/18/2023</td>
-                <td>09.00</td>
-                <td>Boralesgamuwa</td>
-                <td>02/18/2023</td>
-                <td>13.00</td>
-                <td>Colombo City Center</td>
-                <td>Not Release </td>
-            </tr>
+    <div>
 
-            </tbody>
-        </table>
     </div>
+
 </main>
 
 
-<script src="../assets/js/jquery-3.6.1.min.js"></script>
-
-<script src="../controllers/AdminDashboardController.js"></script>
-
-<script src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>
