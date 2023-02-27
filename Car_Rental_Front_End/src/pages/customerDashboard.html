@@ -43,10 +43,58 @@
 <main class="container-fluid" id="CustomerDashboard" style=" height: 1010px;">
     <img src="../assets/images/cusDashboardimage.jpg" alt="dashbpardimage" style=" height: 1010px; width: 2304px; position: absolute; left: 0">
 
-    <div>
+    <section class="container " style="position: absolute;background: white">
+        <form id="customerForm">
+            <div class="row">
 
-    </div>
+                <div class="form-group col">
+                    <labal></labal>
+                    <input class="form-control" id="txtPickupDate" required type="date" >
+                    <span class="control-error" ></span>
+                </div>
+                <div class="form-group col">
+                    <input class="form-control" id="txtPickupTime" required type="time">
+                    <span class="control-error" ></span>
+                </div>
+                <div class="form-group col">
+                    <input class="form-control" id="txtReturnDate" required type="date" >
+                    <span class="control-error" ></span>
+                </div>
+                <div class="form-group col">
+                    <input class="form-control" id="txtReturnTime" required type="time">
+                    <span class="control-error" ></span>
+                </div>
+            </div>
 
+            <br>
+
+            <div class="row" >
+                <div class="form-group col">
+                    <input class="form-control" id="txtPickupLocation" type="text" placeholder="Pickup Location">
+                    <span class="control-error" ></span>
+                </div>
+                <div class="form-group col">
+                    <input class="form-control" id="txtDropLocation" type="text" placeholder="Drop Location">
+                    <span class="control-error"></span>
+                </div>
+                <div class="form-group col">
+                    <input class="form-control" id="txtJourneyDuration" type="text" placeholder="Journey Duration">
+                    <span class="control-error"></span>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="btn-group col-4 gap-1 rounded">
+                    <button class="btn btn-primary" id="btnCustomer">Search Vehicle</button>
+                </div>
+            </div>
+            <br>
+            <br>
+        </form>
+    </section>
 </main>
 
 
