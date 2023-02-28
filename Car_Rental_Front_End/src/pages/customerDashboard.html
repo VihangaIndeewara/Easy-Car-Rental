@@ -26,8 +26,6 @@
             border-radius: 20px;
             border: 1px solid  rgba(255,255,0,0.18);
             box-shadow: 0 8px 32px 0  rgba(0,0,0,0.37);
-            top: 450px;
-            left: 80px;
         }
 
         .topic{
@@ -39,6 +37,22 @@
             width: max-content;
             margin: auto;
         }
+
+        #btnSearchVehicle{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 450px;
+        }
+        #btnEditVehicle{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 450px;
+        }
+
     </style>
 
 </head>
@@ -62,8 +76,8 @@
 </header>
 
 <!--Customer Dashboard-->
-<main class="container-fluid" id="CustomerDashboard" style=" height: 1010px;">
-    <img src="../assets/images/cusDashboardimage.jpg" alt="dashbpardimage" style=" height: 1010px; width: 2304px; position: absolute; left: 0">
+<main class="container-fluid" id="CustomerDashboardPage" style="display: block; height: 1010px;">
+    <img src="../assets/images/cusDashboardimage.jpg" alt="dashboardimage" style=" height: 1010px; width: 2304px; position: absolute; left: 0">
 
     <br>
     <br>
@@ -73,7 +87,7 @@
     <h1 class=" topic  ">Search The Car For Rent</h1>
     <br>
     <br>
-    <section class="container rounded-4 bg- glass" style="position: absolute;">
+    <section class="container rounded-4 glass position-absolute"  style=" top: 450px;left: 80px;">
         <form id="customerForm">
             <div class="row">
 
@@ -120,18 +134,94 @@
             <br>
 
             <div class=" row">
-                <div class="btn-group col-4 gap-1 rounded">
-                </div>
-                <div class="btn-group col-4 gap-1 rounded">
-                    <button class="btn btn-primary fw-bold"  id="btnCustomer" >Search Vehicle</button>
+                <div class="btn-group  gap-1 rounded">
+                    <a href="#VehiclePage"> <button type="button" aria-current="page" class="btn btn-primary fw-bold"  id="btnSearchVehicle" >Search Vehicle</button></a>
                 </div>
             </div>
+            <br>
             <br>
             <br>
         </form>
     </section>
 </main>
 
+<main class="container-fluid" id="VehiclePage" style="display: none; height: 1010px;background:#CBE1E6">
+    <div>
+        <img src="../assets/images/searchVehicleBackground.png" alt="background" style=" height:800px; width: 2304px; position: absolute; left: 0">
 
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h1 class=" topic  ">Select Your Car</h1>
+        <br>
+        <div class="container rounded-4 glass position-absolute" style="top: 400px;left: 0;right: 0;">
+        <form id="editCustomerForm">
+            <div class="row">
+
+                <div class="form-group col">
+                    <label class="fw-bold">Pickup</label>
+                    <input class="form-control" id="txtEditPickupDate" required type="date" >
+                    <span class="control-error" ></span>
+                </div>
+                <div class="form-group col">
+                    <label></label>
+                    <input class="form-control" id="txtEditPickupTime" required type="time">
+                    <span class="control-error" ></span>
+                </div>
+                <div class="form-group col">
+                    <label class="fw-bold">Drop</label>
+                    <input class="form-control" id="txtEditReturnDate" required type="date" >
+                    <span class="control-error" ></span>
+                </div>
+                <div class="form-group col">
+                    <label></label>
+                    <input class="form-control" id="txtEditReturnTime" required type="time">
+                    <span class="control-error" ></span>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row" >
+                <div class="form-group col">
+                    <input class="form-control" id="txtEditPickupLocation" type="text" placeholder="Pickup Location">
+                    <span class="control-error" ></span>
+                </div>
+                <div class="form-group col">
+                    <input class="form-control" id="txtEditDropLocation" type="text" placeholder="Drop Location">
+                    <span class="control-error"></span>
+                </div>
+                <div class="form-group col">
+                    <input class="form-control" id="txtEditJourneyDuration" type="text" placeholder="Journey Duration">
+                    <span class="control-error"></span>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class=" row">
+                <div class="btn-group  gap-1 rounded">
+                   <button type="button" class="btn btn-primary fw-bold"  id="btnEditVehicle" >Edit</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </form>
+        </div>
+    </div>
+
+    <div></div>
+
+</main>
+
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
+
+<script src="../controllers/CustomerDashboardController.js"></script>
+
+<script src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>
