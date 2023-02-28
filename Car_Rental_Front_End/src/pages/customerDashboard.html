@@ -18,6 +18,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
+    <style>
+        .glass{
+            background: linear-gradient(135deg, #bbc5c9,rgba(255,255,255,0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid  rgba(255,255,0,0.18);
+            box-shadow: 0 8px 32px 0  rgba(0,0,0,0.37);
+            top: 450px;
+            left: 80px;
+        }
+
+        .topic{
+            position: absolute;
+            font-family: 'Russo One', sans-serif;
+            color: rgba(255, 255, 0, 0.3);
+            left: 0;
+            right: 0;
+            width: max-content;
+            margin: auto;
+        }
+    </style>
 
 </head>
 <body>
@@ -43,24 +65,35 @@
 <main class="container-fluid" id="CustomerDashboard" style=" height: 1010px;">
     <img src="../assets/images/cusDashboardimage.jpg" alt="dashbpardimage" style=" height: 1010px; width: 2304px; position: absolute; left: 0">
 
-    <section class="container " style="position: absolute;background: white">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class=" topic  ">Search The Car For Rent</h1>
+    <br>
+    <br>
+    <section class="container rounded-4 bg- glass" style="position: absolute;">
         <form id="customerForm">
             <div class="row">
 
                 <div class="form-group col">
-                    <labal></labal>
+                    <label class="fw-bold">Pickup</label>
                     <input class="form-control" id="txtPickupDate" required type="date" >
                     <span class="control-error" ></span>
                 </div>
                 <div class="form-group col">
+                    <label></label>
                     <input class="form-control" id="txtPickupTime" required type="time">
                     <span class="control-error" ></span>
                 </div>
                 <div class="form-group col">
+                    <label class="fw-bold text-white">Drop</label>
                     <input class="form-control" id="txtReturnDate" required type="date" >
                     <span class="control-error" ></span>
                 </div>
                 <div class="form-group col">
+                    <label></label>
                     <input class="form-control" id="txtReturnTime" required type="time">
                     <span class="control-error" ></span>
                 </div>
@@ -86,9 +119,11 @@
             <br>
             <br>
 
-            <div class="row">
+            <div class=" row">
                 <div class="btn-group col-4 gap-1 rounded">
-                    <button class="btn btn-primary" id="btnCustomer">Search Vehicle</button>
+                </div>
+                <div class="btn-group col-4 gap-1 rounded">
+                    <button class="btn btn-primary fw-bold"  id="btnCustomer" >Search Vehicle</button>
                 </div>
             </div>
             <br>
