@@ -9,3 +9,9 @@ $(".bookNow").click(function (){
     $("#VehiclePage").css("display","none")
     $("#VehicleBookingPage").css("display","block")
 })
+
+$("#back").click(function (){
+    $("#CustomerDashboardPage").css("display","none")
+    $("#VehiclePage").css("display","block")
+    $("#VehicleBookingPage").css("display","none")
+})
