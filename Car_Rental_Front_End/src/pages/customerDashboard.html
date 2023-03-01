@@ -28,6 +28,15 @@
             box-shadow: 0 8px 32px 0  rgba(0,0,0,0.37);
         }
 
+        .tableBackground{
+            background: linear-gradient(135deg,#ECEDEE,#ECEDEE);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid  rgba(255,255,0,0.18);
+            box-shadow: 0 8px 32px 0  rgba(0,0,0,0.37);
+        }
+
         .glassBackground{
             background: linear-gradient(135deg, rgba(255,255,0,0.13),rgba(255,255,0,0.13));
         }
@@ -61,6 +70,11 @@
         .img{
             width: 100%;
             height: 40%;
+        }
+
+        .carImages{
+            width:100px;
+            height:50px;
         }
 
     </style>
@@ -499,7 +513,7 @@
 </main>
 
 <!-- Vehicle Booking-->
-<main class="container-fluid" id="VehicleBookingPage" style="display: none; height: 1010px;background: #9C9B9B">
+<main class="container-fluid" id="VehicleBookingPage" style="display: none; height: 1010px;background: #D6D6D6">
 
     <br>
     <br>
@@ -514,7 +528,7 @@
     <br>
 
     <div class="row">
-    <div class="container col rounded-4 glass position-absolute"  style=" top: 350px;left: 80px; width: 600px; ">
+    <div class="container col rounded-4 glass position-absolute"  style=" top: 350px;left: 80px; width: 600px;background: #BAB9B9 ">
         <br>
         <h3 class="text-center">Booking Details</h3>
         ------------------------------------------------------------------------------------------
@@ -574,16 +588,18 @@
             <br>
         </form>
         <br>
+
+
         <br>
     </div>
 
 
     </div>
 
-    <div class="row">
-        <div class="container col-6 rounded-4 glass glassBackground position-absolute"  style=" top: 350px; width: 1400px; left: 800px;">
+    <div class="col">
+        <div class="container row rounded-4 glass glassBackground position-absolute"  style=" top: 350px; width: 1400px; left: 800px;">
             <h3 class="text-center">Customer Details</h3>
-            ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <br>
             <br>
             <form id="customerBookingForm">
@@ -612,6 +628,37 @@
                 <br>
             </form>
         </div>
+
+        <!--Table-->
+        <div  class=" row container-fluid position-absolute tableBackground" style=" width: 1330px; height:300px;left: 800px;top: 632px">
+            <table class="table table-striped  text-center"  >
+                <thead  style="background: gray" >
+                <tr>
+                    <th scope="col">Car Image</th>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Driver</th>
+                    <th scope="col">Driver Name</th>
+                    <th scope="col">Driver Contact</th>
+                    <th scope="col">Loss Damage Waiver Payment</th>
+                </tr>
+                </thead>
+                <tbody class="table-light fs-5 fw-bold">
+                <tr>
+                    <td><img class="carImages" src="../assets/images/allion.jpg" alt="car" ></td>
+                    <td>Toyota Allion</td>
+                    <td>White</td>
+                    <td>Premium</td>
+                    <td style="color:#589DF6;"><input type="checkbox" >  If you need a driver click me</td>
+                    <td>none</td>
+                    <td>none</td>
+                    <td>10000</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 
 </main>
