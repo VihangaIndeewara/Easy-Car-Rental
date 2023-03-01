@@ -28,6 +28,10 @@
             box-shadow: 0 8px 32px 0  rgba(0,0,0,0.37);
         }
 
+        .glassBackground{
+            background: linear-gradient(135deg, rgba(255,255,0,0.13),rgba(255,255,0,0.13));
+        }
+
         .topic{
             position: absolute;
             font-family: 'Russo One', sans-serif;
@@ -37,6 +41,7 @@
             width: max-content;
             margin: auto;
         }
+
 
         #btnSearchVehicle{
             position: absolute;
@@ -494,7 +499,7 @@
 </main>
 
 <!-- Vehicle Booking-->
-<main class="container-fluid" id="VehicleBookingPage" style="display: none; height: 1010px;background: #B8AA90">
+<main class="container-fluid" id="VehicleBookingPage" style="display: none; height: 1010px;background: #9C9B9B">
 
     <br>
     <br>
@@ -502,47 +507,68 @@
     <br>
     <br>
     <br>
-    <h1 class=" text-center" style="color: black">Vehicle Booking Form</h1>
+    <h1 class=" text-center" style="color: black; font-family: 'Russo One', sans-serif;">Vehicle Booking Form</h1>
     <br>
     <br>
     <br>
     <br>
 
-    <div class="container rounded-4 glass position-absolute"  style=" top: 350px;left: 80px; width: 500px">
+    <div class="row">
+    <div class="container col rounded-4 glass position-absolute"  style=" top: 350px;left: 80px; width: 600px; ">
         <br>
-        <h3 class="text-center">Customer Details</h3>
+        <h3 class="text-center">Booking Details</h3>
+        ------------------------------------------------------------------------------------------
         <br>
-        <form id="customerBookingForm">
+        <br>
+        <br>
+        <form id="BookingForm">
             <div class="row">
                 <div class="form-group col">
-                    <label for="txtBookingCusName" class="fw-bold">Id</label>
-                    <input class="form-control" id="txtBookingCusId"  type="text">
+                    <label for="txtBookingPickupDate" class="fw-bold">Pickup Date</label>
+                    <input class="form-control" id="txtBookingPickupDate"  type="text">
+                    <span class="control-error" ></span>
+                </div>
+                <div class="form-group col">
+                    <label for="txtBookingPickupTime" class="fw-bold">Pickup Time</label>
+                    <input class="form-control" id="txtBookingPickupTime"  type="text" >
+                    <span class="control-error" ></span>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="form-group col">
+                    <label  for="txtBookingReturnDate" class="fw-bold">Return Date</label>
+                    <input class="form-control" id="txtBookingReturnDate"  type="text">
+                    <span class="control-error" ></span>
+                </div>
+                <div class="form-group col">
+                    <label  for="txtBookingReturnTime" class="fw-bold ">Return Time</label>
+                    <input class="form-control" id="txtBookingReturnTime"  type="text" >
                     <span class="control-error" ></span>
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="form-group col">
-                    <label for="txtBookingCusName" class="fw-bold">Name</label>
-                    <input class="form-control" id="txtBookingCusName"  type="text" >
+                    <label  for="txtBookingPickupLocation" class="fw-bold">Pickup Location</label>
+                    <input class="form-control" id="txtBookingPickupLocation"  type="text">
+                    <span class="control-error" ></span>
+                </div>
+                <div class="form-group col">
+                    <label  for="txtBookingReturnLocation" class="fw-bold ">Return Location</label>
+                    <input class="form-control" id="txtBookingReturnLocation"  type="text" >
                     <span class="control-error" ></span>
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="form-group col">
-                    <label  for="txtBookingCusContact" class="fw-bold">Contact No</label>
-                    <input class="form-control" id="txtBookingCusContact"  type="text">
+                    <label  for="txtBookingDuration" class="fw-bold ">Duration</label>
+                    <input class="form-control" id="txtBookingDuration"  type="text" >
                     <span class="control-error" ></span>
                 </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="form-group col">
-                    <label  for="txtBookingCusNic" class="fw-bold ">NIC</label>
-                    <input class="form-control" id="txtBookingCusNic"  type="text" >
-                    <span class="control-error" ></span>
-                </div>
+                <div class="form-group col"></div>
             </div>
             <br>
             <br>
@@ -551,6 +577,42 @@
         <br>
     </div>
 
+
+    </div>
+
+    <div class="row">
+        <div class="container col-6 rounded-4 glass glassBackground position-absolute"  style=" top: 350px; width: 1400px; left: 800px;">
+            <h3 class="text-center">Customer Details</h3>
+            ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            <br>
+            <br>
+            <form id="customerBookingForm">
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="txtBookingCusName" class="fw-bold">Id</label>
+                        <input class="form-control" id="txtBookingCusId"  type="text">
+                        <span class="control-error" ></span>
+                    </div>
+                    <div class="form-group col">
+                        <label for="txtBookingCusName" class="fw-bold">Name</label>
+                        <input class="form-control" id="txtBookingCusName"  type="text" >
+                        <span class="control-error" ></span>
+                    </div>
+                    <div class="form-group col">
+                        <label  for="txtBookingCusContact" class="fw-bold">Contact No</label>
+                        <input class="form-control" id="txtBookingCusContact"  type="text">
+                        <span class="control-error" ></span>
+                    </div>
+                    <div class="form-group col">
+                        <label  for="txtBookingCusNic" class="fw-bold ">NIC</label>
+                        <input class="form-control" id="txtBookingCusNic"  type="text" >
+                        <span class="control-error" ></span>
+                    </div>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
 
 </main>
 
