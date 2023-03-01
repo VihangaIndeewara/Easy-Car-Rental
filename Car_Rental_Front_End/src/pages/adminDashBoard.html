@@ -19,32 +19,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
     <style>
-        .a{
+        .a {
             color: white;
             font-size: 20px;
         }
 
-        .topic{
+        .topic {
             font-family: 'Russo One', sans-serif;
         }
 
 
-        .navbar-nav{
+        .navbar-nav {
             margin-right: 150px;
 
         }
 
-        .nav-item{
+        .nav-item {
             padding-left: 30px;
         }
 
-        .card{
-            box-shadow:  4px 8px 8px 8px #464444;
+        .card {
+            box-shadow: 4px 8px 8px 8px #464444;
         }
 
-        .cusImages{
-            width:35px;
-            height:35px;
+        .cusImages {
+            width: 35px;
+            height: 35px;
+        }
+
+        .glass {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 0, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
     </style>
 </head>
@@ -58,41 +66,46 @@
         <div class="container-fluid">
             <h1 style="color: #e3f2fd;font-family: 'Gajraj One', cursive;">Easy Car Rental</h1>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse"  style="position:absolute;right: 15px" id="navbarNavDropdown">
-                <ul class="navbar-nav " >
+            <div class="collapse navbar-collapse" style="position:absolute;right: 15px" id="navbarNavDropdown">
+                <ul class="navbar-nav ">
                     <li class="nav-item ">
-                        <a class="nav-link  a" aria-current="page" id="home" href="#HomePage"  >Home</a>
+                        <a class="nav-link  a" aria-current="page" id="home" href="#HomePage">Home</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link a" aria-current="page" id="admin" href="#AdminPage">Admin</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link a" aria-current="page" id="cars" href="#CarManagerPage" >Cars</a>
+                        <a class="nav-link a" aria-current="page" id="cars" href="#CarManagerPage">Cars</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link a" aria-current="page" id="customers" href="#CustomersManagerPage" >Customers</a>
+                        <a class="nav-link a" aria-current="page" id="customers"
+                           href="#CustomersManagerPage">Customers</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link a" aria-current="page" id="drivers" href="#DriversManagerPage" >Drivers</a>
+                        <a class="nav-link a" aria-current="page" id="drivers" href="#DriversManagerPage">Drivers</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link a" aria-current="page" id="reservations" href="#ReservationsPage" >Reservations</a>
+                        <a class="nav-link a" aria-current="page" id="reservations" href="#ReservationsPage">Reservations</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link a" aria-current="page" id="scheduleDetails" href="#SchedulePage" >Schedule </a>
+                        <a class="nav-link a" aria-current="page" id="scheduleDetails"
+                           href="#SchedulePage">Schedule </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link a" aria-current="page" id="payment" href="#PaymentPage" >Payment</a>
+                        <a class="nav-link a" aria-current="page" id="payment" href="#PaymentPage">Payment</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link a" aria-current="page" id="incomeDetails" href="#IncomePage" >Income</a>
+                        <a class="nav-link a" aria-current="page" id="incomeDetails" href="#IncomePage">Income</a>
                     </li>
                 </ul>
-                <a href="../index.html" style="width: 200px"><button class="btn btn-danger fw-bold" style=" width: 200px;">Log Out</button></a>
+                <a href="../index.html" style="width: 200px">
+                    <button class="btn btn-danger fw-bold" style=" width: 200px;">Log Out</button>
+                </a>
 
             </div>
         </div>
@@ -102,33 +115,36 @@
 </header>
 
 <main class="container-fluid" id="HomePage" style="display: block; height: 1010px;background:#B8AA90">
-<br>
-<br>
-    <br>
-<h1 class="topic text-center">Admin DashBoard</h1>
 
-<br>
     <br>
-<div class="jumbotron pt-md-5">
-    <div id="home-tiles">
-        <div class="row ">
+    <br>
+    <br>
+    <h1 class="topic text-center">Admin DashBoard</h1>
 
-            <div class="col-lg-6 col-xl-3 mb-2 ">
+    <br>
+    <br>
+    <div class="jumbotron pt-md-5" style="margin-left: 80px">
+        <div id="home-tiles">
+            <div class="row gap-5">
+
+                <div class="col-lg-6 col-xl-3 mb-2 " style="width: 500px;">
                     <div class="card ">
-                        <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">Registered Users</h3></div>
+                        <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">
+                            Registered Users</h3></div>
                         <div class="card-body " style="background: #D3CBBB">
-                            <div class="dash-tile-icon" >
+                            <div class="dash-tile-icon">
                                 <img src="../assets/images/User.jpg" width="200" height="200">
                             </div>
                             <div class="dash-tile-text text-lg-end text-black "><h2>150</h2></div>
                         </div>
                     </div>
-            </div>
+                </div>
 
 
-            <div class="col-lg-6 col-xl-3 mb-2">
+                <div class="col-lg-6 col-xl-3 mb-2" style="width: 500px">
                     <div class="card">
-                        <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">Total Booking For Today</h3></div>
+                        <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">
+                            Total Booking For Today</h3></div>
                         <div class="card-body" style="background: #D3CBBB">
                             <div class="dash-tile-icon">
                                 <img src="../assets/images/Booking.jpg" width="200" height="200">
@@ -136,11 +152,12 @@
                             <div class="dash-tile-text text-lg-end text-black"><h2>350</h2></div>
                         </div>
                     </div>
-            </div>
+                </div>
 
-            <div class="col-lg-6 col-xl-3 mb-2">
+                <div class="col-lg-6 col-xl-3 mb-2" style="width: 500px">
                     <div class="card">
-                        <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">Available Car Count</h3></div>
+                        <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">
+                            Available Car Count</h3></div>
                         <div class="card-body" style="background: #D3CBBB">
                             <div class="dash-tile-icon">
                                 <img src="../assets/images/BlueCar.jpg" width="200" height="200">
@@ -148,11 +165,12 @@
                             <div class="dash-tile-text text-lg-end text-black"><h2>20</h2></div>
                         </div>
                     </div>
-            </div>
+                </div>
 
-            <div class="col-lg-6 col-xl-3 mb-2">
+                <div class="col-lg-6 col-xl-3 mb-2" style="width: 500px">
                     <div class="card">
-                        <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">Reserved Car Count</h3></div>
+                        <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">
+                            Reserved Car Count</h3></div>
                         <div class="card-body" style="background: #D3CBBB">
                             <div class="dash-tile-icon" style="">
                                 <img src="../assets/images/BlueCar.jpg" width="200" height="200">
@@ -160,77 +178,81 @@
                             <div class="dash-tile-text text-lg-end text-black"><h2>420</h2></div>
                         </div>
                     </div>
-            </div>
+                </div>
 
 
-            <div class="col-lg-6 col-xl-3 mb-2">
-                <div class="card">
-                    <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">Available Drivers</h3></div>
-                    <div class="card-body" style="background: #D3CBBB">
-                        <div class="dash-tile-icon">
-                            <img src="../assets/images/driver.jpg" width="200" height="200">
+                <div class="col-lg-6 col-xl-3 mb-2" style="width: 500px">
+                    <div class="card">
+                        <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">
+                            Available Drivers</h3></div>
+                        <div class="card-body" style="background: #D3CBBB">
+                            <div class="dash-tile-icon">
+                                <img src="../assets/images/driver.jpg" width="200" height="200">
+                            </div>
+                            <div class="dash-tile-text text-lg-end text-black "><h2>150</h2></div>
                         </div>
-                        <div class="dash-tile-text text-lg-end text-black "><h2>150</h2></div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-lg-6 col-xl-3 mb-2">
-                <div class="card">
-                    <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">Occupied Drivers</h3></div>
-                    <div class="card-body" style="background: #D3CBBB">
-                        <div class="dash-tile-icon">
-                            <img src="../assets/images/driver.jpg" width="200" height="200">
+                <div class="col-lg-6 col-xl-3 mb-2" style="width: 500px">
+                    <div class="card">
+                        <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">
+                            Occupied Drivers</h3></div>
+                        <div class="card-body" style="background: #D3CBBB">
+                            <div class="dash-tile-icon">
+                                <img src="../assets/images/driver.jpg" width="200" height="200">
+                            </div>
+                            <div class="dash-tile-text text-lg-end text-black"><h2>350</h2></div>
                         </div>
-                        <div class="dash-tile-text text-lg-end text-black"><h2>350</h2></div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-lg-6 col-xl-3 mb-2">
-                <div class="card">
-                    <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white"> Car Need Maintenance</h3></div>
-                    <div class="card-body" style="background: #D3CBBB">
-                        <div class="dash-tile-icon">
-                            <img src="../assets/images/Maintenace.jpg" width="200" height="200">
+                <div class="col-lg-6 col-xl-3 mb-2" style="width: 500px">
+                    <div class="card">
+                        <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">
+                            Car Need Maintenance</h3></div>
+                        <div class="card-body" style="background: #D3CBBB">
+                            <div class="dash-tile-icon">
+                                <img src="../assets/images/Maintenace.jpg" width="200" height="200">
+                            </div>
+                            <div class="dash-tile-text text-lg-end text-black"><h2>20</h2></div>
                         </div>
-                        <div class="dash-tile-text text-lg-end text-black"><h2>20</h2></div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-lg-6 col-xl-3 mb-2">
-                <div class="card">
-                    <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">Car Under Maintenance</h3></div>
-                    <div class="card-body" style="background: #D3CBBB">
-                        <div class="dash-tile-icon" style="">
-                            <img src="../assets/images/Maintenace.jpg" width="200" height="200">
+                <div class="col-lg-6 col-xl-3 mb-2" style="width: 500px">
+                    <div class="card">
+                        <div class="card-header font-weight-bolder" style="background: gray"><h3 style="color: white">
+                            Car Under Maintenance</h3></div>
+                        <div class="card-body" style="background: #D3CBBB">
+                            <div class="dash-tile-icon" style="">
+                                <img src="../assets/images/Maintenace.jpg" width="200" height="200">
+                            </div>
+                            <div class="dash-tile-text text-lg-end text-black"><h2>420</h2></div>
                         </div>
-                        <div class="dash-tile-text text-lg-end text-black"><h2>420</h2></div>
                     </div>
                 </div>
+
+
             </div>
-
-
         </div>
     </div>
-</div>
 </main>
 
 <!--Admin Manager-->
 <main class="container-fluid" id="AdminPage" style="display: none; height: 1010px; background: #B8AA90">
+    <br>
+    <br>
+    <br>
+    <section class="container glass">
+        <br>
+        <br>
+        <br>
+        <h1 class=" topic text-center">Admin Form</h1>
+        <br>
+        <br>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 class=" topic text-center">Admin Form</h1>
-    <br>
-    <br>
 
-    <section class="container ">
         <form id="adminForm">
             <div class="row">
 
@@ -248,7 +270,7 @@
 
             <br>
 
-            <div class="row" >
+            <div class="row">
                 <div class="form-group col">
                     <label for="txtAdminUsername" class="fw-bold">Admin Username</label>
                     <input class="form-control" id="txtAdminUsername" type="text">
@@ -276,46 +298,45 @@
         </form>
 
 
+        <!--    Table-->
 
-    <!--    Table-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div  class="container-fluid " style=" width: 1300px; height:400px ;">
-        <table class="table table-striped "  >
-            <thead style="background: gray">
-            <tr>
-                <th scope="col">Admin Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Username</th>
-                <th scope="col">Password</th>
-            </tr>
-            </thead>
-            <tbody class="table-light fs-6 fw-bold">
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-            <!--                <tr>-->
-            <!--                    <th scope="row">3</th>-->
-            <!--                    <td colspan="2">Larry the Bird</td>-->
-            <!--                    <td>@twitter</td>-->
-            <!--                </tr>-->
-            </tbody>
-        </table>
-    </div>
+        <div class="container-fluid " style=" width: 1300px; height:350px ;">
+            <table class="table table-striped ">
+                <thead style="background: gray">
+                <tr>
+                    <th scope="col">Admin Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password</th>
+                </tr>
+                </thead>
+                <tbody class="table-light fs-6 fw-bold">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <!--                <tr>-->
+                <!--                    <th scope="row">3</th>-->
+                <!--                    <td colspan="2">Larry the Bird</td>-->
+                <!--                    <td>@twitter</td>-->
+                <!--                </tr>-->
+                </tbody>
+            </table>
+        </div>
 
 
     </section>
@@ -323,255 +344,264 @@
 </main>
 
 
-
 <!--Car Manager-->
 
-<main class="container-fluid" id="CarManagerPage" style="display: none;background:#B8AA90">
+<main class="container-fluid " id="CarManagerPage" style="display: none;background:#B8AA90">
 
-        <!--    Add Car-->
-        <div class="container-fluid" style=" width: 2200px; height: 1010px;">
+    <!--    Add Car-->
+    <div class="container-fluid " style=" width: 2200px; height: 1010px;">
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <h1 class="topic text-center">Manage Cars</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="topic text-center">Manage Cars</h1>
 
 
+        <button type="button" class="btn btn-warning col-1 " style="width: 120px; height: 70px; margin-left: 1550px "
+                data-bs-toggle="modal" data-bs-target="#addCarModal"><h3 class="fs-4">Manage Car</h3></button>
 
-            <button type="button" class="btn btn-warning col-1 "style="width: 120px; height: 70px; margin-left: 1550px " data-bs-toggle="modal" data-bs-target="#addCarModal" ><h3 class="fs-4">Manage Car</h3></button>
+        <!--         save modal-->
+        <div class="modal  modal-dialog modal-xl  " id="addCarModal" tabindex="-10" aria-labelledby="addCar"
+             aria-hidden="true" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header " style="background: #3A4D85; color: white">
+                        <h5 class="modal-title" id="saveModalTitle">Add New Car</h5>
+                    </div>
 
-            <!--         save modal-->
-            <div class="modal  modal-dialog modal-xl  " id="addCarModal" tabindex="-10" aria-labelledby="addCar"  aria-hidden="true" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header " style="background: #3A4D85; color: white">
-                            <h5 class="modal-title" id="saveModalTitle">Add New Car</h5>
+                    <form id="addCar">
+                        <div class="modal-body  row">
+
+                            <div class="mb-3 col">
+                                <label for="carIdInput" class="form-label">Car ID</label>
+                                <input type="text" class="form-control" id="carIdInput" placeholder="Ex:- C001"
+                                       name="id">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboBrand" class="form-label">Brand</label>
+                                <select name="brand" class="form-control" id="comboBrand">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboColour" class="form-label">Colour</label>
+                                <select name="color" class="form-control" id="comboColour">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboType" class="form-label">Type</label>
+                                <select name="type" class="form-control" id="comboType">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+
                         </div>
 
-                        <form id="addCar">
-                            <div class="modal-body  row">
 
-                                <div class="mb-3 col">
-                                    <label for="carIdInput" class="form-label">Car ID</label>
-                                    <input type="text" class="form-control" id="carIdInput" placeholder="Ex:- C001" name="id">
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="comboBrand" class="form-label">Brand</label>
-                                    <select name="brand" class="form-control" id="comboBrand">
-                                        <option value="Select">Select</option>
-                                    </select>
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="comboColour" class="form-label">Colour</label>
-                                    <select name="color" class="form-control" id="comboColour">
-                                        <option value="Select">Select</option>
-                                    </select>
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="comboType" class="form-label">Type</label>
-                                    <select name="type" class="form-control" id="comboType">
-                                        <option value="Select">Select</option>
-                                    </select>
-                                    <span class="control-error"></span>
-                                </div>
+                        <div class="modal-body  row">
 
+                            <div class="mb-3 col">
+                                <label for="registrationNoInput" class="form-label">Registration No</label>
+                                <input type="text" class="form-control" id="registrationNoInput" name="registrationNo">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboFuelType" class="form-label">Fuel Type</label>
+                                <select name="fuelType" class="form-control" id="comboFuelType">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboTransmissionType" class="form-label">Transmission Type</label>
+                                <select name="transmissionType" class="form-control" id="comboTransmissionType">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="noOfPassengersInput" class="form-label">No Of Passengers</label>
+                                <input type="text" class="form-control" id="noOfPassengersInput" name="noOfPassengers">
+                                <span class="control-error"></span>
                             </div>
 
-
-                            <div class="modal-body  row">
-
-                                <div class="mb-3 col">
-                                    <label for="registrationNoInput" class="form-label">Registration No</label>
-                                    <input type="text" class="form-control" id="registrationNoInput"  name="registrationNo">
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="comboFuelType" class="form-label">Fuel Type</label>
-                                    <select name="fuelType" class="form-control" id="comboFuelType">
-                                        <option value="Select">Select</option>
-                                    </select>
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="comboTransmissionType" class="form-label">Transmission Type</label>
-                                    <select name="transmissionType" class="form-control" id="comboTransmissionType">
-                                        <option value="Select">Select</option>
-                                    </select>
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="noOfPassengersInput" class="form-label">No Of Passengers</label>
-                                    <input type="text" class="form-control" id="noOfPassengersInput"  name="noOfPassengers">
-                                    <span class="control-error"></span>
-                                </div>
-
-                            </div>
-
-                            <div class="modal-body  row">
-                                <div class="mb-3 col">
-                                    <label for="dailyRatePriceInput" class="form-label">Daily Rate Price</label>
-                                    <input type="text" class="form-control" id="dailyRatePriceInput"  name="dailyRatePrice">
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="monthlyRatePriceInput" class="form-label">Monthly Rate Price</label>
-                                    <input type="text" class="form-control" id="monthlyRatePriceInput"  name="monthlyRatePrice">
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="freeKmPerDayInput" class="form-label">Free Km Per Day</label>
-                                    <input type="text" class="form-control" id="freeKmPerDayInput"  name="freeKmPerDay">
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="freeKmPerMonthInput" class="form-label">Free Km Per Month</label>
-                                    <input type="text" class="form-control" id="freeKmPerMonthInput"  name="freeKmPerMonth">
-                                    <span class="control-error"></span>
-                                </div>
-
-                            </div>
-
-                            <div class="modal-body  row">
-                                <div class="mb-3 col">
-                                    <label for="priceExtraKMInput" class="form-label">Price For Extra KM</label>
-                                    <input type="text" class="form-control" id="priceExtraKMInput"  name="priceForExtraKM">
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="comboAvailableOrNot" class="form-label">Available Or Not</label>
-                                    <select name="availableOrNot" class="form-control" id="comboAvailableOrNot">
-                                        <option value="Select">Select</option>
-                                    </select>
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="comboDamageOrNot" class="form-label">Damage Or Not</label>
-                                    <select name="damageOrNot" class="form-control" id="comboDamageOrNot">
-                                        <option value="Select">Select</option>
-                                    </select>
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="comboUnderMaintainOrNot" class="form-label">Under Maintain Or Not</label>
-                                    <select name="underMaintainOrNot" class="form-control" id="comboUnderMaintainOrNot">
-                                        <option value="Select">Select</option>
-                                    </select>
-                                    <span class="control-error"></span>
-                                </div>
-
-                            </div>
-
-
-                            <div class="modal-body  row">
-                                <div class="mb-3 col-3">
-                                    <label for="totalDistanceInput" class="form-label">Total Distance Travelled</label>
-                                    <input type="text" class="form-control" id="totalDistanceInput"  name="TotalDistanceTravelled">
-                                    <span class="control-error"></span>
-                                </div>
-                            </div>
-
-
-                            <div class="modal-body  row">
-                                <div class="mb-3 col">
-                                    <label for="chooseUploadFrontView" class="form-label">Upload Front View</label>
-                                    <input type="file" class="form-control" id="chooseUploadFrontView"  name="uploadFrontView">
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="chooseUploadBackView" class="form-label">Upload Back View</label>
-                                    <input type="file" class="form-control" id="chooseUploadBackView"  name="uploadBackView">
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="chooseUploadSideView" class="form-label">Upload Side View</label>
-                                    <input type="file" class="form-control" id="chooseUploadSideView"  name="uploadSideView">
-                                    <span class="control-error"></span>
-                                </div>
-                                <div class="mb-3 col">
-                                    <label for="chooseUploadInteriorView" class="form-label">Upload Interior View</label>
-                                    <input type="file" class="form-control" id="chooseUploadInteriorView"  name="uploadInteriorView">
-                                    <span class="control-error"></span>
-                                </div>
-
-                            </div>
-
-                        </form>
-
-                        <div class="modal-footer">
-                            <button id="carsSaveButton" type="button" class="btn btn-primary" >Save</button>
-                            <button id="carsUpdateButton" type="button" class="btn btn-secondary" >Update</button>
-                            <button id="carsDeleteButton" type="button" class="btn btn-danger" >Delete</button>
-                            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
                         </div>
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="dailyRatePriceInput" class="form-label">Daily Rate Price</label>
+                                <input type="text" class="form-control" id="dailyRatePriceInput" name="dailyRatePrice">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="monthlyRatePriceInput" class="form-label">Monthly Rate Price</label>
+                                <input type="text" class="form-control" id="monthlyRatePriceInput"
+                                       name="monthlyRatePrice">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="freeKmPerDayInput" class="form-label">Free Km Per Day</label>
+                                <input type="text" class="form-control" id="freeKmPerDayInput" name="freeKmPerDay">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="freeKmPerMonthInput" class="form-label">Free Km Per Month</label>
+                                <input type="text" class="form-control" id="freeKmPerMonthInput" name="freeKmPerMonth">
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="priceExtraKMInput" class="form-label">Price For Extra KM</label>
+                                <input type="text" class="form-control" id="priceExtraKMInput" name="priceForExtraKM">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboAvailableOrNot" class="form-label">Available Or Not</label>
+                                <select name="availableOrNot" class="form-control" id="comboAvailableOrNot">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboDamageOrNot" class="form-label">Damage Or Not</label>
+                                <select name="damageOrNot" class="form-control" id="comboDamageOrNot">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="comboUnderMaintainOrNot" class="form-label">Under Maintain Or Not</label>
+                                <select name="underMaintainOrNot" class="form-control" id="comboUnderMaintainOrNot">
+                                    <option value="Select">Select</option>
+                                </select>
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col-3">
+                                <label for="totalDistanceInput" class="form-label">Total Distance Travelled</label>
+                                <input type="text" class="form-control" id="totalDistanceInput"
+                                       name="TotalDistanceTravelled">
+                                <span class="control-error"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="chooseUploadFrontView" class="form-label">Upload Front View</label>
+                                <input type="file" class="form-control" id="chooseUploadFrontView"
+                                       name="uploadFrontView">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="chooseUploadBackView" class="form-label">Upload Back View</label>
+                                <input type="file" class="form-control" id="chooseUploadBackView" name="uploadBackView">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="chooseUploadSideView" class="form-label">Upload Side View</label>
+                                <input type="file" class="form-control" id="chooseUploadSideView" name="uploadSideView">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="chooseUploadInteriorView" class="form-label">Upload Interior View</label>
+                                <input type="file" class="form-control" id="chooseUploadInteriorView"
+                                       name="uploadInteriorView">
+                                <span class="control-error"></span>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                    <div class="modal-footer">
+                        <button id="carsSaveButton" type="button" class="btn btn-primary">Save</button>
+                        <button id="carsUpdateButton" type="button" class="btn btn-secondary">Update</button>
+                        <button id="carsDeleteButton" type="button" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-
-
-            <!--    Table-->
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <div class="container-fluid" style=" width: 2200px; height:580px ;">
-                <table class="table table-striped table-hover " >
-                    <thead style="background: gray">
-                    <tr>
-                        <th scope="col">Car Id</th>
-                        <th scope="col">Brand</th>
-                        <th scope="col">Color</th>
-                        <th scope="col">Type</th>
-                        <th scope="col">Registration No</th>
-                        <th scope="col">Fuel Type</th>
-                        <th scope="col">Transmission Type</th>
-                        <th scope="col">No Of Passengers</th>
-                        <th scope="col">Daily Rate Price</th>
-                        <th scope="col">Monthly Rate Price</th>
-                        <th scope="col">Free KM Per Day</th>
-                        <th scope="col">Free KM Per Month</th>
-                        <th scope="col">Price For Extra KM</th>
-                        <th scope="col">Total Distance Travelled</th>
-                        <th scope="col">Available Or Not</th>
-                        <th scope="col">Damage Or Not</th>
-                        <th scope="col">Under Maintain Or Not</th>
-                        <th scope="col">Font View</th>
-                        <th scope="col">Back View</th>
-                        <th scope="col">Side View</th>
-                        <th scope="col">Interior View</th>
-                    </tr>
-                    </thead>
-                    <tbody class="table-light fs-6 fw-bold">
-                                    <tr>
-                                        <th>C0000001</th>
-                                        <td>Suzuki Celerio</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
         </div>
+
+
+        <!--    Table-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="container-fluid glass" style=" width: 2200px; height:580px; background: #D3CBBB;">
+            <table class="table table-striped table-hover ">
+                <thead style="background: gray">
+                <tr>
+                    <th scope="col">Car Id</th>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Registration No</th>
+                    <th scope="col">Fuel Type</th>
+                    <th scope="col">Transmission Type</th>
+                    <th scope="col">No Of Passengers</th>
+                    <th scope="col">Daily Rate Price</th>
+                    <th scope="col">Monthly Rate Price</th>
+                    <th scope="col">Free KM Per Day</th>
+                    <th scope="col">Free KM Per Month</th>
+                    <th scope="col">Price For Extra KM</th>
+                    <th scope="col">Total Distance Travelled</th>
+                    <th scope="col">Available Or Not</th>
+                    <th scope="col">Damage Or Not</th>
+                    <th scope="col">Under Maintain Or Not</th>
+                    <th scope="col">Font View</th>
+                    <th scope="col">Back View</th>
+                    <th scope="col">Side View</th>
+                    <th scope="col">Interior View</th>
+                </tr>
+                </thead>
+                <tbody class="table-light fs-6 fw-bold">
+                <tr>
+                    <th>C0000001</th>
+                    <td>Suzuki Celerio</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
 
 </main>
 
 <!--Customer Manager-->
 <main class="container-fluid" id="CustomersManagerPage" style="display: none; height: 1010px;background:#B8AA90">
-    <div class="container-fluid" >
+    <div class="container-fluid">
 
 
-        <button type="button" class="btn btn-warning col-1 position-absolute"style="width: 150px; height:60px; top: 250px; margin-left: 1860px " data-bs-toggle="modal" data-bs-target="#manageCustomerModal" ><h3 class="fs-5">Manage Customer</h3></button>
+        <button type="button" class="btn btn-warning col-1 position-absolute"
+                style="width: 150px; height:60px; top: 250px; margin-left: 1860px " data-bs-toggle="modal"
+                data-bs-target="#manageCustomerModal"><h3 class="fs-5">Manage Customer</h3></button>
 
         <!--         save modal-->
-        <div class="modal  modal-dialog modal-xl  " id="manageCustomerModal" tabindex="-10" aria-labelledby="manageCustomer"  aria-hidden="true" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0">
+        <div class="modal  modal-dialog modal-xl  " id="manageCustomerModal" tabindex="-10"
+             aria-labelledby="manageCustomer" aria-hidden="true"
+             style="position: absolute; top: 0; right: 0; left: 0; bottom: 0">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header " style="background: #3A4D85; color: white">
@@ -597,22 +627,23 @@
                         <div class="modal-body  row">
                             <div class="mb-3 col">
                                 <label for="customerAddressInput" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="customerAddressInput" name="customerAddress">
+                                <input type="text" class="form-control" id="customerAddressInput"
+                                       name="customerAddress">
                                 <span class="control-error"></span>
                             </div>
                         </div>
 
 
-
                         <div class="modal-body  row">
                             <div class="mb-3 col">
                                 <label for="customerContactNoInput" class="form-label">Contact No</label>
-                                <input type="text" class="form-control" id="customerContactNoInput"  name="customerContactNo">
+                                <input type="text" class="form-control" id="customerContactNoInput"
+                                       name="customerContactNo">
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col">
                                 <label for="customerEmailInput" class="form-label">Email</label>
-                                <input type="text" class="form-control" id="customerEmailInput"  name="customerEmail">
+                                <input type="text" class="form-control" id="customerEmailInput" name="customerEmail">
                                 <span class="control-error"></span>
                             </div>
                         </div>
@@ -620,12 +651,13 @@
                         <div class="modal-body  row">
                             <div class="mb-3 col-6">
                                 <label for="customerNICNoInput" class="form-label">NIC No</label>
-                                <input type="text" class="form-control" id="customerNICNoInput"  name="customerNICNo">
+                                <input type="text" class="form-control" id="customerNICNoInput" name="customerNICNo">
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col-6">
                                 <label for="customerLicenseNoInput" class="form-label">License No</label>
-                                <input type="text" class="form-control" id="customerLicenseNoInput"  name="customerLicenseNo">
+                                <input type="text" class="form-control" id="customerLicenseNoInput"
+                                       name="customerLicenseNo">
                                 <span class="control-error"></span>
                             </div>
 
@@ -652,46 +684,46 @@
         <br>
         <br>
         <h1 class="topic text-center">Manage Customers</h1>
-            <!--    Table-->
+        <!--    Table-->
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
-            <div  class="container-fluid " style=" width: 1900px; height:580px ;">
-                <table class="table table-striped "  >
-                    <thead style="background: gray" >
-                        <tr>
-                            <th scope="col">Customer Id</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">Contact No</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">NIC No</th>
-                            <th scope="col">License No</th>
-                            <th scope="col">Customer Image</th>
-                            <th scope="col">NIC Image</th>
-                            <th scope="col">License Image</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-light fs-6 fw-bold">
-                        <tr>
-                            <td>C001</td>
-                            <td>Kamal Perera</td>
-                            <td>80, Galle Rd, Galle</td>
-                            <td>+94785252369</td>
-                            <td>kamal123@gmail.com</td>
-                            <td>982536125v</td>
-                            <td>B745D4475</td>
-                            <td><img class="cusImages" src="../assets/images/client.jpg" alt="customer" ></td>
-                            <td><img class="cusImages" src="../assets/images/nic.jpg" alt="nic" ></td>
-                            <td><img class="cusImages" src="../assets/images/license.jpg" alt="license" ></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="container-fluid glass" style=" width: 1900px; height:580px ;background: #D3CBBB;">
+            <table class="table table-striped ">
+                <thead style="background: gray">
+                <tr>
+                    <th scope="col">Customer Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Contact No</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">NIC No</th>
+                    <th scope="col">License No</th>
+                    <th scope="col">Customer Image</th>
+                    <th scope="col">NIC Image</th>
+                    <th scope="col">License Image</th>
+                </tr>
+                </thead>
+                <tbody class="table-light fs-6 fw-bold">
+                <tr>
+                    <td>C001</td>
+                    <td>Kamal Perera</td>
+                    <td>80, Galle Rd, Galle</td>
+                    <td>+94785252369</td>
+                    <td>kamal123@gmail.com</td>
+                    <td>982536125v</td>
+                    <td>B745D4475</td>
+                    <td><img class="cusImages" src="../assets/images/client.jpg" alt="customer"></td>
+                    <td><img class="cusImages" src="../assets/images/nic.jpg" alt="nic"></td>
+                    <td><img class="cusImages" src="../assets/images/license.jpg" alt="license"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </main>
@@ -699,7 +731,7 @@
 
 <!--Driver Manager-->
 <main class="container-fluid" id="DriversManagerPage" style="display: none; height: 1010px; background: #B8AA90">
-    <div class="container-fluid" style=" width: 1800px; height: 1010px; " >
+    <div class="container-fluid" style=" width: 1800px; height: 1010px; ">
         <br>
         <br>
         <br>
@@ -710,10 +742,13 @@
         <br>
         <br>
 
-        <button type="button" class="btn btn-warning col-1 position-absolute"style="width: 150px; height:60px; top: 300px; margin-left: 1500px " data-bs-toggle="modal" data-bs-target="#manageDriverModal" ><h3 class="fs-5">Manage Driver</h3></button>
+        <button type="button" class="btn btn-warning col-1 position-absolute"
+                style="width: 150px; height:60px; top: 300px; margin-left: 1500px " data-bs-toggle="modal"
+                data-bs-target="#manageDriverModal"><h3 class="fs-5">Manage Driver</h3></button>
 
         <!--         save modal-->
-        <div class="modal  modal-dialog modal-xl  " id="manageDriverModal" tabindex="-10" aria-labelledby="manageDriver"  aria-hidden="true" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0">
+        <div class="modal  modal-dialog modal-xl  " id="manageDriverModal" tabindex="-10" aria-labelledby="manageDriver"
+             aria-hidden="true" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header " style="background: #3A4D85; color: white">
@@ -760,16 +795,16 @@
                         </div>
 
 
-
                         <div class="modal-body  row">
                             <div class="mb-3 col">
                                 <label for="driverContactNoInput" class="form-label">Contact No</label>
-                                <input type="text" class="form-control" id="driverContactNoInput"  name="driverContactNo">
+                                <input type="text" class="form-control" id="driverContactNoInput"
+                                       name="driverContactNo">
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col">
                                 <label for="ageInput" class="form-label">Age</label>
-                                <input type="text" class="form-control" id="ageInput"  name="age">
+                                <input type="text" class="form-control" id="ageInput" name="age">
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col-6">
@@ -805,9 +840,9 @@
         <br>
         <br>
 
-        <div  class="container-fluid " style=" width: 1600px; height:580px;">
-            <table class="table table-striped "  >
-                <thead style="background: gray" >
+        <div class="container-fluid glass" style=" width: 1600px; height:580px;background: #D3CBBB;">
+            <table class="table table-striped ">
+                <thead style="background: gray">
                 <tr>
                     <th scope="col">Driver Id</th>
                     <th scope="col">Driver Name</th>
@@ -850,9 +885,9 @@
     <br>
     <br>
 
-    <div  class="container-fluid " style=" width: 1600px; height:580px;">
-        <table class="table table-striped "  >
-            <thead style="background: gray" >
+    <div class="container-fluid glass" style=" width: 1600px; height:580px;background: #D3CBBB;">
+        <table class="table table-striped ">
+            <thead style="background: gray">
             <tr>
                 <th scope="col">Reserve Id</th>
                 <th scope="col">Reserve Date</th>
@@ -881,7 +916,7 @@
                 <td>02/18/2023</td>
                 <td>13.00</td>
                 <td>Colombo City Center</td>
-                <td>4 </td>
+                <td>4</td>
             </tr>
 
             </tbody>
@@ -904,9 +939,9 @@
     <br>
     <br>
 
-    <div  class="container-fluid " style=" width: 1600px; height:580px;">
-        <table class="table table-striped "  >
-            <thead style="background: gray" >
+    <div class="container-fluid glass" style=" width: 1600px; height:580px; background: #D3CBBB;">
+        <table class="table table-striped ">
+            <thead style="background: gray">
             <tr>
                 <th scope="col">Schedule Id</th>
                 <th scope="col">Reserve Id</th>
@@ -933,7 +968,7 @@
                 <td>02/18/2023</td>
                 <td>13.00</td>
                 <td>Colombo City Center</td>
-                <td>Not Release </td>
+                <td>Not Release</td>
             </tr>
 
             </tbody>
@@ -943,7 +978,7 @@
 
 <!--Payment-->
 <main class="container-fluid" id="PaymentPage" style="display: none; height: 1010px;background:#B8AA90">
-    <div class="container-fluid" >
+    <div class="container-fluid">
 
         <br>
         <br>
@@ -953,10 +988,12 @@
         <br>
         <h1 class="topic text-center">Payment</h1>
 
-        <button type="button" class="btn btn-warning col-1 "style="width: 150px; height:60px; margin-left: 1860px " data-bs-toggle="modal" data-bs-target="#makePaymentModal" ><h3 class="fs-5">Make Payment</h3></button>
+        <button type="button" class="btn btn-warning col-1 " style="width: 150px; height:60px; margin-left: 1860px "
+                data-bs-toggle="modal" data-bs-target="#makePaymentModal"><h3 class="fs-5">Make Payment</h3></button>
 
         <!--         save modal-->
-        <div class="modal  modal-dialog modal-xl  " id="makePaymentModal" tabindex="-10" aria-labelledby="makePayment"  aria-hidden="true" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0">
+        <div class="modal  modal-dialog modal-xl  " id="makePaymentModal" tabindex="-10" aria-labelledby="makePayment"
+             aria-hidden="true" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header " style="background: #3A4D85; color: white">
@@ -992,13 +1029,17 @@
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col">
-                                <label for="lossDamageWaiverPaymentInput" class="form-label">Loss Damage Waiver Payment</label>
-                                <input type="text" class="form-control" id="lossDamageWaiverPaymentInput"  name="lossDamageWaiverPayment">
+                                <label for="lossDamageWaiverPaymentInput" class="form-label">Loss Damage Waiver
+                                    Payment</label>
+                                <input type="text" class="form-control" id="lossDamageWaiverPaymentInput"
+                                       name="lossDamageWaiverPayment">
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col">
-                                <label for="reducedLossDamagePaymentInput" class="form-label">Reduced Loss Damage Payment</label>
-                                <input type="text" class="form-control" id="reducedLossDamagePaymentInput"  name="reducedLossDamagePayment">
+                                <label for="reducedLossDamagePaymentInput" class="form-label">Reduced Loss Damage
+                                    Payment</label>
+                                <input type="text" class="form-control" id="reducedLossDamagePaymentInput"
+                                       name="reducedLossDamagePayment">
                                 <span class="control-error"></span>
                             </div>
 
@@ -1015,12 +1056,13 @@
                             </div>
                             <div class="mb-3 col">
                                 <label for="travelledDistanceInput" class="form-label">Travelled Distance</label>
-                                <input type="text" class="form-control" id="travelledDistanceInput"  name="travelledDistance">
+                                <input type="text" class="form-control" id="travelledDistanceInput"
+                                       name="travelledDistance">
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col">
                                 <label for="extraKMInput" class="form-label">Extra KM</label>
-                                <input type="text" class="form-control" id="extraKMInput"  name="extraKM">
+                                <input type="text" class="form-control" id="extraKMInput" name="extraKM">
                                 <span class="control-error"></span>
                             </div>
 
@@ -1030,7 +1072,8 @@
                         <div class="modal-body  row">
                             <div class="mb-3 col-4">
                                 <label for="priceForExtraKMInput" class="form-label">Price For Extra KM</label>
-                                <input type="text" class="form-control" id="priceForExtraKMInput"  name="priceForExtraKM">
+                                <input type="text" class="form-control" id="priceForExtraKMInput"
+                                       name="priceForExtraKM">
                                 <span class="control-error"></span>
                             </div>
 
@@ -1040,18 +1083,22 @@
                         <div class="modal-body  row">
                             <div class="mb-3 col-6">
                                 <label class="form-label"> </label>
-                                <button type="button" class="form-control" style="background: #d0a331; color: white;font-weight: bold; height: 50px">Click For Total Price</button>
+                                <button type="button" class="form-control"
+                                        style="background: #d0a331; color: white;font-weight: bold; height: 50px">Click
+                                    For Total Price
+                                </button>
                             </div>
                             <div class="mb-3 col-6">
                                 <label for="fullPaymentInput" class="form-label">Full Payment</label>
-                                <input type="text" class="form-control" id="fullPaymentInput"  name="fullPayment">
+                                <input type="text" class="form-control" id="fullPaymentInput" name="fullPayment">
                                 <span class="control-error"></span>
                             </div>
                         </div>
                     </form>
 
                     <div class="modal-footer">
-                        <button id="paymentSaveButton" type="button" class="btn btn-success"  style="width: 200px">Pay</button>
+                        <button id="paymentSaveButton" type="button" class="btn btn-success" style="width: 200px">Pay
+                        </button>
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -1063,8 +1110,8 @@
         <br>
         <br>
 
-        <div class="container-fluid" style=" width: 1800px; height:580px ;">
-            <table class="table table-striped table-hover " >
+        <div class="container-fluid glass" style=" width: 1800px; height:580px ;background: #D3CBBB;">
+            <table class="table table-striped table-hover ">
                 <thead style="background: gray">
                 <tr>
                     <th scope="col">Payment Id</th>
@@ -1117,40 +1164,45 @@
     <br>
     <br>
 
-    <div class="container position-absolute" style=" width: 600px; height:500px ;top: 450px; left:1650px;background: #DBDADA; box-shadow: 1px 4px 16px 4px #DBDADA">
+    <div class="container position-absolute glass"
+         style=" width: 600px; height:500px ;top: 450px; left:1650px;background: #DBDADA; ">
         <br>
         <br>
-        <h4 class="text-center" style="font-family: 'Rye', cursive; color: black" >Total Profit Between Entered Dates</h4>
+        <h4 class="text-center" style="font-family: 'Rye', cursive; color: black">Total Profit Between Entered
+            Dates</h4>
         <br>
         <br>
-        <div class="row text-center" >
+        <div class="row text-center">
             <div class="col">
-                <lable for="startDateInput" ><h5>Start Date</h5></lable>
+                <label for="startDateInput"><h5>Start Date</h5></label>
                 <input type="date" id="startDateInput" name="StartDate" style="width: 250px; height: 40px;">
             </div>
             <div class="col">
-                <lable for="endDateInput"><h5>End Date</h5></lable>
-                <input type="date" id="endDateInput" name="EndDate"  style="width: 250px; height: 40px;">
+                <label for="endDateInput"><h5>End Date</h5></label>
+                <input type="date" id="endDateInput" name="EndDate" style="width: 250px; height: 40px;">
             </div>
         </div>
         <br>
         <br>
         <br>
-        <button class="fw-bold bg-danger fs-5 " style="width: 100%; height: 50px; color: white; border:none">Find Profit</button>
+        <button class="fw-bold bg-danger fs-5 " style="width: 100%; height: 50px; color: white; border:none">Find
+            Profit
+        </button>
         <br>
         <br>
         <br>
         <br>
         <h1 class="text-center" style="font-family: 'Lobster', cursive; font-size: 50px">25000.00</h1>
     </div>
-    
+
     <br>
     <br>
     <br>
 
-    <div  class="container-fluid  position-absolute " style=" width: 1400px; height:580px ; top: 400px; left:150px;">
-        <table class="table table-striped "  >
-            <thead style="background: gray" >
+    <div class="container-fluid  position-absolute glass"
+         style=" width: 1400px; height:580px ; top: 400px; left:150px;background: #D3CBBB;">
+        <table class="table table-striped ">
+            <thead style="background: gray">
             <tr>
                 <th scope="col">Reserve Id</th>
                 <th scope="col">Driver Id</th>
