@@ -19,29 +19,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
     <style>
-        .glass{
-            background: linear-gradient(135deg, rgba(255,255,255,0.3),rgba(255,255,255,0.3));
+        .glass {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-radius: 20px;
-            border: 1px solid  rgba(255,255,0,0.18);
-            box-shadow: 0 8px 32px 0  rgba(0,0,0,0.37);
+            border: 1px solid rgba(255, 255, 0, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
 
-        .tableBackground{
-            background: linear-gradient(135deg,#ECEDEE,#ECEDEE);
+        .tableBackground {
+            background: linear-gradient(135deg, #ECEDEE, #ECEDEE);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-radius: 20px;
-            border: 1px solid  rgba(255,255,0,0.18);
-            box-shadow: 0 8px 32px 0  rgba(0,0,0,0.37);
+            border: 1px solid rgba(255, 255, 0, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
 
-        .glassBackground{
-            background: linear-gradient(135deg, rgba(255,255,0,0.13),rgba(255,255,0,0.13));
+        .glassBackground {
+            background: linear-gradient(135deg, rgba(255, 255, 0, 0.13), rgba(255, 255, 0, 0.13));
         }
 
-        .topic{
+        .topic {
             position: absolute;
             font-family: 'Russo One', sans-serif;
             color: rgba(255, 255, 0, 0.3);
@@ -52,14 +52,7 @@
         }
 
 
-        #btnSearchVehicle{
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 450px;
-        }
-        #btnEditVehicle{
+        #btnSearchVehicle {
             position: absolute;
             left: 0;
             right: 0;
@@ -67,17 +60,25 @@
             width: 450px;
         }
 
-        .img{
+        #btnEditVehicle {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 450px;
+        }
+
+        .img {
             width: 100%;
             height: 40%;
         }
 
-        .carImages{
-            width:100px;
-            height:50px;
+        .carImages {
+            width: 100px;
+            height: 50px;
         }
 
-        #back{
+        #back {
             width: 50px;
             height: 50px;
             margin-top: 50px;
@@ -93,13 +94,16 @@
         <div class="container-fluid">
             <h1 style="color: #e3f2fd;font-family: 'Gajraj One', cursive;">Easy Car Rental</h1>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse"  style="position:absolute;right: 15px" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse" style="position:absolute;right: 15px" id="navbarNavDropdown">
 
-                <a href="../index.html" style="width: 200px"><button class="btn btn-danger fw-bold" style=" width: 200px;">Log Out</button></a>
+                <a href="../index.html" style="width: 200px">
+                    <button class="btn btn-danger fw-bold" style=" width: 200px;">Log Out</button>
+                </a>
 
             </div>
         </div>
@@ -108,7 +112,8 @@
 
 <!--Customer Dashboard-->
 <main class="container-fluid" id="CustomerDashboardPage" style="display: block; height: 1010px;">
-    <img src="../assets/images/cusDashboardimage.jpg" alt="dashboardimage" style=" height: 1010px; width: 2304px; position: absolute; left: 0">
+    <img src="../assets/images/cusDashboardimage.jpg" alt="dashboardimage"
+         style=" height: 1010px; width: 2304px; position: absolute; left: 0">
 
     <br>
     <br>
@@ -118,38 +123,38 @@
     <h1 class=" topic  ">Search The Car For Rent</h1>
     <br>
     <br>
-    <section class="container rounded-4 glass position-absolute"  style=" top: 450px;left: 80px;">
+    <section class="container rounded-4 glass position-absolute" style=" top: 450px;left: 80px;">
         <form id="customerForm">
             <div class="row">
 
                 <div class="form-group col">
                     <label class="fw-bold text-white">Pickup</label>
-                    <input class="form-control" id="txtPickupDate" required type="date" >
-                    <span class="control-error" ></span>
+                    <input class="form-control" id="txtPickupDate" required type="date">
+                    <span class="control-error"></span>
                 </div>
                 <div class="form-group col">
                     <label></label>
                     <input class="form-control" id="txtPickupTime" required type="time">
-                    <span class="control-error" ></span>
+                    <span class="control-error"></span>
                 </div>
                 <div class="form-group col">
                     <label class="fw-bold text-white">Drop</label>
-                    <input class="form-control" id="txtReturnDate" required type="date" >
-                    <span class="control-error" ></span>
+                    <input class="form-control" id="txtReturnDate" required type="date">
+                    <span class="control-error"></span>
                 </div>
                 <div class="form-group col">
                     <label></label>
                     <input class="form-control" id="txtReturnTime" required type="time">
-                    <span class="control-error" ></span>
+                    <span class="control-error"></span>
                 </div>
             </div>
 
             <br>
 
-            <div class="row" >
+            <div class="row">
                 <div class="form-group col">
                     <input class="form-control" id="txtPickupLocation" type="text" placeholder="Pickup Location">
-                    <span class="control-error" ></span>
+                    <span class="control-error"></span>
                 </div>
                 <div class="form-group col">
                     <input class="form-control" id="txtDropLocation" type="text" placeholder="Drop Location">
@@ -166,7 +171,11 @@
 
             <div class=" row">
                 <div class="btn-group  gap-1 rounded">
-                    <a href="#VehiclePage"> <button type="button" aria-current="page" class="btn btn-primary fw-bold"  id="btnSearchVehicle" >Search Vehicle</button></a>
+                    <a href="#VehiclePage">
+                        <button type="button" aria-current="page" class="btn btn-primary fw-bold" id="btnSearchVehicle">
+                            Search Vehicle
+                        </button>
+                    </a>
                 </div>
             </div>
             <br>
@@ -179,8 +188,9 @@
 
 <!-- Select Vehicle-->
 <main class="container-fluid" id="VehiclePage" style="display: none; height: 1010px;">
-    <section >
-        <img src="../assets/images/searchVehicleBackground.png" alt="background" style=" height:800px; width: 2279px; position: absolute; left: 0">
+    <section>
+        <img src="../assets/images/searchVehicleBackground.png" alt="background"
+             style=" height:800px; width: 2279px; position: absolute; left: 0">
 
         <br>
         <br>
@@ -190,202 +200,228 @@
         <h1 class=" topic  ">Select Your Car</h1>
         <br>
         <div class="container rounded-4 glass position-absolute" style="top: 400px;left: 0;right: 0;">
-        <form id="editCustomerForm">
-            <div class="row">
+            <form id="editCustomerForm">
+                <div class="row">
 
-                <div class="form-group col">
-                    <label class="fw-bold text-white">Pickup</label>
-                    <input class="form-control" id="txtEditPickupDate" required type="date" >
-                    <span class="control-error" ></span>
+                    <div class="form-group col">
+                        <label class="fw-bold text-white">Pickup</label>
+                        <input class="form-control" id="txtEditPickupDate" required type="date">
+                        <span class="control-error"></span>
+                    </div>
+                    <div class="form-group col">
+                        <label></label>
+                        <input class="form-control" id="txtEditPickupTime" required type="time">
+                        <span class="control-error"></span>
+                    </div>
+                    <div class="form-group col">
+                        <label class="fw-bold text-white">Drop</label>
+                        <input class="form-control" id="txtEditReturnDate" required type="date">
+                        <span class="control-error"></span>
+                    </div>
+                    <div class="form-group col">
+                        <label></label>
+                        <input class="form-control" id="txtEditReturnTime" required type="time">
+                        <span class="control-error"></span>
+                    </div>
                 </div>
-                <div class="form-group col">
-                    <label></label>
-                    <input class="form-control" id="txtEditPickupTime" required type="time">
-                    <span class="control-error" ></span>
-                </div>
-                <div class="form-group col">
-                    <label class="fw-bold text-white">Drop</label>
-                    <input class="form-control" id="txtEditReturnDate" required type="date" >
-                    <span class="control-error" ></span>
-                </div>
-                <div class="form-group col">
-                    <label></label>
-                    <input class="form-control" id="txtEditReturnTime" required type="time">
-                    <span class="control-error" ></span>
-                </div>
-            </div>
 
-            <br>
+                <br>
 
-            <div class="row" >
-                <div class="form-group col">
-                    <input class="form-control" id="txtEditPickupLocation" type="text" placeholder="Pickup Location">
-                    <span class="control-error" ></span>
+                <div class="row">
+                    <div class="form-group col">
+                        <input class="form-control" id="txtEditPickupLocation" type="text"
+                               placeholder="Pickup Location">
+                        <span class="control-error"></span>
+                    </div>
+                    <div class="form-group col">
+                        <input class="form-control" id="txtEditDropLocation" type="text" placeholder="Drop Location">
+                        <span class="control-error"></span>
+                    </div>
+                    <div class="form-group col">
+                        <input class="form-control" id="txtEditJourneyDuration" type="text"
+                               placeholder="Journey Duration">
+                        <span class="control-error"></span>
+                    </div>
                 </div>
-                <div class="form-group col">
-                    <input class="form-control" id="txtEditDropLocation" type="text" placeholder="Drop Location">
-                    <span class="control-error"></span>
-                </div>
-                <div class="form-group col">
-                    <input class="form-control" id="txtEditJourneyDuration" type="text" placeholder="Journey Duration">
-                    <span class="control-error"></span>
-                </div>
-            </div>
 
-            <br>
-            <br>
+                <br>
+                <br>
 
-            <div class=" row">
-                <div class="btn-group  gap-1 rounded">
-                   <button type="button" class="btn btn-primary fw-bold"  id="btnEditVehicle" >Edit</button>
+                <div class=" row">
+                    <div class="btn-group  gap-1 rounded">
+                        <button type="button" class="btn btn-primary fw-bold" id="btnEditVehicle">Edit</button>
+                    </div>
                 </div>
-            </div>
-            <br>
-            <br>
-            <br>
-        </form>
+                <br>
+                <br>
+                <br>
+            </form>
         </div>
     </section>
 
     <section class="container-fluid position-absolute" style=" width: 1800px; top: 1000px; left: 0;right: 0;">
         <div class="row  gap-5">
             <div class="card col" style="width: 25rem;height: 55rem">
-                <img src="../assets/images/alto.png" class="card-img-top img" alt="alto" >
+                <img src="../assets/images/alto.png" class="card-img-top img" alt="alto">
                 <div class="card-body">
                     <h2 class="card-title">Suzuki Alto</h2>
                     <h4 style="color: orangered">General</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Passengers     :  4  </li>
-                    <li class="list-group-item">Transmission   :  Manual</li>
-                    <li class="list-group-item">Color          :  Red/White/Gray/Black</li>
+                    <li class="list-group-item">Passengers : 4</li>
+                    <li class="list-group-item">Transmission : Manual</li>
+                    <li class="list-group-item">Color : Red/White/Gray/Black</li>
                 </ul>
                 <br>
                 <div class="card-body">
-                    <h3>Daily :  2500.00</h3>
-                    <h3>Monthly :  64500.00</h3>
+                    <h3>Daily : 2500.00</h3>
+                    <h3>Monthly : 64500.00</h3>
 
                     <br>
                     <br>
-                    <a href="#VehicleBookingPage"><button class="btn btn-primary text-white fw-bold fs-4 bookNow" style="width: 100%; height: 50px; border: none">Book Now</button></a>
+                    <a href="#VehicleBookingPage">
+                        <button class="btn btn-primary text-white fw-bold fs-4 bookNow"
+                                style="width: 100%; height: 50px; border: none">Book Now
+                        </button>
+                    </a>
                     <br>
                 </div>
             </div>
 
             <div class="card col" style="width: 25rem;height: 55rem">
-                <img src="../assets/images/altok10.jpg" class="card-img-top img" alt="altoK10" >
+                <img src="../assets/images/altok10.jpg" class="card-img-top img" alt="altoK10">
                 <div class="card-body">
                     <h2 class="card-title">Suzuki Alto K10</h2>
                     <h4 style="color: orangered">General</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Passengers     :  4  </li>
-                    <li class="list-group-item">Transmission   :  Auto</li>
-                    <li class="list-group-item">Color          :  White/Gray/Orange</li>
+                    <li class="list-group-item">Passengers : 4</li>
+                    <li class="list-group-item">Transmission : Auto</li>
+                    <li class="list-group-item">Color : White/Gray/Orange</li>
                 </ul>
                 <br>
                 <div class="card-body">
-                    <h3>Daily :  3000.00</h3>
-                    <h3>Monthly :  71390.00</h3>
+                    <h3>Daily : 3000.00</h3>
+                    <h3>Monthly : 71390.00</h3>
 
                     <br>
                     <br>
-                    <a href="#VehicleBookingPage"><button class="btn btn-primary text-white fw-bold fs-4 bookNow" style="width: 100%; height: 50px; border: none">Book Now</button></a>
+                    <a href="#VehicleBookingPage">
+                        <button class="btn btn-primary text-white fw-bold fs-4 bookNow"
+                                style="width: 100%; height: 50px; border: none">Book Now
+                        </button>
+                    </a>
                     <br>
                 </div>
             </div>
 
             <div class="card col" style="width: 25rem;height: 55rem">
-                <img src="../assets/images/celerio.png" class="card-img-top img" alt="celerio" >
+                <img src="../assets/images/celerio.png" class="card-img-top img" alt="celerio">
                 <div class="card-body">
                     <h2 class="card-title">Suzuki Celerio</h2>
                     <h4 style="color: orangered">General</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Passengers     :  4  </li>
-                    <li class="list-group-item">Transmission   :  Auto</li>
-                    <li class="list-group-item">Color          :  Gold/Red</li>
+                    <li class="list-group-item">Passengers : 4</li>
+                    <li class="list-group-item">Transmission : Auto</li>
+                    <li class="list-group-item">Color : Gold/Red</li>
                 </ul>
                 <br>
                 <div class="card-body">
-                    <h3>Daily :  3300.00</h3>
-                    <h3>Monthly :  77200.00</h3>
+                    <h3>Daily : 3300.00</h3>
+                    <h3>Monthly : 77200.00</h3>
 
                     <br>
                     <br>
-                    <a href="#VehicleBookingPage"><button class="btn btn-primary text-white fw-bold fs-4 bookNow" style="width: 100%; height: 50px; border: none">Book Now</button></a>
+                    <a href="#VehicleBookingPage">
+                        <button class="btn btn-primary text-white fw-bold fs-4 bookNow"
+                                style="width: 100%; height: 50px; border: none">Book Now
+                        </button>
+                    </a>
                     <br>
                 </div>
-        </div>
+            </div>
         </div>
 
 
         <div class="row gap-5">
             <div class="card col" style="width: 25rem;height: 55rem">
-                <img src="../assets/images/axia.jpg" class="card-img-top img" alt="axia" >
+                <img src="../assets/images/axia.jpg" class="card-img-top img" alt="axia">
                 <div class="card-body">
                     <h2 class="card-title">Perodua (Daihatsu) Axia</h2>
                     <h4 style="color: orangered">General</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Passengers     :  4  </li>
-                    <li class="list-group-item">Transmission   :  Auto</li>
-                    <li class="list-group-item">Color          :  White/Black</li>
+                    <li class="list-group-item">Passengers : 4</li>
+                    <li class="list-group-item">Transmission : Auto</li>
+                    <li class="list-group-item">Color : White/Black</li>
                 </ul>
                 <br>
                 <div class="card-body">
-                    <h3>Daily :  3800.00</h3>
-                    <h3>Monthly :  90200.00</h3>
+                    <h3>Daily : 3800.00</h3>
+                    <h3>Monthly : 90200.00</h3>
 
                     <br>
                     <br>
-                    <a href="#VehicleBookingPage"><button class="btn btn-primary text-white fw-bold fs-4 bookNow" style="width: 100%; height: 50px; border: none">Book Now</button></a>
+                    <a href="#VehicleBookingPage">
+                        <button class="btn btn-primary text-white fw-bold fs-4 bookNow"
+                                style="width: 100%; height: 50px; border: none">Book Now
+                        </button>
+                    </a>
                     <br>
                 </div>
             </div>
 
             <div class="card col" style="width: 25rem;height: 55rem">
-                <img src="../assets/images/aqua.jpg" class="card-img-top img" alt="aqua" >
+                <img src="../assets/images/aqua.jpg" class="card-img-top img" alt="aqua">
                 <div class="card-body">
                     <h2 class="card-title">Toyota Prius C/Aqua</h2>
                     <h4 style="color: orangered">General</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Passengers     :  4  </li>
-                    <li class="list-group-item">Transmission   :  Auto</li>
-                    <li class="list-group-item">Color          :  White/Purple/Silver</li>
+                    <li class="list-group-item">Passengers : 4</li>
+                    <li class="list-group-item">Transmission : Auto</li>
+                    <li class="list-group-item">Color : White/Purple/Silver</li>
                 </ul>
                 <br>
                 <div class="card-body">
-                    <h3>Daily :  5000.00</h3>
-                    <h3>Monthly :  110330.00</h3>
+                    <h3>Daily : 5000.00</h3>
+                    <h3>Monthly : 110330.00</h3>
 
                     <br>
                     <br>
-                    <a href="#VehicleBookingPage"><button class="btn btn-primary text-white fw-bold fs-4 bookNow" style="width: 100%; height: 50px; border: none">Book Now</button></a>
+                    <a href="#VehicleBookingPage">
+                        <button class="btn btn-primary text-white fw-bold fs-4 bookNow"
+                                style="width: 100%; height: 50px; border: none">Book Now
+                        </button>
+                    </a>
                     <br>
                 </div>
             </div>
 
             <div class="card col" style="width: 25rem;height: 55rem">
-                <img src="../assets/images/bezza.webp" class="card-img-top img" alt="bezza" >
+                <img src="../assets/images/bezza.webp" class="card-img-top img" alt="bezza">
                 <div class="card-body">
                     <h2 class="card-title">Perodua Bezza Prime</h2>
                     <h4 style="color: orangered">Premium</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Passengers     :  4  </li>
-                    <li class="list-group-item">Transmission   :  Auto</li>
-                    <li class="list-group-item">Color          :  White/Black/Blue</li>
+                    <li class="list-group-item">Passengers : 4</li>
+                    <li class="list-group-item">Transmission : Auto</li>
+                    <li class="list-group-item">Color : White/Black/Blue</li>
                 </ul>
                 <br>
                 <div class="card-body">
-                    <h3>Daily :  5500.00</h3>
-                    <h3>Monthly :  120330.00</h3>
+                    <h3>Daily : 5500.00</h3>
+                    <h3>Monthly : 120330.00</h3>
 
                     <br>
                     <br>
-                    <a href="#VehicleBookingPage"><button class="btn btn-primary text-white fw-bold fs-4 bookNow" style="width: 100%; height: 50px; border: none">Book Now</button></a>
+                    <a href="#VehicleBookingPage">
+                        <button class="btn btn-primary text-white fw-bold fs-4 bookNow"
+                                style="width: 100%; height: 50px; border: none">Book Now
+                        </button>
+                    </a>
                     <br>
                 </div>
             </div>
@@ -394,70 +430,82 @@
         <div class="row gap-5">
 
             <div class="card col" style="width: 25rem;height: 55rem">
-                <img src="../assets/images/corolla.webp" class="card-img-top img" alt="corolla" >
+                <img src="../assets/images/corolla.webp" class="card-img-top img" alt="corolla">
                 <div class="card-body">
                     <h2 class="card-title">Toyota Corolla Axio</h2>
                     <h4 style="color: orangered">Premium</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Passengers     :  4  </li>
-                    <li class="list-group-item">Transmission   :  Auto</li>
-                    <li class="list-group-item">Color          :  White/Black/Blue</li>
+                    <li class="list-group-item">Passengers : 4</li>
+                    <li class="list-group-item">Transmission : Auto</li>
+                    <li class="list-group-item">Color : White/Black/Blue</li>
                 </ul>
                 <br>
                 <div class="card-body">
-                    <h3>Daily :  5500.00</h3>
-                    <h3>Monthly :  120330.00</h3>
+                    <h3>Daily : 5500.00</h3>
+                    <h3>Monthly : 120330.00</h3>
 
                     <br>
                     <br>
-                    <a href="#VehicleBookingPage"><button class="btn btn-primary text-white fw-bold fs-4 bookNow" style="width: 100%; height: 50px; border: none">Book Now</button></a>
+                    <a href="#VehicleBookingPage">
+                        <button class="btn btn-primary text-white fw-bold fs-4 bookNow"
+                                style="width: 100%; height: 50px; border: none">Book Now
+                        </button>
+                    </a>
                     <br>
                 </div>
             </div>
 
             <div class="card col" style="width: 25rem;height: 55rem">
-                <img src="../assets/images/allion.jpg" class="card-img-top img" alt="allion" >
+                <img src="../assets/images/allion.jpg" class="card-img-top img" alt="allion">
                 <div class="card-body">
                     <h2 class="card-title">Toyota Allion</h2>
                     <h4 style="color: orangered">Premium</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Passengers     :  4  </li>
-                    <li class="list-group-item">Transmission   :  Auto</li>
-                    <li class="list-group-item">Color          :  White/Maroon</li>
+                    <li class="list-group-item">Passengers : 4</li>
+                    <li class="list-group-item">Transmission : Auto</li>
+                    <li class="list-group-item">Color : White/Maroon</li>
                 </ul>
                 <br>
                 <div class="card-body">
-                    <h3>Daily :  5800.00</h3>
-                    <h3>Monthly :  155760.00</h3>
+                    <h3>Daily : 5800.00</h3>
+                    <h3>Monthly : 155760.00</h3>
 
                     <br>
                     <br>
-                    <a href="#VehicleBookingPage"><button class="btn btn-primary text-white fw-bold fs-4 bookNow" style="width: 100%; height: 50px; border: none">Book Now</button></a>
+                    <a href="#VehicleBookingPage">
+                        <button class="btn btn-primary text-white fw-bold fs-4 bookNow"
+                                style="width: 100%; height: 50px; border: none">Book Now
+                        </button>
+                    </a>
                     <br>
                 </div>
             </div>
 
             <div class="card col" style="width: 25rem;height: 55rem">
-                <img src="../assets/images/axio.jpg" class="card-img-top img" alt="axio" >
+                <img src="../assets/images/axio.jpg" class="card-img-top img" alt="axio">
                 <div class="card-body">
                     <h2 class="card-title">Toyota Corolla Axio</h2>
                     <h4 style="color: orangered">Premium</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Passengers     :  4  </li>
-                    <li class="list-group-item">Transmission   :  Auto</li>
-                    <li class="list-group-item">Color          :  White</li>
+                    <li class="list-group-item">Passengers : 4</li>
+                    <li class="list-group-item">Transmission : Auto</li>
+                    <li class="list-group-item">Color : White</li>
                 </ul>
                 <br>
                 <div class="card-body">
-                    <h3>Daily :  6000.00</h3>
-                    <h3>Monthly :  175230.00</h3>
+                    <h3>Daily : 6000.00</h3>
+                    <h3>Monthly : 175230.00</h3>
 
                     <br>
                     <br>
-                    <a href="#VehicleBookingPage"> <button class="btn btn-primary text-white fw-bold fs-4 bookNow" style="width: 100%; height: 50px; border: none">Book Now</button></a>
+                    <a href="#VehicleBookingPage">
+                        <button class="btn btn-primary text-white fw-bold fs-4 bookNow"
+                                style="width: 100%; height: 50px; border: none">Book Now
+                        </button>
+                    </a>
                     <br>
                 </div>
             </div>
@@ -465,47 +513,55 @@
 
         <div class="row gap-5">
             <div class="card col" style="width: 25rem;height: 55rem">
-                <img src="../assets/images/premio.png" class="card-img-top img" alt="premio" >
+                <img src="../assets/images/premio.png" class="card-img-top img" alt="premio">
                 <div class="card-body">
                     <h2 class="card-title">Toyota Premio</h2>
                     <h4 style="color: orangered">Luxury</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Passengers     :  4  </li>
-                    <li class="list-group-item">Transmission   :  Auto</li>
-                    <li class="list-group-item">Color          :  White</li>
+                    <li class="list-group-item">Passengers : 4</li>
+                    <li class="list-group-item">Transmission : Auto</li>
+                    <li class="list-group-item">Color : White</li>
                 </ul>
                 <br>
                 <div class="card-body">
-                    <h3>Daily :  10000.00</h3>
-                    <h3>Monthly :  227150.00</h3>
+                    <h3>Daily : 10000.00</h3>
+                    <h3>Monthly : 227150.00</h3>
 
                     <br>
                     <br>
-                    <a href="#VehicleBookingPage"> <button class="btn btn-primary text-white fw-bold fs-4 bookNow" style="width: 100%; height: 50px; border: none">Book Now</button></a>
+                    <a href="#VehicleBookingPage">
+                        <button class="btn btn-primary text-white fw-bold fs-4 bookNow"
+                                style="width: 100%; height: 50px; border: none">Book Now
+                        </button>
+                    </a>
                     <br>
                 </div>
             </div>
 
             <div class="card col" style="width: 25rem;height: 55rem">
-                <img src="../assets/images/i8.jpg" class="card-img-top img" alt="i8" >
+                <img src="../assets/images/i8.jpg" class="card-img-top img" alt="i8">
                 <div class="card-body">
                     <h2 class="card-title">BMW I8</h2>
                     <h4 style="color: orangered">Luxury</h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Passengers     :  3  </li>
-                    <li class="list-group-item">Transmission   :  Auto</li>
-                    <li class="list-group-item">Color          :  White</li>
+                    <li class="list-group-item">Passengers : 3</li>
+                    <li class="list-group-item">Transmission : Auto</li>
+                    <li class="list-group-item">Color : White</li>
                 </ul>
                 <br>
                 <div class="card-body">
-                    <h3>Daily :  18000.00</h3>
-                    <h3>Monthly :  300000.00</h3>
+                    <h3>Daily : 18000.00</h3>
+                    <h3>Monthly : 300000.00</h3>
 
                     <br>
                     <br>
-                    <a href="#VehicleBookingPage"><button class="btn btn-primary text-white fw-bold fs-4 bookNow" style="width: 100%; height: 50px; border: none">Book Now</button></a>
+                    <a href="#VehicleBookingPage">
+                        <button class="btn btn-primary text-white fw-bold fs-4 bookNow"
+                                style="width: 100%; height: 50px; border: none">Book Now
+                        </button>
+                    </a>
                     <br>
                 </div>
             </div>
@@ -535,75 +591,80 @@
     <br>
 
     <div class="row">
-    <div class="container col rounded-4 glass position-absolute"  style=" top: 350px;left: 80px; width: 600px;background: #BAB9B9 ">
-        <br>
-        <h3 class="text-center">Booking Details</h3>
-        ------------------------------------------------------------------------------------------
-        <br>
-        <br>
-        <br>
-        <form id="BookingForm">
-            <div class="row">
-                <div class="form-group col">
-                    <label for="txtBookingPickupDate" class="fw-bold">Pickup Date</label>
-                    <input class="form-control" id="txtBookingPickupDate"  type="text">
-                    <span class="control-error" ></span>
+        <div class="container col rounded-4 glass position-absolute"
+             style=" top: 350px;left: 80px; width: 600px;background: #BAB9B9 ">
+            <br>
+            <h3 class="text-center">Booking Details</h3>
+            ------------------------------------------------------------------------------------------
+            <br>
+            <br>
+            <br>
+            <form id="BookingForm">
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="txtBookingPickupDate" class="fw-bold">Pickup Date</label>
+                        <input class="form-control" id="txtBookingPickupDate" type="text">
+                        <span class="control-error"></span>
+                    </div>
+                    <div class="form-group col">
+                        <label for="txtBookingPickupTime" class="fw-bold">Pickup Time</label>
+                        <input class="form-control" id="txtBookingPickupTime" type="text">
+                        <span class="control-error"></span>
+                    </div>
                 </div>
-                <div class="form-group col">
-                    <label for="txtBookingPickupTime" class="fw-bold">Pickup Time</label>
-                    <input class="form-control" id="txtBookingPickupTime"  type="text" >
-                    <span class="control-error" ></span>
+
+                <br>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="txtBookingReturnDate" class="fw-bold">Return Date</label>
+                        <input class="form-control" id="txtBookingReturnDate" type="text">
+                        <span class="control-error"></span>
+                    </div>
+                    <div class="form-group col">
+                        <label for="txtBookingReturnTime" class="fw-bold ">Return Time</label>
+                        <input class="form-control" id="txtBookingReturnTime" type="text">
+                        <span class="control-error"></span>
+                    </div>
                 </div>
-            </div>
+                <br>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="txtBookingPickupLocation" class="fw-bold">Pickup Location</label>
+                        <input class="form-control" id="txtBookingPickupLocation" type="text">
+                        <span class="control-error"></span>
+                    </div>
+                    <div class="form-group col">
+                        <label for="txtBookingReturnLocation" class="fw-bold ">Return Location</label>
+                        <input class="form-control" id="txtBookingReturnLocation" type="text">
+                        <span class="control-error"></span>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="txtBookingDuration" class="fw-bold ">Duration</label>
+                        <input class="form-control" id="txtBookingDuration" type="text">
+                        <span class="control-error"></span>
+                    </div>
+                    <div class="form-group col"></div>
+                </div>
+                <br>
+            </form>
+            <br>
+
 
             <br>
-            <div class="row">
-                <div class="form-group col">
-                    <label  for="txtBookingReturnDate" class="fw-bold">Return Date</label>
-                    <input class="form-control" id="txtBookingReturnDate"  type="text">
-                    <span class="control-error" ></span>
-                </div>
-                <div class="form-group col">
-                    <label  for="txtBookingReturnTime" class="fw-bold ">Return Time</label>
-                    <input class="form-control" id="txtBookingReturnTime"  type="text" >
-                    <span class="control-error" ></span>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="form-group col">
-                    <label  for="txtBookingPickupLocation" class="fw-bold">Pickup Location</label>
-                    <input class="form-control" id="txtBookingPickupLocation"  type="text">
-                    <span class="control-error" ></span>
-                </div>
-                <div class="form-group col">
-                    <label  for="txtBookingReturnLocation" class="fw-bold ">Return Location</label>
-                    <input class="form-control" id="txtBookingReturnLocation"  type="text" >
-                    <span class="control-error" ></span>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="form-group col">
-                    <label  for="txtBookingDuration" class="fw-bold ">Duration</label>
-                    <input class="form-control" id="txtBookingDuration"  type="text" >
-                    <span class="control-error" ></span>
-                </div>
-                <div class="form-group col"></div>
-            </div>
-            <br>
-        </form>
-        <br>
-
-
-        <br>
-    </div>
-        <button class="btn position-absolute col-3 fs-5 fw-bold text-white"  style="height: 60px; bottom: 60px; left: 87px;background: #60A670;border: none;border-radius: 5px; box-shadow: 0 0 4px 2px  black">Booking</button>
+        </div>
+        <button class="btn position-absolute col-3 fs-5 fw-bold text-white"
+                style="height: 60px; bottom: 60px; left: 87px;background: #60A670;border: none;border-radius: 5px; box-shadow: 0 0 4px 2px  black">
+            Booking
+        </button>
 
     </div>
 
     <div class="col">
-        <div class="container row rounded-4 glass glassBackground position-absolute"  style=" top: 350px; width: 1400px; left: 800px;">
+        <div class="container row rounded-4 glass glassBackground position-absolute"
+             style=" top: 350px; width: 1400px; left: 800px;">
             <h3 class="text-center">Customer Details</h3>
             ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             <br>
@@ -612,23 +673,23 @@
                 <div class="row">
                     <div class="form-group col">
                         <label for="txtBookingCusName" class="fw-bold">Id</label>
-                        <input class="form-control" id="txtBookingCusId"  type="text">
-                        <span class="control-error" ></span>
+                        <input class="form-control" id="txtBookingCusId" type="text">
+                        <span class="control-error"></span>
                     </div>
                     <div class="form-group col">
                         <label for="txtBookingCusName" class="fw-bold">Name</label>
-                        <input class="form-control" id="txtBookingCusName"  type="text" >
-                        <span class="control-error" ></span>
+                        <input class="form-control" id="txtBookingCusName" type="text">
+                        <span class="control-error"></span>
                     </div>
                     <div class="form-group col">
-                        <label  for="txtBookingCusContact" class="fw-bold">Contact No</label>
-                        <input class="form-control" id="txtBookingCusContact"  type="text">
-                        <span class="control-error" ></span>
+                        <label for="txtBookingCusContact" class="fw-bold">Contact No</label>
+                        <input class="form-control" id="txtBookingCusContact" type="text">
+                        <span class="control-error"></span>
                     </div>
                     <div class="form-group col">
-                        <label  for="txtBookingCusNic" class="fw-bold ">NIC</label>
-                        <input class="form-control" id="txtBookingCusNic"  type="text" >
-                        <span class="control-error" ></span>
+                        <label for="txtBookingCusNic" class="fw-bold ">NIC</label>
+                        <input class="form-control" id="txtBookingCusNic" type="text">
+                        <span class="control-error"></span>
                     </div>
                 </div>
                 <br>
@@ -637,9 +698,10 @@
         </div>
 
         <!--Table-->
-        <div  class=" row container-fluid position-absolute tableBackground" style=" width: 1330px; height:390px;left: 800px;top: 632px">
-            <table class="table table-striped  text-center"  >
-                <thead  style="background: gray" >
+        <div class=" row container-fluid position-absolute tableBackground"
+             style=" width: 1330px; height:390px;left: 800px;top: 632px">
+            <table class="table table-striped  text-center">
+                <thead style="background: gray">
                 <tr>
                     <th scope="col">Car Image</th>
                     <th scope="col">Brand</th>
@@ -653,11 +715,11 @@
                 </thead>
                 <tbody class="table-light fs-5 fw-bold">
                 <tr>
-                    <td><img class="carImages" src="../assets/images/allion.jpg" alt="car" ></td>
+                    <td><img class="carImages" src="../assets/images/allion.jpg" alt="car"></td>
                     <td>Toyota Allion</td>
                     <td>White</td>
                     <td>Premium</td>
-                    <td style="color:#589DF6;"><input type="checkbox" >  If you need a driver click me</td>
+                    <td style="color:#589DF6;"><input type="checkbox"> If you need a driver click me</td>
                     <td>none</td>
                     <td>none</td>
                     <td>10000</td>
@@ -669,9 +731,6 @@
     </div>
 
 </main>
-
-
-
 
 
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
