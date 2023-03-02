@@ -259,12 +259,12 @@
                 <div class="form-group col">
                     <label for="txtAdminID" class="fw-bold">Admin Id</label>
                     <input class="form-control" id="txtAdminID" type="text" name="id">
-                    <span class="control-error" id="lbladminid"></span>
+                    <span class="control-error"></span>
                 </div>
                 <div class="form-group col">
                     <label for="txtAdminName" class="fw-bold">Admin Name</label>
                     <input class="form-control" id="txtAdminName" type="text" name="name">
-                    <span class="control-error" id="lbladminname"></span>
+                    <span class="control-error"></span>
                 </div>
             </div>
 
@@ -274,12 +274,12 @@
                 <div class="form-group col">
                     <label for="txtAdminUsername" class="fw-bold">Admin Username</label>
                     <input class="form-control" id="txtAdminUsername" type="text" name="username">
-                    <span class="control-error" id="lbladminusername"></span>
+                    <span class="control-error"></span>
                 </div>
                 <div class="form-group col">
                     <label for="txtAdminPassword" class="fw-bold">Admin Password</label>
                     <input class="form-control" id="txtAdminPassword" type="text" name="password">
-                    <span class="control-error" id="lbladminpassword"></span>
+                    <span class="control-error"></span>
                 </div>
 
             </div>
@@ -289,7 +289,7 @@
 
             <div class="row">
                 <div class="btn-group col-4 gap-1 rounded">
-                    <button class="btn btn-primary" id="btnSaveAdmin">Save</button>
+                    <button class="btn btn-primary" id="btnSaveAdmin" type="button">Save</button>
                     <button class="btn btn-secondary" id="btnUpdateAdmin">Update</button>
                     <button class="btn btn-danger" id="btnDeleteAdmin">Delete</button>
                     <button class="btn btn-warning" id="btn-clear1">Clear All</button>
@@ -1240,15 +1240,16 @@
     </div>
 
 </main>
+
+<script src="../assets/js/bootstrap.min.js"></script>
+
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 
 <script src="../controllers/AdminDashboardController.js"></script>
 
-<script src="../assets/js/bootstrap.min.js"></script>
-
 <script>
 
-    let baseURL="http://localhost:8080/"
+    let baseURL="http://localhost:8080/Car_Rental_Back_End_war/"
 
     $("#btnSaveAdmin").click(function (){
         let formData = $("#adminForm").serialize();
