@@ -5,9 +5,13 @@ import lk.ijse.spring.entity.Admin;
 import lk.ijse.spring.repo.AdminRepo;
 import lk.ijse.spring.service.AdminService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Transactional
@@ -25,5 +29,11 @@ public class AdminServiceImpl implements AdminService {
         }
         Admin entity = mapper.map(dto, Admin.class);
         repo.save(entity);
+    }
+
+    @Override
+    public ArrayList<AdminDTO> getAllAdmin() {
+        List<Admin> all = repo.findAll();
+        return mapper.map(all,new TypeToken<ArrayList<AdminDTO>>(){}.getType());
     }
 }

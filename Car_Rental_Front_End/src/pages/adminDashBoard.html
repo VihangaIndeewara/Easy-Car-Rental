@@ -316,24 +316,8 @@
                     <th scope="col">Password</th>
                 </tr>
                 </thead>
-                <tbody class="table-light fs-6 fw-bold">
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <!--                <tr>-->
-                <!--                    <th scope="row">3</th>-->
-                <!--                    <td colspan="2">Larry the Bird</td>-->
-                <!--                    <td>@twitter</td>-->
-                <!--                </tr>-->
+                <tbody class="table-light fs-6 fw-bold" id="adminTable">
+
                 </tbody>
             </table>
         </div>
@@ -1261,6 +1245,7 @@
             dataType:"json",
             success:function (resp){
                 alert(resp.message)
+                loadAllAdmin()
             },
             error:function (error){
                 let parse = JSON.parse(error.responseText);
@@ -1269,6 +1254,20 @@
         })
 
     })
+
+    loadAllAdmin()
+
+    function loadAllAdmin(){
+        $.ajax({
+            url: baseURL+"admin",
+            success:function (resp){
+                $("#adminTable").empty();
+                for (var r of resp.data) {
+                    $("#adminTable").append('<tr><td>' + r.id + '</td><td>' + r.name + '</td><td>' + r.username + '</td><td>' + r.password + '</td></tr>')
+                }
+            }
+        })
+    }
 
 </script>
 
