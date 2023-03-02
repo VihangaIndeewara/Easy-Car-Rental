@@ -27,4 +27,10 @@ public class AdminController {
         ArrayList<AdminDTO> allAdmin = service.getAllAdmin();
         return new ResponseUtil("200","Success",allAdmin);
     }
+
+    @PutMapping
+    public ResponseUtil updateAdmin(@RequestBody AdminDTO dto){
+        service.updateAdmin(dto);
+        return new ResponseUtil("200","Successfully Updated",null);
+    }
 }

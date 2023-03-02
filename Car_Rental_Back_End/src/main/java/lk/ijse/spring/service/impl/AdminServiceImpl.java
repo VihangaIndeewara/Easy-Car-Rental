@@ -32,6 +32,16 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
+    public void updateAdmin(AdminDTO dto) {
+         if (!repo.existsById(dto.getId())){
+             throw new RuntimeException("Admin Id "+dto.getId()+" Not Available");
+         }
+
+        Admin entity = mapper.map(dto, Admin.class);
+        repo.save(entity);
+    }
+
+    @Override
     public ArrayList<AdminDTO> getAllAdmin() {
         List<Admin> all = repo.findAll();
         return mapper.map(all,new TypeToken<ArrayList<AdminDTO>>(){}.getType());

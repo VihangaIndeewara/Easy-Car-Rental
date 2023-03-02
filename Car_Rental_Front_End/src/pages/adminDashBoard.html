@@ -290,8 +290,8 @@
             <div class="row">
                 <div class="btn-group col-4 gap-1 rounded">
                     <button class="btn btn-primary" id="btnSaveAdmin" type="button">Save</button>
-                    <button class="btn btn-warning" id="btnUpdateAdmin">Update</button>
-                    <button class="btn btn-danger" id="btnDeleteAdmin">Delete</button>
+                    <button class="btn btn-warning" id="btnUpdateAdmin" type="button">Update</button>
+                    <button class="btn btn-danger" id="btnDeleteAdmin" type="button">Delete</button>
                 </div>
             </div>
         </form>
@@ -1291,6 +1291,37 @@
         $("#txtAdminUsername").val("");
         $("#txtAdminPassword").val("");
     }
+
+    $("#btnUpdateAdmin").click(function (){
+
+        let id = $("#txtAdminID").val();
+        let name = $("#txtAdminName").val();
+        let username = $("#txtAdminUsername").val();
+        let password = $("#txtAdminPassword").val();
+
+        var adminObj={
+            id:id,
+            name:name,
+            username:username,
+            password:password
+        }
+
+        $.ajax({
+            url:baseURL+"admin",
+            method: "put",
+            contentType:"application/json",
+            data:JSON.stringify(adminObj),
+            dataType: "json",
+            success:function (resp){
+                alert(resp.message)
+                loadAllAdmin()
+                clearAdminTextField()
+            },
+            error:function (error){
+                alert(JSON.parse(error.responseText).message);
+            }
+        })
+    })
 
 </script>
 
