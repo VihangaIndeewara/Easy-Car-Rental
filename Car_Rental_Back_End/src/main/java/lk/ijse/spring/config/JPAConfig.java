@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-
+//@EnableJpaRepositories(basePackages = "lk.ijse.spring.repo")
 public class JPAConfig {
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource ds, JpaVendorAdapter jpa){
@@ -33,7 +33,7 @@ public class JPAConfig {
     public DataSource dataSource(){
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/easycarrental?createDatabaseIfNotExist=true");
+        ds.setUrl("jdbc:mysql://localhost:3306/easy_car_rental?createDatabaseIfNotExist=true");
         ds.setUsername("root");
         ds.setPassword("1234");
         return ds;

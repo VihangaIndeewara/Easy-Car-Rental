@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @Import({JPAConfig.class})
-
+//@ComponentScan(basePackageClasses = {CustomerServiceImpl.class})
 public class WebRootConfig {
 
     @Bean
