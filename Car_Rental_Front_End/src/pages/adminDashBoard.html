@@ -290,9 +290,8 @@
             <div class="row">
                 <div class="btn-group col-4 gap-1 rounded">
                     <button class="btn btn-primary" id="btnSaveAdmin" type="button">Save</button>
-                    <button class="btn btn-secondary" id="btnUpdateAdmin">Update</button>
+                    <button class="btn btn-warning" id="btnUpdateAdmin">Update</button>
                     <button class="btn btn-danger" id="btnDeleteAdmin">Delete</button>
-                    <button class="btn btn-warning" id="btn-clear1">Clear All</button>
                 </div>
             </div>
         </form>
@@ -1246,6 +1245,7 @@
             success:function (resp){
                 alert(resp.message)
                 loadAllAdmin()
+                clearAdminTextField()
             },
             error:function (error){
                 let parse = JSON.parse(error.responseText);
@@ -1265,8 +1265,31 @@
                 for (var r of resp.data) {
                     $("#adminTable").append('<tr><td>' + r.id + '</td><td>' + r.name + '</td><td>' + r.username + '</td><td>' + r.password + '</td></tr>')
                 }
+                bindRowEvents()
             }
         })
+    }
+
+    function bindRowEvents(){
+        $("#adminTable>tr").click(function (){
+            let id = $(this).children(":eq(0)").text();
+            let name = $(this).children(":eq(1)").text();
+            let username = $(this).children(":eq(2)").text();
+            let password = $(this).children(":eq(3)").text();
+
+            $("#txtAdminID").val(id);
+            $("#txtAdminName").val(name);
+            $("#txtAdminUsername").val(username);
+            $("#txtAdminPassword").val(password);
+
+        })
+    }
+
+    function clearAdminTextField(){
+        $("#txtAdminName").val("");
+        $("#txtAdminID").val("");
+        $("#txtAdminUsername").val("");
+        $("#txtAdminPassword").val("");
     }
 
 </script>
