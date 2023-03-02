@@ -42,6 +42,15 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
+    public void deleteAdmin(String id) {
+        if (!repo.existsById(id)){
+            throw new RuntimeException("Admin Id "+id+" Not Available");
+        }
+
+        repo.deleteById(id);
+    }
+
+    @Override
     public ArrayList<AdminDTO> getAllAdmin() {
         List<Admin> all = repo.findAll();
         return mapper.map(all,new TypeToken<ArrayList<AdminDTO>>(){}.getType());
