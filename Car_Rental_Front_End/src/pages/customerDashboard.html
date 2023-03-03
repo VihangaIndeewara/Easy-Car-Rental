@@ -597,12 +597,12 @@
                 <div class="row">
                     <div class="form-group col">
                         <label for="txtBookingPickupDate" class="fw-bold">Pickup Date</label>
-                        <input class="form-control" id="txtBookingPickupDate" type="text">
+                        <input class="form-control" id="txtBookingPickupDate" type="text" name="txtPickupDate">
                         <span class="control-error"></span>
                     </div>
                     <div class="form-group col">
                         <label for="txtBookingPickupTime" class="fw-bold">Pickup Time</label>
-                        <input class="form-control" id="txtBookingPickupTime" type="text">
+                        <input class="form-control" id="txtBookingPickupTime" type="text" name="txtPickupTime">
                         <span class="control-error"></span>
                     </div>
                 </div>
@@ -611,12 +611,12 @@
                 <div class="row">
                     <div class="form-group col">
                         <label for="txtBookingReturnDate" class="fw-bold">Return Date</label>
-                        <input class="form-control" id="txtBookingReturnDate" type="text">
+                        <input class="form-control" id="txtBookingReturnDate" type="text" name="txtReturnDate">
                         <span class="control-error"></span>
                     </div>
                     <div class="form-group col">
                         <label for="txtBookingReturnTime" class="fw-bold ">Return Time</label>
-                        <input class="form-control" id="txtBookingReturnTime" type="text">
+                        <input class="form-control" id="txtBookingReturnTime" type="text" name="txtReturnTime">
                         <span class="control-error"></span>
                     </div>
                 </div>
@@ -624,20 +624,20 @@
                 <div class="row">
                     <div class="form-group col">
                         <label for="txtBookingPickupLocation" class="fw-bold">Pickup Location</label>
-                        <input class="form-control" id="txtBookingPickupLocation" type="text">
+                        <input class="form-control" id="txtBookingPickupLocation" type="text" name="txtPickupLocation">
                         <span class="control-error"></span>
                     </div>
                     <div class="form-group col">
                         <label for="txtBookingReturnLocation" class="fw-bold ">Return Location</label>
-                        <input class="form-control" id="txtBookingReturnLocation" type="text">
+                        <input class="form-control" id="txtBookingReturnLocation" type="text" name="txtReturnLocation">
                         <span class="control-error"></span>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="form-group col">
-                        <label for="txtBookingDuration" class="fw-bold ">Duration</label>
-                        <input class="form-control" id="txtBookingDuration" type="text">
+                        <label for="txtBookingJourneyDuration" class="fw-bold ">Journey Duration</label>
+                        <input class="form-control" id="txtBookingJourneyDuration" type="text" name="txtJourneyDuration">
                         <span class="control-error"></span>
                     </div>
                     <div class="form-group col"></div>
@@ -649,8 +649,7 @@
 
             <br>
         </div>
-        <button class="btn position-absolute col-3 fs-5 fw-bold text-white"
-                style="height: 60px; bottom: 60px; left: 87px;background: #60A670;border: none;border-radius: 5px; box-shadow: 0 0 4px 2px  black">
+        <button class="btn position-absolute col-3 fs-5 fw-bold text-white" style="height: 60px; bottom: 60px; left: 87px;background: #60A670;border: none;border-radius: 5px; box-shadow: 0 0 4px 2px  black">
             Booking
         </button>
 
@@ -792,11 +791,20 @@
 
         cusScheduleArray=temp;
 
-
-        for (let a of cusScheduleArray) {
-            console.log(a)
-        }
     })
+
+    $(".bookNow").click(function (){
+        $("#txtBookingPickupDate").val(cusScheduleArray[0]);
+        $("#txtBookingPickupTime").val(cusScheduleArray[1]);
+        $("#txtBookingReturnDate").val(cusScheduleArray[2]);
+        $("#txtBookingReturnTime").val(cusScheduleArray[3]);
+        $("#txtBookingPickupLocation").val(cusScheduleArray[4]);
+        $("#txtBookingReturnLocation").val(cusScheduleArray[5]);
+        $("#txtBookingJourneyDuration").val(cusScheduleArray[6]);
+
+
+    })
+
 
 </script>
 </body>
