@@ -171,9 +171,7 @@
 
             <div class=" row">
                 <div class="btn-group  gap-1 rounded">
-                    <a href="#VehiclePage">
-                        <button type="button" aria-current="page" class="btn btn-primary fw-bold" id="btnSearchVehicle">Search Vehicle</button>
-                    </a>
+                        <button type="button" aria-current="page" class="btn btn-primary fw-bold" id="btnSearchVehicle" >Search Vehicle</button>
                 </div>
             </div>
             <br>
@@ -227,8 +225,7 @@
 
                 <div class="row">
                     <div class="form-group col">
-                        <input class="form-control" id="txtEditPickupLocation" type="text"
-                               placeholder="Pickup Location">
+                        <input class="form-control" id="txtEditPickupLocation" type="text" placeholder="Pickup Location">
                         <span class="control-error"></span>
                     </div>
                     <div class="form-group col">
@@ -236,8 +233,7 @@
                         <span class="control-error"></span>
                     </div>
                     <div class="form-group col">
-                        <input class="form-control" id="txtEditJourneyDuration" type="text"
-                               placeholder="Journey Duration">
+                        <input class="form-control" id="txtEditJourneyDuration" type="text" placeholder="Journey Duration">
                         <span class="control-error"></span>
                     </div>
                 </div>
@@ -247,7 +243,7 @@
 
                 <div class=" row">
                     <div class="btn-group  gap-1 rounded">
-                        <button type="button" class="btn btn-primary fw-bold" id="btnEditVehicle">Edit</button>
+                        <button type="button" class="btn btn-primary fw-bold" id="btnEditSchedule">Edit</button>
                     </div>
                 </div>
                 <br>
@@ -740,6 +736,8 @@
        searchInputValues()
     })
 
+    let array;
+
     function searchInputValues(){
         let pickupDate = $("#txtPickupDate").val();
         let pickupTime = $("#txtPickupTime").val();
@@ -749,24 +747,38 @@
         let dropLocation = $("#txtDropLocation").val();
         let journeyDuration = $("#txtJourneyDuration").val();
 
-        let array = new Array(pickupDate,pickupTime,dropDate,dropTime,pickupLocation,dropLocation,journeyDuration);
+         cusScheduleArray = new Array(pickupDate,pickupTime,dropDate,dropTime,pickupLocation,dropLocation,journeyDuration);
 
         let count=0;
 
-        for (var i = 0; i < array.length; i++) {
-            if (array[i].length>0){
+        for (var i = 0; i < cusScheduleArray.length; i++) {
+            if (cusScheduleArray[i].length>0){
                 count++
             }
         }
 
         if(count==7){
-            console.log("ok")
+            $("#CustomerDashboardPage").css("display","none")
+            $("#VehiclePage").css("display","block")
+            $("#VehicleBookingPage").css("display","none")
+            setEditTextFieldValues()
         }else if(count!=7){
-            alert("Please Fill All The Fields")
+            alert("Please Fill All The Fields...")
         }
-
-
     }
+
+
+    function setEditTextFieldValues(){
+            $("#txtEditPickupDate").val(cusScheduleArray[0]);
+            $("#txtEditPickupTime").val(cusScheduleArray[1]);
+            $("#txtEditReturnDate").val(cusScheduleArray[2]);
+            $("#txtEditReturnTime").val(cusScheduleArray[3]);
+            $("#txtEditPickupLocation").val(cusScheduleArray[4]);
+            $("#txtEditDropLocation").val(cusScheduleArray[5]);
+            $("#txtEditJourneyDuration").val(cusScheduleArray[6]);
+    }
+
+
 
 </script>
 </body>
