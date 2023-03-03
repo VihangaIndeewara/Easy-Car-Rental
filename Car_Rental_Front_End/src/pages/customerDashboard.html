@@ -60,7 +60,7 @@
             width: 450px;
         }
 
-        #btnEditVehicle {
+        #btnEditSchedule {
             position: absolute;
             left: 0;
             right: 0;
@@ -243,7 +243,7 @@
 
                 <div class=" row">
                     <div class="btn-group  gap-1 rounded">
-                        <button type="button" class="btn btn-primary fw-bold" id="btnEditSchedule">Edit</button>
+                        <button type="button" class="btn btn-primary fw-bold" id="btnEditSchedule" >Edit</button>
                     </div>
                 </div>
                 <br>
@@ -778,7 +778,25 @@
             $("#txtEditJourneyDuration").val(cusScheduleArray[6]);
     }
 
+    $("#btnEditSchedule").click(function (){
 
+        let temp = cusScheduleArray;
+
+        temp[0]= $("#txtEditPickupDate").val();
+        temp[1] = $("#txtEditPickupTime").val();
+        temp[2] = $("#txtEditReturnDate").val();
+        temp[3] = $("#txtEditReturnTime").val();
+        temp[4] = $("#txtEditPickupLocation").val();
+        temp[5] = $("#txtEditDropLocation").val();
+        temp[6] = $("#txtEditJourneyDuration").val();
+
+        cusScheduleArray=temp;
+
+
+        for (let a of cusScheduleArray) {
+            console.log(a)
+        }
+    })
 
 </script>
 </body>
