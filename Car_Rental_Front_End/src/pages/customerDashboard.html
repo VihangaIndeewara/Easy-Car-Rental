@@ -120,31 +120,31 @@
     <br>
     <br>
     <br>
-    <h1 class=" topic  ">Search The Car For Rent</h1>
+    <h1 class=" topic  ">Search A Car For Rent</h1>
     <br>
     <br>
     <section class="container rounded-4 glass position-absolute" style=" top: 450px;left: 80px;">
-        <form id="customerForm">
+        <form id="vehicleSearchForm">
             <div class="row">
 
                 <div class="form-group col">
                     <label class="fw-bold text-white">Pickup</label>
-                    <input class="form-control" id="txtPickupDate" required type="date">
+                    <input class="form-control" id="txtPickupDate" required type="date" name="searchPickupDate">
                     <span class="control-error"></span>
                 </div>
                 <div class="form-group col">
                     <label></label>
-                    <input class="form-control" id="txtPickupTime" required type="time">
+                    <input class="form-control" id="txtPickupTime" required type="time" name="searchPickupTime">
                     <span class="control-error"></span>
                 </div>
                 <div class="form-group col">
                     <label class="fw-bold text-white">Drop</label>
-                    <input class="form-control" id="txtReturnDate" required type="date">
+                    <input class="form-control" id="txtReturnDate" required type="date" name="searchDropDate">
                     <span class="control-error"></span>
                 </div>
                 <div class="form-group col">
                     <label></label>
-                    <input class="form-control" id="txtReturnTime" required type="time">
+                    <input class="form-control" id="txtReturnTime" required type="time" name="searchDropTime">
                     <span class="control-error"></span>
                 </div>
             </div>
@@ -153,15 +153,15 @@
 
             <div class="row">
                 <div class="form-group col">
-                    <input class="form-control" id="txtPickupLocation" type="text" placeholder="Pickup Location">
+                    <input class="form-control" id="txtPickupLocation" type="text" required placeholder="Pickup Location" name="searchPickupLocation">
                     <span class="control-error"></span>
                 </div>
                 <div class="form-group col">
-                    <input class="form-control" id="txtDropLocation" type="text" placeholder="Drop Location">
+                    <input class="form-control" id="txtDropLocation" type="text" placeholder="Drop Location" required name="searchDropLocation">
                     <span class="control-error"></span>
                 </div>
                 <div class="form-group col">
-                    <input class="form-control" id="txtJourneyDuration" type="text" placeholder="Journey Duration">
+                    <input class="form-control" id="txtJourneyDuration" type="text" placeholder="Journey Duration" required name="searchJourneyDuration">
                     <span class="control-error"></span>
                 </div>
             </div>
@@ -172,9 +172,7 @@
             <div class=" row">
                 <div class="btn-group  gap-1 rounded">
                     <a href="#VehiclePage">
-                        <button type="button" aria-current="page" class="btn btn-primary fw-bold" id="btnSearchVehicle">
-                            Search Vehicle
-                        </button>
+                        <button type="button" aria-current="page" class="btn btn-primary fw-bold" id="btnSearchVehicle">Search Vehicle</button>
                     </a>
                 </div>
             </div>
@@ -734,9 +732,42 @@
 
 
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
-
+<script src="../assets/js/bootstrap.min.js"></script>
 <script src="../controllers/CustomerDashboardController.js"></script>
 
-<script src="../assets/js/bootstrap.min.js"></script>
+<script>
+    $("#btnSearchVehicle").click(function (){
+       searchInputValues()
+    })
+
+    function searchInputValues(){
+        let pickupDate = $("#txtPickupDate").val();
+        let pickupTime = $("#txtPickupTime").val();
+        let dropDate = $("#txtReturnDate").val();
+        let dropTime = $("#txtReturnTime").val();
+        let pickupLocation = $("#txtPickupLocation").val();
+        let dropLocation = $("#txtDropLocation").val();
+        let journeyDuration = $("#txtJourneyDuration").val();
+
+        let array = new Array(pickupDate,pickupTime,dropDate,dropTime,pickupLocation,dropLocation,journeyDuration);
+
+        let count=0;
+
+        for (var i = 0; i < array.length; i++) {
+            if (array[i].length>0){
+                count++
+            }
+        }
+
+        if(count==7){
+            console.log("ok")
+        }else if(count!=7){
+            alert("Please Fill All The Fields")
+        }
+
+
+    }
+
+</script>
 </body>
 </html>
