@@ -473,7 +473,7 @@
                             </div>
                             <div class="mb-3 col-3">
                                 <label for="totalDistanceInput" class="form-label">Total Distance Travelled</label>
-                                <input type="text" class="form-control" id="totalDistanceInput" placeholder="150" name="TotalDistanceTravelled">
+                                <input type="text" class="form-control" id="totalDistanceInput" placeholder="Ex:- 150" name="TotalDistanceTravelled">
                                 <span class="control-error"></span>
                             </div>
                         </div>
@@ -734,32 +734,17 @@
                         <h5 class="modal-title" id="manageDriverTitle">Manage Driver</h5>
                     </div>
 
-                    <form id="manageDriver">
-                        <div class="modal-body  row">
-
-                            <div class="mb-3 col">
-                                <label for="driverUsernameInput" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="driverUsernameInput" name="driverUsername">
-                                <span class="control-error"></span>
-                            </div>
-                            <div class="mb-3 col">
-                                <label for="driverPasswordInput" class="form-label">Password</label>
-                                <input type="text" class="form-control" id="driverPasswordInput" name="driverPassword">
-                                <span class="control-error"></span>
-                            </div>
-                        </div>
-
-
+                    <form id="manageDriverForm">
                         <div class="modal-body  row">
 
                             <div class="mb-3 col">
                                 <label for="driverIDInput" class="form-label">Driver ID</label>
-                                <input type="text" class="form-control" id="driverIDInput" name="driverID">
+                                <input type="text" class="form-control" id="driverIDInput" placeholder="Ex:- D000001" name="driverID">
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col">
                                 <label for="driverNameInput" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="driverNameInput" name="driverName">
+                                <input type="text" class="form-control" id="driverNameInput" placeholder="Ex:- Kamal Perera" name="driverName">
                                 <span class="control-error"></span>
                             </div>
                         </div>
@@ -768,7 +753,7 @@
                         <div class="modal-body  row">
                             <div class="mb-3 col">
                                 <label for="driverAddressInput" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="driverAddressInput" name="driverAddress">
+                                <input type="text" class="form-control" id="driverAddressInput" placeholder="Ex:- 80/A, Galle Rd, Galle" name="driverAddress">
                                 <span class="control-error"></span>
                             </div>
                         </div>
@@ -777,13 +762,12 @@
                         <div class="modal-body  row">
                             <div class="mb-3 col">
                                 <label for="driverContactNoInput" class="form-label">Contact No</label>
-                                <input type="text" class="form-control" id="driverContactNoInput"
-                                       name="driverContactNo">
+                                <input type="text" class="form-control" id="driverContactNoInput" placeholder="Ex:- +94714501518" name="driverContactNo">
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col">
                                 <label for="ageInput" class="form-label">Age</label>
-                                <input type="text" class="form-control" id="ageInput" name="age">
+                                <input type="text" class="form-control" id="ageInput" placeholder="Ex:- 28" name="age">
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col-6">
@@ -795,15 +779,29 @@
                                 </select>
                                 <span class="control-error"></span>
                             </div>
+
+                            <div class="modal-body  row">
+
+                                <div class="mb-3 col">
+                                    <label for="driverUsernameInput" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="driverUsernameInput" placeholder="Ex:- kamal123" name="driverUsername">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="driverPasswordInput" class="form-label">Password</label>
+                                    <input type="text" class="form-control" id="driverPasswordInput" placeholder="Ex:- perera@123" name="driverPassword">
+                                    <span class="control-error"></span>
+                                </div>
+                            </div>
                         </div>
 
                     </form>
 
                     <div class="modal-footer">
                         <div class="btn-group col-4 gap-1 rounded">
-                            <button class="btn btn-primary" id="btnDriverSave">Save</button>
-                            <button class="btn btn-secondary" id="btnDriverUpdate">Update</button>
-                            <button class="btn btn-danger" id="btnDriverDelete">Delete</button>
+                            <button type="button" class="btn btn-primary" id="btnDriverSave">Save</button>
+                            <button type="button" class="btn btn-secondary" id="btnDriverUpdate">Update</button>
+                            <button type="button" class="btn btn-danger" id="btnDriverDelete">Delete</button>
                             <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -1228,6 +1226,8 @@
 
     let baseURL="http://localhost:8080/Car_Rental_Back_End_war/"
 
+    //Admin
+
     $("#btnSaveAdmin").click(function (){
         let formData = $("#adminForm").serialize();
 
@@ -1334,6 +1334,28 @@
                 alert(parse.message);
             }
         })
+    })
+
+
+    //Driver
+
+    $("#btnDriverSave").click(function (){
+        let formData = $("#manageDriverForm").serialize();
+
+        $.ajax({
+            url:baseURL+"driver",
+            method:"post",
+            data: formData,
+            dataType:"json",
+            success:function (resp){
+                alert(resp.message)
+            },
+            error:function (error){
+                let parse = JSON.parse(error.responseText);
+                alert(parse.message)
+            }
+        })
+
     })
 
 </script>
