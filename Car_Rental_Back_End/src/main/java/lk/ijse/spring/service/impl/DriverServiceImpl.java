@@ -45,6 +45,14 @@ public class DriverServiceImpl implements DriverService {
     }
 
     @Override
+    public void deleteDriver(String id) {
+        if (!repo.existsById(id)){
+            throw new RuntimeException("Driver Id "+id+" Not Available");
+        }
+        repo.deleteById(id);
+    }
+
+    @Override
     public ArrayList<DriverDTO> getAllDrivers() {
         List<Driver> all = repo.findAll();
         return mapper.map(all,new TypeToken<ArrayList<DriverDTO>>(){}.getType());

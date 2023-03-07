@@ -1429,6 +1429,24 @@
         })
     })
 
+    $("#btnDriverDelete").click(function (){
+        let id = $("#driverIDInput").val();
+
+        $.ajax({
+            url:baseURL+"driver?id="+id,
+            method:"delete",
+            dataType:"json",
+            success:function (resp){
+                alert(resp.message)
+                loadAllDrivers()
+            },
+            error:function (error){
+                let parse = JSON.parse(error.responseText);
+                alert(parse.message);
+            }
+        })
+    })
+
 
 </script>
 
