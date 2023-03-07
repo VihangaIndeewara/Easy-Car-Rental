@@ -827,6 +827,8 @@
                     <th scope="col">Driver Age</th>
                     <th scope="col">Driver Contact No</th>
                     <th scope="col">Release Status</th>
+                    <th scope="col">Driver Username</th>
+                    <th scope="col">Driver Password</th>
                 </tr>
                 </thead>
                 <tbody class="table-light fs-6 fw-bold" id="driverTable">
@@ -1362,12 +1364,34 @@
             success:function (resp){
                 $("#driverTable").empty();
                 for (var r of resp.data) {
-                    $("#driverTable").append('<tr><td>' + r.driverID + '</td><td>' + r.driverName + '</td><td>' + r.driverAddress + '</td><td>' + r.driverContactNo + '</td><td>' + r.age + '</td><td>' + r.releaseStatus + '</td></tr>')
+                    $("#driverTable").append('<tr><td>' + r.driverID + '</td><td>' + r.driverName + '</td><td>' + r.driverAddress + '</td><td>' + r.driverContactNo + '</td><td>' + r.age + '</td><td>' + r.releaseStatus + '</td><td>' + r.driverUsername + '</td><td>' + r.driverPassword + '</td></tr>')
                 }
-                // bindRowEvents()
+                bindDriverRowEvents()
             }
         })
     }
+
+    function bindDriverRowEvents(){
+        $("#driverTable>tr").click(function (){
+            let id = $(this).children(":eq(0)").text();
+            let name = $(this).children(":eq(1)").text();
+            let address = $(this).children(":eq(2)").text();
+            let contactNo = $(this).children(":eq(3)").text();
+            let age = $(this).children(":eq(4)").text();
+            let releaseStatus = $(this).children(":eq(5)").text();
+            let username = $(this).children(":eq(6)").text();
+            let password = $(this).children(":eq(7)").text();
+            $("#driverIDInput").val(id);
+            $("#driverNameInput").val(name);
+            $("#driverAddressInput").val(address);
+            $("#driverContactNoInput").val(contactNo);
+            $("#ageInput").val(age);
+            $("#comboReleaseStatus").val(releaseStatus);
+            $("#driverUsernameInput").val(username);
+            $("#driverPasswordInput").val(password);
+        })
+    }
+
 
 </script>
 
