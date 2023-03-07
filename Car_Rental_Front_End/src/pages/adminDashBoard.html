@@ -644,9 +644,9 @@
 
                     <div class="modal-footer">
                         <div class="btn-group col-4 gap-1 rounded">
-                            <button class="btn btn-primary" id="btnCustomerSave">Save</button>
-                            <button class="btn btn-secondary" id="btnCustomerUpdate">Update</button>
-                            <button class="btn btn-danger" id="btnCustomerDelete">Delete</button>
+                            <button type="button"  class="btn btn-primary" id="btnCustomerSave">Save</button>
+                            <button type="button"  class="btn btn-secondary" id="btnCustomerUpdate">Update</button>
+                            <button type="button" class="btn btn-danger" id="btnCustomerDelete">Delete</button>
                             <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -687,7 +687,7 @@
                     <th scope="col">License Image</th>
                 </tr>
                 </thead>
-                <tbody class="table-light fs-6 fw-bold">
+                <tbody class="table-light fs-6 fw-bold" id="customerTable">
                 <tr>
                     <td>C001</td>
                     <td>Kamal Perera</td>
@@ -1446,6 +1446,32 @@
             }
         })
     })
+
+
+//    Customer
+
+    bindCustomerRowEvents()
+
+    function bindCustomerRowEvents(){
+        $("#customerTable>tr").click(function (){
+            let id = $(this).children(":eq(0)").text();
+            let name = $(this).children(":eq(1)").text();
+            let address = $(this).children(":eq(2)").text();
+            let contactNo = $(this).children(":eq(3)").text();
+            let email = $(this).children(":eq(0)").text();
+            let nicNo = $(this).children(":eq(1)").text();
+            let licenseNo = $(this).children(":eq(2)").text();
+
+            $("#customerIDInput").val(id);
+            $("#customerNameInput").val(name);
+            $("#customerAddressInput").val(address);
+            $("#customerContactNoInput").val(contactNo);
+            $("#customerEmailInput").val(email);
+            $("#customerNICNoInput").val(nicNo);
+            $("#customerLicenseNoInput").val(licenseNo);
+        })
+    }
+
 
 
 </script>
