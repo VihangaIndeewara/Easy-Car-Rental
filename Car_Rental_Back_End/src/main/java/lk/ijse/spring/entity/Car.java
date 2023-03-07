@@ -15,22 +15,21 @@ import javax.persistence.Id;
 @Entity
 public class Car {
     @Id
-    private String cId;
+    private String carId;
     private String brand;
     private String colour;
     private String type;
     private String fuelType;
     private String transmissionType;
-    private String noOfPassengers;
-    private String dailyRatePrice;
-    private String monthlyRatePrice;
-    private String freeKmPerDay;
-    private String freeKmPerMonth;
-    private String priceForExtraKM;
+    private int noOfPassengers;
+    private double dailyRatePrice;
+    private double monthlyRatePrice;
+    private int freeKmPerDay;
+    private int freeKmPerMonth;
+    private double priceForExtraKM;
     private String availableOrNot;
     private String damageOrNot;
     private String underMaintainOrNot;
-    private String TotalDistanceTravelled;
 //    private String uploadBackView;
 //    private String uploadSideView;
 //    private String uploadInteriorView;

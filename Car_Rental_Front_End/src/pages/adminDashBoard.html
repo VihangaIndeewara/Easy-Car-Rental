@@ -360,7 +360,7 @@
 
                             <div class="mb-3 col">
                                 <label for="carIdInput" class="form-label">Car ID</label>
-                                <input type="text" class="form-control" id="carIdInput" placeholder="Ex:- C000001" name="cId">
+                                <input type="text" class="form-control" id="carIdInput" placeholder="Ex:- C000001" name="carId">
                                 <span class="control-error"></span>
                             </div>
                             <div class="mb-3 col">
@@ -402,8 +402,9 @@
                             <div class="mb-3 col">
                                 <label for="comboTransmissionType" class="form-label">Transmission Type</label>
                                 <select name="transmissionType" class="form-control" id="comboTransmissionType">
-                                    <option value="Select">Manual</option>
-                                    <option value="Select">Auto</option>
+                                    <option value="Select">Select</option>
+                                    <option value="Manual">Manual</option>
+                                    <option value="Auto">Auto</option>
                                 </select>
                                 <span class="control-error"></span>
                             </div>
@@ -471,11 +472,7 @@
                                 </select>
                                 <span class="control-error"></span>
                             </div>
-                            <div class="mb-3 col-3">
-                                <label for="totalDistanceInput" class="form-label">Total Distance Travelled</label>
-                                <input type="text" class="form-control" id="totalDistanceInput" placeholder="Ex:- 150" name="TotalDistanceTravelled">
-                                <span class="control-error"></span>
-                            </div>
+
                         </div>
 
 
@@ -541,7 +538,6 @@
                     <th scope="col">Free KM Per Day</th>
                     <th scope="col">Free KM Per Month</th>
                     <th scope="col">Price For Extra KM</th>
-                    <th scope="col">Total Distance Travelled</th>
                     <th scope="col">Available Or Not</th>
                     <th scope="col">Damage Or Not</th>
                     <th scope="col">Under Maintain Or Not</th>
@@ -551,13 +547,7 @@
                     <th scope="col">Interior View</th>
                 </tr>
                 </thead>
-                <tbody class="table-light fs-6 fw-bold">
-                <tr>
-                    <th>C0000001</th>
-                    <td>Suzuki Celerio</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
+                <tbody class="table-light fs-6 fw-bold" id="carTable">
                 </tbody>
             </table>
         </div>
@@ -1485,7 +1475,7 @@
             dataType:"json",
             success:function (resp){
                 alert(resp.message)
-                loadAllDrivers()
+                loadAllCars()
             },
             error:function (error){
                 let parse = JSON.parse(error.responseText);
@@ -1494,6 +1484,62 @@
         })
 
     })
+
+
+
+    loadAllCars()
+
+    function loadAllCars(){
+        $.ajax({
+            url: baseURL+"car",
+            success:function (resp){
+                $("#carTable").empty();
+                for (var r of resp.data) {
+                    $("#carTable").append('<tr><td>' + r.carId + '</td><td>' + r.brand + '</td><td>' + r.colour + '</td><td>' + r.type + '</td><td>' + r.fuelType + '</td><td>' + r.transmissionType + '</td><td>' + r.noOfPassengers + '</td><td>' + r.dailyRatePrice + '</td><td>' + r.monthlyRatePrice + '</td><td>' + r.freeKmPerDay + '</td><td>' + r.priceForExtraKM + '</td><td>' + r.freeKmPerMonth + '</td><td>' + r.availableOrNot + '</td><td>' + r.damageOrNot + '</td><td>' + r.underMaintainOrNot + '</td></tr>')
+                }
+                bindCarRowEvents()
+            }
+        })
+    }
+
+    function bindCarRowEvents(){
+        $("#carTable>tr").click(function (){
+            let id = $(this).children(":eq(0)").text();
+            let brand = $(this).children(":eq(1)").text();
+            let colour = $(this).children(":eq(2)").text();
+            let type = $(this).children(":eq(3)").text();
+            let fuelType = $(this).children(":eq(4)").text();
+            let transmissionType = $(this).children(":eq(5)").text();
+            let noOfPassengers = $(this).children(":eq(6)").text();
+            let dailyRatePrice = $(this).children(":eq(7)").text();
+            let monthlyRatePrice = $(this).children(":eq(8)").text();
+            let freeKmPerDay = $(this).children(":eq(9)").text();
+            let freeKmPerMonth = $(this).children(":eq(10)").text();
+            let availableOrNot = $(this).children(":eq(11)").text();
+            let priceForExtraKM = $(this).children(":eq(12)").text();
+            let damageOrNot = $(this).children(":eq(13)").text();
+            let underMaintainOrNot = $(this).children(":eq(14)").text();
+            let TotalDistanceTravelled = $(this).children(":eq(15)").text();
+
+
+            $("#carIdInput").val(id);
+            $("#carBrandInput").val(brand);
+            $("#carColourInput").val(colour);
+            $("#comboType").val(type);
+            $("#comboFuelType").val(fuelType);
+            $("#comboTransmissionType").val(transmissionType);
+            $("#noOfPassengersInput").val(noOfPassengers);
+            $("#dailyRatePriceInput").val(dailyRatePrice);
+            $("#priceExtraKMInput").val(freeKmPerMonth);
+            $("#monthlyRatePriceInput").val(monthlyRatePrice);
+            $("#freeKmPerDayInput").val(freeKmPerDay);
+            $("#freeKmPerMonthInput").val(priceForExtraKM);
+            $("#comboAvailableOrNot").val(availableOrNot);
+            $("#comboDamageOrNot").val(damageOrNot);
+            $("#comboUnderMaintainOrNot").val(underMaintainOrNot);
+            $("#totalDistanceInput").val(TotalDistanceTravelled);
+        })
+    }
 
 </script>
 
