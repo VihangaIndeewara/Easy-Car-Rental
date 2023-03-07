@@ -829,14 +829,8 @@
                     <th scope="col">Release Status</th>
                 </tr>
                 </thead>
-                <tbody class="table-light fs-6 fw-bold">
+                <tbody class="table-light fs-6 fw-bold" id="driverTable">
                 <tr>
-                    <td>D001</td>
-                    <td>Kamal Perera</td>
-                    <td>80, Galle Rd, Galle</td>
-                    <td>28</td>
-                    <td>+94785252369</td>
-                    <td>Release</td>
                 </tr>
                 </tbody>
             </table>
@@ -1349,6 +1343,7 @@
             dataType:"json",
             success:function (resp){
                 alert(resp.message)
+                loadAllDrivers()
             },
             error:function (error){
                 let parse = JSON.parse(error.responseText);
@@ -1357,6 +1352,22 @@
         })
 
     })
+
+
+    loadAllDrivers()
+
+    function loadAllDrivers(){
+        $.ajax({
+            url: baseURL+"driver",
+            success:function (resp){
+                $("#driverTable").empty();
+                for (var r of resp.data) {
+                    $("#driverTable").append('<tr><td>' + r.driverID + '</td><td>' + r.driverName + '</td><td>' + r.driverAddress + '</td><td>' + r.driverContactNo + '</td><td>' + r.age + '</td><td>' + r.releaseStatus + '</td></tr>')
+                }
+                // bindRowEvents()
+            }
+        })
+    }
 
 </script>
 
