@@ -35,6 +35,16 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    public void updateCar(CarDTO dto) {
+        if (!repo.existsById(dto.getCarId())){
+            throw new RuntimeException("Admin Id "+dto.getCarId()+" Not Available");
+        }
+
+        Car entity = mapper.map(dto, Car.class);
+        repo.save(entity);
+    }
+
+    @Override
     public ArrayList<CarDTO> getAllCars() {
         List<Car> all = repo.findAll();
         return mapper.map(all,new TypeToken<ArrayList<Car>>(){}.getType());

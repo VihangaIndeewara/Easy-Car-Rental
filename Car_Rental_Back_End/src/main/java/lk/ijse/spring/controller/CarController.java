@@ -1,5 +1,6 @@
 package lk.ijse.spring.controller;
 
+import lk.ijse.spring.dto.AdminDTO;
 import lk.ijse.spring.dto.CarDTO;
 import lk.ijse.spring.dto.DriverDTO;
 import lk.ijse.spring.service.CarService;
@@ -28,4 +29,11 @@ public class CarController {
         ArrayList<CarDTO> allCars = service.getAllCars();
         return new ResponseUtil("200","Success",allCars);
     }
+
+    @PutMapping
+    public ResponseUtil updateAdmin(@RequestBody CarDTO dto){
+        service.updateCar(dto);
+        return new ResponseUtil("200","Successfully Updated",null);
+    }
+
 }

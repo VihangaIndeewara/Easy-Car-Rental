@@ -1536,9 +1536,62 @@
             $("#comboAvailableOrNot").val(availableOrNot);
             $("#comboDamageOrNot").val(damageOrNot);
             $("#comboUnderMaintainOrNot").val(underMaintainOrNot);
-            $("#totalDistanceInput").val(TotalDistanceTravelled);
         })
     }
+
+    $("#carsUpdateButton").click(function (){
+
+
+        let id = $("#carIdInput").val();
+        let brand = $("#carBrandInput").val();
+        let colour = $("#carColourInput").val();
+        let type = $("#comboType").val();
+        let fuelType = $("#comboFuelType").val();
+        let transmissionType = $("#comboTransmissionType").val();
+        let passengers = $("#noOfPassengersInput").val();
+        let dailyPrice = $("#dailyRatePriceInput").val();
+        let priceExtraKM = $("#priceExtraKMInput").val();
+        let monthlyPrice = $("#monthlyRatePriceInput").val();
+        let freeKmDay = $("#freeKmPerDayInput").val();
+        let freeKmMonth = $("#freeKmPerMonthInput").val();
+        let available = $("#comboAvailableOrNot").val();
+        let damage = $("#comboDamageOrNot").val();
+        let maintain = $("#comboUnderMaintainOrNot").val();
+
+
+        var carObj={
+            carId:id,
+            brand:brand,
+            colour:colour,
+            type:type,
+            fuelType:fuelType,
+            transmissionType:transmissionType,
+            noOfPassengers:passengers,
+            dailyRatePrice:dailyPrice,
+            monthlyRatePrice:monthlyPrice,
+            freeKmPerDay:freeKmDay,
+            freeKmPerMonth:freeKmMonth,
+            priceForExtraKM:priceExtraKM,
+            availableOrNot:available,
+            damageOrNot:damage,
+            underMaintainOrNot:maintain,
+        }
+
+        $.ajax({
+            url:baseURL+"car",
+            method: "put",
+            contentType:"application/json",
+            data:JSON.stringify(carObj),
+            dataType: "json",
+            success:function (resp){
+                alert(resp.message)
+                loadAllCars()
+            },
+            error:function (error){
+                alert(JSON.parse(error.responseText).message);
+            }
+        })
+    })
 
 </script>
 
