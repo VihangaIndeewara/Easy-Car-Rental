@@ -29,4 +29,10 @@ public class DriverController {
         return new ResponseUtil("200","Success",allDrivers);
     }
 
+    @PutMapping
+    public ResponseUtil updateDriver(@RequestBody DriverDTO dto){
+        service.updateDriver(dto);
+        return new ResponseUtil("200","Successfully Updated",null);
+    }
+
 }

@@ -1391,6 +1391,43 @@
             $("#driverPasswordInput").val(password);
         })
     }
+    $("#btnDriverUpdate").click(function (){
+
+        let id = $("#driverIDInput").val();
+        let name = $("#driverNameInput").val();
+        let address = $("#driverAddressInput").val();
+        let contactNo = $("#driverContactNoInput").val();
+        let age = $("#ageInput").val();
+        let status = $("#comboReleaseStatus").val();
+        let username = $("#driverUsernameInput").val();
+        let password = $("#driverPasswordInput").val();
+
+        var driverObj={
+            driverID:id,
+            driverName:name,
+            driverAddress:address,
+            driverContactNo:contactNo,
+            age:age,
+            releaseStatus:status,
+            driverUsername:username,
+            driverPassword:password
+        }
+
+        $.ajax({
+            url:baseURL+"driver",
+            method: "put",
+            contentType:"application/json",
+            data:JSON.stringify(driverObj),
+            dataType: "json",
+            success:function (resp){
+                alert(resp.message)
+                loadAllDrivers()
+            },
+            error:function (error){
+                alert(JSON.parse(error.responseText).message);
+            }
+        })
+    })
 
 
 </script>

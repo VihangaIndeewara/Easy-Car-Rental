@@ -33,6 +33,17 @@ public class DriverServiceImpl implements DriverService {
         Driver entity = mapper.map(dto, Driver.class);
         repo.save(entity);
     }
+
+    @Override
+    public void updateDriver(DriverDTO dto) {
+        if (!repo.existsById(dto.getDriverID())){
+            throw new RuntimeException("Driver Id "+dto.getDriverID()+" Not Available");
+        }
+
+        Driver entity = mapper.map(dto, Driver.class);
+        repo.save(entity);
+    }
+
     @Override
     public ArrayList<DriverDTO> getAllDrivers() {
         List<Driver> all = repo.findAll();
