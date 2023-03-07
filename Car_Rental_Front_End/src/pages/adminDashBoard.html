@@ -1473,6 +1473,27 @@
     }
 
 
+    // Car
+
+    $("#carsSaveButton").click(function (){
+        let formData = $("#manageCarForm").serialize();
+
+        $.ajax({
+            url:baseURL+"car",
+            method:"post",
+            data: formData,
+            dataType:"json",
+            success:function (resp){
+                alert(resp.message)
+                loadAllDrivers()
+            },
+            error:function (error){
+                let parse = JSON.parse(error.responseText);
+                alert(parse.message)
+            }
+        })
+
+    })
 
 </script>
 
