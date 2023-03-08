@@ -60,4 +60,11 @@ public class CustomerServiceImpl implements CustomerService {
         List<Customer> all = repo.findAll();
         return mapper.map(all,new TypeToken<ArrayList<Customer>>(){}.getType());
     }
+
+    public String getLastCustomerId(){
+        String lastId = repo.lastCustomerId();
+        return lastId;
+
+    }
+
 }
