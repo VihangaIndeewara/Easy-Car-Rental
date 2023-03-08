@@ -30,7 +30,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void addCustomer(CustomerDTO dto) {
         if (repo.existsById(dto.getCustomerID())){
-            throw new RuntimeException("Customer Id "+dto.getCustomerID()+" Already Exit..");
+            throw new RuntimeException("Registration Id "+dto.getCustomerID()+" Already Exit..");
         }
         Customer entity = mapper.map(dto, Customer.class);
         repo.save(entity);

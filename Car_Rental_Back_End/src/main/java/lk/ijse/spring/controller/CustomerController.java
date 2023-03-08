@@ -23,14 +23,14 @@ public class CustomerController {
     @PostMapping
     public ResponseUtil saveCustomer(CustomerDTO dto){
         service.addCustomer(dto);
-        return new ResponseUtil("200","Successfully Added",null);
+        return new ResponseUtil("200","Your Registration is Successfully.. Please Login As Customer..!",null);
     }
 
-//    @GetMapping
-//    public ResponseUtil getAllCustomers(){
-//        ArrayList<CustomerDTO> allCustomers = service.getAllCustomers();
-//        return new ResponseUtil("200","Success",allCustomers);
-//    }
+    @GetMapping
+    public ResponseUtil getAllCustomers(){
+        ArrayList<CustomerDTO> allCustomers = service.getAllCustomers();
+        return new ResponseUtil("200","Success",allCustomers);
+    }
 
     @PutMapping
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto){
@@ -43,11 +43,11 @@ public class CustomerController {
         service.deleteCustomer(id);
         return new ResponseUtil("200","Successfully Deleted",null);
     }
-
-    @GetMapping
-    public ResponseUtil lastCustomerId(){
-        String lastCustomerId = service.getLastCustomerId();
-        return new ResponseUtil("200","Success",lastCustomerId);
-    }
+//
+//    @GetMapping
+//    public ResponseUtil lastCustomerId(){
+//        String lastCustomerId = service.getLastCustomerId();
+//        return new ResponseUtil("200","Success",lastCustomerId);
+//    }
 
 }

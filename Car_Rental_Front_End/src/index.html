@@ -350,7 +350,7 @@
 
                     <div class="mb-3 col-6">
                         <label for="customerIDInput" class="form-label">Registration Id</label>
-                        <input type="text" class="form-control" id="customerIDInput" name="customerID"  disabled>
+                        <input type="text" class="form-control" id="customerIDInput" name="customerID" >
                         <span class="control-error"></span>
                     </div>
 
@@ -454,39 +454,38 @@
     let baseURL="http://localhost:8080/Car_Rental_Back_End_war/"
 
 
-        loadLastId()
 
-    function loadLastId(){
+    $("#saveCusButton").click(function (){
+        let formData = $("#customerRegistrationForm").serialize();
+
         $.ajax({
-            url: baseURL + "customer",
-            success: function (resp) {
-                $("#customerIDInput").val(resp.data)
+            url:baseURL+"customer",
+            method:"post",
+            data: formData,
+            dataType:"json",
+            success:function (resp){
+                alert(resp.message)
+                clearTexts();
             },
-            error: function (error) {
+            error:function (error){
                 let parse = JSON.parse(error.responseText);
                 alert(parse.message)
             }
         })
-    }
 
-    // $("#saveCusButton").click(function (){
-    //     let formData = $("#customerRegistrationForm").serialize();
-    //
-    //     $.ajax({
-    //         url:baseURL+"customer",
-    //         method:"post",
-    //         data: formData,
-    //         dataType:"json",
-    //         success:function (resp){
-    //             alert(resp.message)
-    //         },
-    //         error:function (error){
-    //             let parse = JSON.parse(error.responseText);
-    //             alert(parse.message)
-    //         }
-    //     })
-    //
-    // })
+    })
+
+    function clearTexts(){
+        $("#customerIDInput").val("");
+        $("#userNameInput").val("");
+        $("#passwordInput").val("");
+        $("#nameInput").val("");
+        $("#contactNoInput").val("");
+        $("#addressInput").val("");
+        $("#emailInput").val("");
+        $("#NICNoInput").val("");
+        $("#licenseNo").val("");
+    }
 
 </script>
 </body>

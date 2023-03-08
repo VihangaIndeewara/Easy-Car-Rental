@@ -648,8 +648,7 @@
 
                     <div class="modal-footer">
                         <div class="btn-group col-4 gap-1 rounded">
-                            <button type="button"  class="btn btn-primary" id="btnCustomerSave">Save</button>
-                            <button type="button"  class="btn btn-secondary" id="btnCustomerUpdate">Update</button>
+                           <button type="button"  class="btn btn-secondary" id="btnCustomerUpdate">Update</button>
                             <button type="button" class="btn btn-danger" id="btnCustomerDelete">Delete</button>
                             <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
                         </div>
@@ -1445,25 +1444,6 @@
 
 //    Customer
 
-    $("#btnCustomerSave").click(function (){
-        let formData = $("#manageCustomerForm").serialize();
-
-        $.ajax({
-            url:baseURL+"customer",
-            method:"post",
-            data: formData,
-            dataType:"json",
-            success:function (resp){
-                alert(resp.message)
-                loadAllCustomers()
-            },
-            error:function (error){
-                let parse = JSON.parse(error.responseText);
-                alert(parse.message)
-            }
-        })
-
-    })
 
 
     loadAllCustomers()
