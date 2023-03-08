@@ -32,4 +32,10 @@ public class CustomerController {
         return new ResponseUtil("200","Success",allCustomers);
     }
 
+    @PutMapping
+    public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto){
+        service.updateCustomer(dto);
+        return new ResponseUtil("200","Successfully Updated",null);
+    }
+
 }

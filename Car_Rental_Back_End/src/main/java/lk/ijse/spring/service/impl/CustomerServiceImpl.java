@@ -30,8 +30,18 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void addCustomer(CustomerDTO dto) {
         if (repo.existsById(dto.getCustomerID())){
-            throw new RuntimeException("Admin Id "+dto.getCustomerID()+" Already Exit..");
+            throw new RuntimeException("Customer Id "+dto.getCustomerID()+" Already Exit..");
         }
+        Customer entity = mapper.map(dto, Customer.class);
+        repo.save(entity);
+    }
+
+    @Override
+    public void updateCustomer(CustomerDTO dto) {
+        if (!repo.existsById(dto.getCustomerID())){
+            throw new RuntimeException("Customer Id "+dto.getCustomerID()+" Not Available");
+        }
+
         Customer entity = mapper.map(dto, Customer.class);
         repo.save(entity);
     }

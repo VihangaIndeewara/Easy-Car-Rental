@@ -1507,6 +1507,45 @@
         })
     }
 
+    $("#btnCustomerUpdate").click(function (){
+
+        let id = $("#customerIDInput").val();
+        let name = $("#customerNameInput").val();
+        let address = $("#customerAddressInput").val();
+        let contactNo = $("#customerContactNoInput").val();
+        let email = $("#customerEmailInput").val();
+        let nicNo = $("#customerNICNoInput").val();
+        let licenseNo = $("#customerLicenseNoInput").val();
+        let username = $("#customerUsernameInput").val();
+        let password = $("#customerPasswordInput").val();
+
+        var cusObj={
+            customerID:id,
+            customerName:name,
+            customerUsername:username,
+            customerPassword:password,
+            customerAddress:address,
+            customerContactNo:contactNo,
+            customerEmail:email,
+            customerNICNo:nicNo,
+            customerLicenseNo:licenseNo
+        }
+
+        $.ajax({
+            url:baseURL+"customer",
+            method: "put",
+            contentType:"application/json",
+            data:JSON.stringify(cusObj),
+            dataType: "json",
+            success:function (resp){
+                alert(resp.message)
+                loadAllCustomers()
+            },
+            error:function (error){
+                alert(JSON.parse(error.responseText).message);
+            }
+        })
+    })
 
     // Car
 
