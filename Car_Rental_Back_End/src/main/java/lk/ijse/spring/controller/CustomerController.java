@@ -38,4 +38,10 @@ public class CustomerController {
         return new ResponseUtil("200","Successfully Updated",null);
     }
 
+    @DeleteMapping(params = "id")
+    public ResponseUtil deleteDriver(String id){
+        service.deleteCustomer(id);
+        return new ResponseUtil("200","Successfully Deleted",null);
+    }
+
 }

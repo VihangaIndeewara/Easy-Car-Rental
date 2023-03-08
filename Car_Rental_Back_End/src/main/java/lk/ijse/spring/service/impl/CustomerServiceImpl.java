@@ -47,6 +47,15 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public void deleteCustomer(String id) {
+        if (!repo.existsById(id)){
+            throw new RuntimeException("Customer Id "+id+" Not Available");
+        }
+
+        repo.deleteById(id);
+    }
+
+    @Override
     public ArrayList<CustomerDTO> getAllCustomers() {
         List<Customer> all = repo.findAll();
         return mapper.map(all,new TypeToken<ArrayList<Customer>>(){}.getType());

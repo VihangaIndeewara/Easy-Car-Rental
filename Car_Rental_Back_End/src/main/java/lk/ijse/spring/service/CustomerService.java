@@ -9,5 +9,6 @@ import java.util.ArrayList;
 public interface CustomerService {
     void addCustomer(CustomerDTO dto);
     void updateCustomer(CustomerDTO dto);
+    void deleteCustomer(String id);
     ArrayList<CustomerDTO> getAllCustomers();
 }
