@@ -28,7 +28,7 @@ public class CarServiceImpl implements CarService {
     @Override
     public void addCar(CarDTO dto) {
         if (repo.existsById(dto.getCarId())){
-            throw new RuntimeException("Admin Id "+dto.getCarId()+" Already Exit..");
+            throw new RuntimeException("Car Id "+dto.getCarId()+" Already Exit..");
         }
         Car entity = mapper.map(dto, Car.class);
         repo.save(entity);
@@ -37,11 +37,20 @@ public class CarServiceImpl implements CarService {
     @Override
     public void updateCar(CarDTO dto) {
         if (!repo.existsById(dto.getCarId())){
-            throw new RuntimeException("Admin Id "+dto.getCarId()+" Not Available");
+            throw new RuntimeException("Car Id "+dto.getCarId()+" Not Available");
         }
 
         Car entity = mapper.map(dto, Car.class);
         repo.save(entity);
+    }
+
+    @Override
+    public void deleteCar(String id) {
+        if (!repo.existsById(id)){
+            throw new RuntimeException("Car Id "+id+" Not Available");
+        }
+
+        repo.deleteById(id);
     }
 
     @Override

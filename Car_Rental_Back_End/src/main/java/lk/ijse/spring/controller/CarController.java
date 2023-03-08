@@ -31,9 +31,14 @@ public class CarController {
     }
 
     @PutMapping
-    public ResponseUtil updateAdmin(@RequestBody CarDTO dto){
+    public ResponseUtil updateCar(@RequestBody CarDTO dto){
         service.updateCar(dto);
         return new ResponseUtil("200","Successfully Updated",null);
     }
 
+    @DeleteMapping(params = "id")
+    public ResponseUtil deleteCar(String id){
+        service.deleteCar(id);
+        return new ResponseUtil("200","Successfully Deleted",null);
+    }
 }

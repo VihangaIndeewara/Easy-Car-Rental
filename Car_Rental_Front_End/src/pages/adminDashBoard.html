@@ -575,7 +575,7 @@
                         <h5 class="modal-title" id="manageCustomerTitle">Manage Customer</h5>
                     </div>
 
-                    <form id="manageCustomer">
+                    <form id="manageCustomerForm">
                         <div class="modal-body  row">
 
                             <div class="mb-3 col">
@@ -586,6 +586,20 @@
                             <div class="mb-3 col">
                                 <label for="customerNameInput" class="form-label">Name</label>
                                 <input type="text" class="form-control" id="customerNameInput" name="customerName">
+                                <span class="control-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="modal-body  row">
+                            <div class="mb-3 col">
+                                <label for="customerUsernameInput" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="customerUsernameInput"
+                                       name="customerUsername">
+                                <span class="control-error"></span>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="customerPasswordInput" class="form-label">Password</label>
+                                <input type="text" class="form-control" id="customerPasswordInput" name="customerPassword">
                                 <span class="control-error"></span>
                             </div>
                         </div>
@@ -672,24 +686,15 @@
                     <th scope="col">Email</th>
                     <th scope="col">NIC No</th>
                     <th scope="col">License No</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password</th>
                     <th scope="col">Customer Image</th>
                     <th scope="col">NIC Image</th>
                     <th scope="col">License Image</th>
                 </tr>
                 </thead>
                 <tbody class="table-light fs-6 fw-bold" id="customerTable">
-                <tr>
-                    <td>C001</td>
-                    <td>Kamal Perera</td>
-                    <td>80, Galle Rd, Galle</td>
-                    <td>+94785252369</td>
-                    <td>kamal123@gmail.com</td>
-                    <td>982536125v</td>
-                    <td>B745D4475</td>
-                    <td><img class="cusImages" src="../assets/images/client.jpg" alt="customer"></td>
-                    <td><img class="cusImages" src="../assets/images/nic.jpg" alt="nic"></td>
-                    <td><img class="cusImages" src="../assets/images/license.jpg" alt="license"></td>
-                </tr>
+
                 </tbody>
             </table>
         </div>
@@ -1440,6 +1445,42 @@
 
 //    Customer
 
+    $("#btnCustomerSave").click(function (){
+        let formData = $("#manageCustomerForm").serialize();
+
+        $.ajax({
+            url:baseURL+"customer",
+            method:"post",
+            data: formData,
+            dataType:"json",
+            success:function (resp){
+                alert(resp.message)
+                loadAllCustomers()
+            },
+            error:function (error){
+                let parse = JSON.parse(error.responseText);
+                alert(parse.message)
+            }
+        })
+
+    })
+
+
+    loadAllCustomers()
+
+    function loadAllCustomers(){
+        $.ajax({
+            url: baseURL+"customer",
+            success:function (resp){
+                $("#customerTable").empty();
+                for (var r of resp.data) {
+                    $("#customerTable").append('<tr><td>' + r.customerID + '</td><td>' + r.customerName + '</td><td>' + r.customerAddress + '</td><td>' + r.customerContactNo + '</td><td>' + r.customerEmail + '</td><td>' + r.customerNICNo + '</td><td>' + r.customerLicenseNo + '</td><td>' + r.customerUsername + '</td><td>' + r.customerPassword + '</td></tr>')
+                }
+                bindCustomerRowEvents()
+            }
+        })
+    }
+
     bindCustomerRowEvents()
 
     function bindCustomerRowEvents(){
@@ -1448,9 +1489,11 @@
             let name = $(this).children(":eq(1)").text();
             let address = $(this).children(":eq(2)").text();
             let contactNo = $(this).children(":eq(3)").text();
-            let email = $(this).children(":eq(0)").text();
-            let nicNo = $(this).children(":eq(1)").text();
-            let licenseNo = $(this).children(":eq(2)").text();
+            let email = $(this).children(":eq(4)").text();
+            let nicNo = $(this).children(":eq(5)").text();
+            let licenseNo = $(this).children(":eq(6)").text();
+            let username = $(this).children(":eq(7)").text();
+            let password = $(this).children(":eq(8)").text();
 
             $("#customerIDInput").val(id);
             $("#customerNameInput").val(name);
@@ -1459,6 +1502,8 @@
             $("#customerEmailInput").val(email);
             $("#customerNICNoInput").val(nicNo);
             $("#customerLicenseNoInput").val(licenseNo);
+            $("#customerUsernameInput").val(username);
+            $("#customerPasswordInput").val(password);
         })
     }
 
@@ -1592,6 +1637,26 @@
             }
         })
     })
+
+
+    $("#carsDeleteButton").click(function (){
+        let id = $("#carIdInput").val();
+
+        $.ajax({
+            url:baseURL+"car?id="+id,
+            method:"delete",
+            dataType:"json",
+            success:function (resp){
+                alert(resp.message)
+                loadAllCars()
+            },
+            error:function (error){
+                let parse = JSON.parse(error.responseText);
+                alert(parse.message);
+            }
+        })
+    })
+
 
 </script>
 

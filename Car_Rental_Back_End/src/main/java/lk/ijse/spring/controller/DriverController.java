@@ -40,5 +40,4 @@ public class DriverController {
         service.deleteDriver(id);
         return new ResponseUtil("200","Successfully Deleted",null);
     }
-
 }

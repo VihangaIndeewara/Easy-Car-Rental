@@ -9,5 +9,6 @@ import java.util.ArrayList;
 public interface CarService {
     void addCar(CarDTO dto);
     void updateCar(CarDTO dto);
+    void deleteCar(String id);
     ArrayList<CarDTO> getAllCars();
 }
