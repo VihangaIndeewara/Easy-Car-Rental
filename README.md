@@ -52,8 +52,9 @@ Easy Car Rentals is the web application of Enterprise level car rental service. 
 <h3>⚡ Main Business  Interface</h3>
 
 ![Movies   TV 06_27_2023 04_23_01 PM (2)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/a71ac475-6ebf-423c-b624-1006d1984c76)
-![Movies   TV 06_27_2023 04_23_34 PM (3)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/5210da16-4c7a-4402-abcb-1a0b84b39c05)
-![Movies   TV 06_27_2023 04_24_46 PM (2)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/59fb48b4-e23a-4899-82a4-88b610bd615d)
+![Movies   TV 06_27_2023 04_23_34 PM (4)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/20e85d01-c03c-426a-b4e4-015d7e0f1f48)
+![Easy Car Rental - Google Chrome 06_27_2023 07_33_29 PM (2)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/b8d59501-6bbc-4236-9b39-665096ca285e)
+![Movies   TV 06_27_2023 04_24_46 PM (3)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/c047eeeb-1d8e-4586-914a-8aa02beb577f)
 
 <br>
 <h3>⚡ Customer Registration Interface</h3>
@@ -63,6 +64,7 @@ Easy Car Rentals is the web application of Enterprise level car rental service. 
 <br>
 <h3>⚡ Login Interface</h3>
 
+![Easy Car Rental - Google Chrome 06_27_2023 07_34_51 PM (2)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/dc292393-e40e-4461-8026-396e1b8bc0db)
 
 
 <br>
@@ -75,7 +77,9 @@ Easy Car Rentals is the web application of Enterprise level car rental service. 
 ![Movies   TV 06_27_2023 04_26_46 PM (2)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/e09a674e-fcc3-468b-8bb7-e0cc2a2b7742)
 ![Movies   TV 06_27_2023 04_27_00 PM (2)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/41bcaa5b-e7de-4a2d-85e6-77948b4a2acd)
 ![Movies   TV 06_27_2023 04_27_23 PM (2)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/eafdc1c4-2926-4dd0-99c6-4c319cd02d85)
-![Movies   TV 06_27_2023 04_27_34 PM (2)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/83a5aa7d-57df-416d-bd73-61f79d62d5ac)
+![Easy Car Rental - Google Chrome 06_27_2023 07_36_33 PM (2)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/0d1be4a2-efa5-4f5e-bcad-f6a9f748cf60)
+![Easy Car Rental - Google Chrome 06_27_2023 07_36_40 PM (2)](https://github.com/VihangaIndeewara/Easy-Car-Rental/assets/101233779/9a610171-5373-4208-b7fd-697d75f65f3e)
+
 
 <hr>
 
